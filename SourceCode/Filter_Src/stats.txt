@@ -1,0 +1,6 @@
+Filtered words saved in directory: .
+Total number of input passwords: 8459063135
+Total number of filtered passwords of length 5: 10751871
+Total number of filtered passwords of length 6: 563608354
+Total number of filtered passwords of length 7: 465597114
+Total number of filtered passwords of length 8: 1357729013
