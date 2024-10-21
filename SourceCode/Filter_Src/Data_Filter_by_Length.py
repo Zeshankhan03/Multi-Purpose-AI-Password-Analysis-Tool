@@ -3,77 +3,125 @@ import argparse
 import multiprocessing
 from tqdm import tqdm
 import csv
-import unittest
+import psutil
+import pickle
+
+SUPPORTED_EXTENSIONS = ['.txt', '.dic','.lst','.uniq']
 
 def filter_words_by_length(chunk, min_length, max_length):
-    return [word for word in chunk if min_length <= len(word) <= max_length]
+    filtered_words = {length: [] for length in range(min_length, max_length + 1)}
+    for word in chunk:
+        word = word.strip()  # Strip leading and trailing spaces
+        word_len = len(word)
+        if min_length <= word_len <= max_length:
+            filtered_words[word_len].append(word)
+    return filtered_words
 
-def process_subchunk(subchunk, min_length, max_length):
-    return filter_words_by_length(subchunk, min_length, max_length)
-
-def process_chunk(chunk_start, chunk_size, min_length, max_length, filename, subchunk_size=1024*1024, encoding='utf-8'):
-    filtered_words = []
+def process_chunk(chunk_start, chunk_size, min_length, max_length, filename, subchunk_size, encoding='utf-8'):
+    filtered_words = {length: [] for length in range(min_length, max_length + 1)}
     total_lines_read = 0
-    with open(filename, 'r', encoding=encoding, errors='ignore') as file:
-        file.seek(chunk_start)
-        while chunk_size > 0:
-            subchunk = file.read(min(subchunk_size, chunk_size)).splitlines()
-            total_lines_read += len(subchunk)
-            filtered_words.extend(process_subchunk(subchunk, min_length, max_length))
-            chunk_size -= subchunk_size
-            if not subchunk:
-                break
+    try:
+        with open(filename, 'r', encoding=encoding, errors='ignore') as file:
+            file.seek(chunk_start)
+            while chunk_size > 0:
+                subchunk = file.read(min(subchunk_size, chunk_size)).splitlines()
+                total_lines_read += len(subchunk)
+                filtered = filter_words_by_length(subchunk, min_length, max_length)
+                for length in filtered:
+                    filtered_words[length].extend(filtered[length])
+                chunk_size -= subchunk_size
+                if not subchunk:
+                    break
+    except Exception as e:
+        print(f"Error processing chunk {chunk_start}-{chunk_start+chunk_size} in file {filename}: {e}")
     return filtered_words, total_lines_read
 
-def get_file_chunks(filename, num_chunks):
+def get_file_chunks(filename, chunk_size):
     file_size = os.path.getsize(filename)
-    chunk_size = file_size // num_chunks
-    return [(i * chunk_size, chunk_size) for i in range(num_chunks)]
+    return [(i, min(chunk_size, file_size - i)) for i in range(0, file_size, chunk_size)]
 
-def parallel_filter_words(filenames, min_length, max_length, num_chunks, subchunk_size, encoding):
+def save_progress(progress_file, progress):
+    with open(progress_file, 'wb') as file:
+        pickle.dump(progress, file)
+
+def load_progress(progress_file):
+    if os.path.exists(progress_file):
+        with open(progress_file, 'rb') as file:
+            return pickle.load(file)
+    return {}
+
+def write_filtered_words(filtered_words, filtered_dir, filename, min_length, max_length, encoding):
+    for length in range(min_length, max_length + 1):
+        output_txt_filename = os.path.join(filtered_dir, f'filtered_words_{length}_{os.path.basename(filename)}.txt')
+        with open(output_txt_filename, 'a', encoding=encoding) as output_file:
+            output_file.write('\n'.join(filtered_words[length]) + '\n')
+
+def parallel_filter_words(directory, min_length, max_length, encoding):
     total_input_passwords = 0
     total_output_passwords = 0
     stats = []
     length_stats = []
 
-    filtered_dir = "filtered_passwords"
-    stats_dir = "stats"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    filtered_dir = os.path.join(script_dir, "filtered_passwords")
+    stats_dir = os.path.join(script_dir, "stats")
+    progress_file = os.path.join(script_dir, "progress.pkl")
+
     os.makedirs(filtered_dir, exist_ok=True)
     os.makedirs(stats_dir, exist_ok=True)
 
+    filenames = [
+        os.path.join(directory, file) 
+        for file in os.listdir(directory) 
+        if os.path.splitext(file)[1] in SUPPORTED_EXTENSIONS
+    ]
+
+    # Calculate available memory and determine chunk sizes
+    available_memory = psutil.virtual_memory().available * 0.10
+    num_chunks = multiprocessing.cpu_count() * 2
+    chunk_size = int(available_memory / num_chunks / 2)
+    subchunk_size = chunk_size // 2
+
+    progress = load_progress(progress_file)
+
     for filename in filenames:
+        if filename in progress and progress[filename] == "completed":
+            print(f"Skipping already processed file: {filename}")
+            continue
+        
         file_total_input = 0
         file_total_output = 0
-        chunks = get_file_chunks(filename, num_chunks)
-        pool = multiprocessing.Pool(num_chunks)
-        
-        for length in range(min_length, max_length + 1):
-            filtered_words = []
-            results = []
-            for chunk_start, chunk_size in tqdm(chunks, desc=f"Processing {filename} for length {length}"):
-                result = pool.apply_async(process_chunk, (chunk_start, chunk_size, length, length, filename, subchunk_size, encoding))
-                results.append(result)
+        chunks = get_file_chunks(filename, chunk_size)
+        pool = multiprocessing.Pool(multiprocessing.cpu_count())
 
-            length_input_count = 0
-            length_output_count = 0
-            for result in results:
-                filtered, lines_read = result.get()
-                length_input_count += lines_read
-                length_output_count += len(filtered)
-                filtered_words.extend(filtered)
+        if filename not in progress:
+            progress[filename] = {length: 0 for length in range(min_length, max_length + 1)}
 
-            file_total_input += length_input_count
-            file_total_output += length_output_count
+        results = []
+        for chunk_index, (chunk_start, chunk_size) in enumerate(tqdm(chunks, desc=f"Processing {filename}")):
+            if chunk_index < max(progress[filename].values()):
+                continue
+            
+            result = pool.apply_async(process_chunk, (chunk_start, chunk_size, min_length, max_length, filename, subchunk_size, encoding))
+            results.append((result, chunk_index))
 
-            output_txt_filename = os.path.join(filtered_dir, f'filtered_words_{length}_{os.path.basename(filename)}.txt')
-            with open(output_txt_filename, 'w', encoding=encoding) as output_file:
-                output_file.write('\n'.join(filtered_words) + '\n')
+        chunk_pbar = tqdm(total=len(results), desc=f"Processing chunks for {filename}")
+        for result, chunk_index in results:
+            try:
+                filtered_words, lines_read = result.get()
+                file_total_input += lines_read
 
-            length_stats.append({
-                'filename': filename,
-                'length': length,
-                'filtered_passwords': length_output_count
-            })
+                write_filtered_words(filtered_words, filtered_dir, filename, min_length, max_length, encoding)
+                file_total_output += sum(len(words) for words in filtered_words.values())
+
+                for length in range(min_length, max_length + 1):
+                    progress[filename][length] = chunk_index + 1
+
+                save_progress(progress_file, progress)
+                chunk_pbar.update(1)
+            except Exception as e:
+                print(f"Error processing result from chunk {chunk_index} in file {filename}: {e}")
+        chunk_pbar.close()
 
         pool.close()
         pool.join()
@@ -86,6 +134,9 @@ def parallel_filter_words(filenames, min_length, max_length, num_chunks, subchun
             'input_passwords': file_total_input,
             'output_passwords': file_total_output
         })
+
+        progress[filename] = "completed"
+        save_progress(progress_file, progress)
 
     with open(os.path.join(stats_dir, 'total_password_count.csv'), 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
@@ -111,13 +162,11 @@ def parallel_filter_words(filenames, min_length, max_length, num_chunks, subchun
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Filter words by length from multiple large text files.")
-    parser.add_argument('filenames', nargs='+', type=str, help='The paths to the large text files.')
+    parser.add_argument('directory', type=str, help='The directory containing the large text files.')
     parser.add_argument('min_length', type=int, help='The minimum length of words to filter.')
     parser.add_argument('max_length', type=int, help='The maximum length of words to filter.')
-    parser.add_argument('--num_chunks', type=int, default=20, help='Number of chunks to split each file into for parallel processing.')
-    parser.add_argument('--subchunk_size', type=int, default=1024*1024, help='Size of subchunks to process at a time (in bytes).')
     parser.add_argument('--encoding', type=str, default='utf-8', help='File encoding (default: utf-8).')
 
     args = parser.parse_args()
 
-    parallel_filter_words(args.filenames, args.min_length, args.max_length, args.num_chunks, args.subchunk_size, args.encoding)
+    parallel_filter_words(args.directory, args.min_length, args.max_length, args.encoding)
