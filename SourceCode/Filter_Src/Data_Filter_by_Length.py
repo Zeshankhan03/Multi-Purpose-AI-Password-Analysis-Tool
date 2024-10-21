@@ -56,7 +56,7 @@ def write_filtered_words(filtered_words, filtered_dir, filename, min_length, max
         with open(output_txt_filename, 'a', encoding=encoding) as output_file:
             output_file.write('\n'.join(filtered_words[length]) + '\n')
 
-def parallel_filter_words(directory, min_length, max_length, encoding):
+def parallel_filter_words(directory, min_length, max_length, encoding, chunk_size, subchunk_size):
     total_input_passwords = 0
     total_output_passwords = 0
     stats = []
@@ -75,12 +75,6 @@ def parallel_filter_words(directory, min_length, max_length, encoding):
         for file in os.listdir(directory) 
         if os.path.splitext(file)[1] in SUPPORTED_EXTENSIONS
     ]
-
-    # Calculate available memory and determine chunk sizes
-    available_memory = psutil.virtual_memory().available * 0.10
-    num_chunks = multiprocessing.cpu_count() * 2
-    chunk_size = int(available_memory / num_chunks / 2)
-    subchunk_size = chunk_size // 2
 
     progress = load_progress(progress_file)
 
@@ -162,11 +156,16 @@ def parallel_filter_words(directory, min_length, max_length, encoding):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Filter words by length from multiple large text files.")
-    parser.add_argument('directory', type=str, help='The directory containing the large text files.')
-    parser.add_argument('min_length', type=int, help='The minimum length of words to filter.')
-    parser.add_argument('max_length', type=int, help='The maximum length of words to filter.')
+    parser.add_argument('--directory', type=str, default='H:\\OUTPUTTXT', help='The directory containing the large text files.')
+    parser.add_argument('--min_length', type=int, default=5, help='The minimum length of words to filter.')
+    parser.add_argument('--max_length', type=int, default=8, help='The maximum length of words to filter.')
     parser.add_argument('--encoding', type=str, default='utf-8', help='File encoding (default: utf-8).')
-
+    parser.add_argument('--chunk_size', type=int, default=1024*1024*10, help='Chunk size in bytes (default: 10MB).')
+    parser.add_argument('--subchunk_size', type=int, default=1024*1024*5, help='Subchunk size in bytes.')
+    
     args = parser.parse_args()
 
-    parallel_filter_words(args.directory, args.min_length, args.max_length, args.encoding)
+    if args.subchunk_size is None:
+        args.subchunk_size = args.chunk_size // 2
+
+    parallel_filter_words(args.directory, args.min_length, args.max_length, args.encoding, args.chunk_size, args.subchunk_size)
