@@ -19,9 +19,9 @@ def is_file_processed(log_file, input_file_path):
 def process_files(input_dir, output_dir, log_file, max_chunk_size=2*1024*1024*1024):
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    
+
     file_counter = 1
-    output_file, output_file_path = create_new_output_file(output_dir, file_counter)
+    buffer = []
     current_size = 0
 
     for root, _, files in os.walk(input_dir):
@@ -29,7 +29,7 @@ def process_files(input_dir, output_dir, log_file, max_chunk_size=2*1024*1024*10
             input_file_path = os.path.join(root, file_name)
             if is_file_processed(log_file, input_file_path):
                 continue
-            
+
             input_file_size = os.path.getsize(input_file_path)
             with open(input_file_path, 'r', encoding='utf-8', errors='ignore') as input_file, tqdm(total=input_file_size, unit='B', unit_scale=True, desc=file_name) as pbar:
                 while True:
@@ -39,27 +39,33 @@ def process_files(input_dir, output_dir, log_file, max_chunk_size=2*1024*1024*10
 
                     for line in chunk.splitlines():
                         try:
-                            output_file.write(line + '\n')
+                            buffer.append(line)
                             current_size += len(line) + 1
                             if current_size >= max_chunk_size:
-                                output_file.close()
+                                write_buffer_to_file(buffer, output_dir, file_counter)
                                 file_counter += 1
-                                output_file, output_file_path = create_new_output_file(output_dir, file_counter)
+                                buffer.clear()
                                 current_size = 0
-                        except Exception:
+                        except Exception as e:
+                            print(f"Error processing line: {e}")
                             continue
 
                     pbar.update(len(chunk))
                     chunk = None  # Free memory after processing
 
             log_processed_file(log_file, input_file_path)
-    
-    if not output_file.closed:
-        output_file.close()
-        
+
+    if buffer:
+        write_buffer_to_file(buffer, output_dir, file_counter)
+
+def write_buffer_to_file(buffer, output_dir, file_counter):
+    output_file, output_file_path = create_new_output_file(output_dir, file_counter)
+    output_file.write('\n'.join(buffer))
+    output_file.close()
+
 if __name__ == "__main__":
-    input_dir = "H:\OUTPUTTXT"
-    output_dir = "H:\PartsOutputs"
-    log_file = "log_file.log"
+    input_dir = "D:/Osama Khalid/Osama Khalid BSCY 7/FYP Part 1/AI Codes/PasswrodsBIG/rockyou.txt"
+    output_dir = "H:\\PartsOutputs"
+    log_file = "DataSpliter_log_file.log"
 
     process_files(input_dir, output_dir, log_file)
