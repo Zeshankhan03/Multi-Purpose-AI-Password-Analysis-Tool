@@ -13,7 +13,7 @@ class HashcatGUI(tk.Tk):
         self.geometry("700x850")
 
         # Load background image (JPEG format)
-        self.background_image = Image.open("Background-image.jpg")  # Save your image as background.jpg in the project directory
+        self.background_image = Image.open("SourceCode\GUI\Images\Background-image.jpg")  # Save your image as background.jpg in the project directory
         self.background_image = self.background_image.resize((700, 850), Image.LANCZOS)  # Resize to fit the window
         self.background_photo = ImageTk.PhotoImage(self.background_image)
         
