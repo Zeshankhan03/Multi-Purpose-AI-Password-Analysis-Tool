@@ -2,58 +2,153 @@ import os
 import argparse
 import multiprocessing
 from tqdm import tqdm
+import csv
 
-def filter_words_by_length(chunk, length):
-    return [word for word in chunk if len(word) == length]
+SUPPORTED_EXTENSIONS = ['.txt', '.dic', '.lst', '.uniq']
+PART_SIZE = 2 * 1024 * 1024 * 1024  # 2GB
 
-def process_subchunk(subchunk, length):
-    return filter_words_by_length(subchunk, length)
-
-def process_chunk(chunk_start, chunk_size, length, filename, subchunk_size=1024*1024, encoding='utf-8'):
-    filtered_words = []
-    with open(filename, 'r', encoding=encoding, errors='ignore') as file:
-        file.seek(chunk_start)
-        while chunk_size > 0:
-            subchunk = file.read(min(subchunk_size, chunk_size)).splitlines()
-            filtered_words.extend(process_subchunk(subchunk, length))
-            chunk_size -= subchunk_size
-            if not subchunk:
-                break
+def filter_words_by_length(chunk, min_length, max_length):
+    filtered_words = {length: [] for length in range(min_length, max_length + 1)}
+    for word in chunk:
+        if isinstance(word, str):  # Ensure word is a string
+            word = word.strip()  # Strip leading and trailing spaces
+            word_len = len(word)
+            if min_length <= word_len <= max_length:
+                filtered_words[word_len].append(word)
     return filtered_words
 
-def get_file_chunks(filename, num_chunks):
+def process_subchunk(subchunk, min_length, max_length):
+    return filter_words_by_length(subchunk, min_length, max_length)
+
+def process_part(part_data, min_length, max_length, num_cores):
+    subchunk_size = len(part_data) // num_cores
+    results = {length: [] for length in range(min_length, max_length + 1)}
+    total_lines_read = 0
+    try:
+        with multiprocessing.Pool(num_cores) as pool:
+            subchunks = [part_data[i:i + subchunk_size] for i in range(0, len(part_data), subchunk_size)]
+            print(f"Subchunks created: {len(subchunks)}")
+            subchunk_results = pool.starmap(process_subchunk, [(subchunk.splitlines(), min_length, max_length) for subchunk in subchunks])
+        
+        for result in subchunk_results:
+            for length, words in result.items():
+                results[length].extend(words)
+            total_lines_read += sum(len(words) for words in result.values())
+    
+    except Exception as e:
+        print(f"Error processing part: {e}")
+    
+    return results, total_lines_read
+
+def get_file_parts(filename, part_size):
     file_size = os.path.getsize(filename)
-    chunk_size = file_size // num_chunks
-    return [(i * chunk_size, chunk_size) for i in range(num_chunks)]
+    return [(i, min(part_size, file_size - i)) for i in range(0, file_size, part_size)]
 
-def parallel_filter_words(filename, word_length, num_chunks, subchunk_size, encoding):
-    chunks = get_file_chunks(filename, num_chunks)
-    pool = multiprocessing.Pool(num_chunks)
-    results = []
+def write_filtered_words(filtered_words, filtered_dir, filename, encoding):
+    for length, words in filtered_words.items():
+        if words:  # Ensure there are words to write
+            output_txt_filename = os.path.join(filtered_dir, f'filtered_words_{length}_{os.path.basename(filename)}.txt')
+            with open(output_txt_filename, 'a', encoding=encoding) as output_file:
+                print(f"Writing {len(words)} words of length {length} to {output_txt_filename}")
+                output_file.write('\n'.join(words) + '\n')
 
-    output_filename = f'filtered_words_{word_length}.txt'
-    with open(output_filename, 'w', encoding=encoding) as output_file:
-        for chunk_start, chunk_size in tqdm(chunks):
-            result = pool.apply_async(process_chunk, (chunk_start, chunk_size, word_length, filename, subchunk_size, encoding))
-            results.append(result)
+def parallel_filter_words(directory, min_length, max_length, encoding):
+    total_input_passwords = 0
+    total_output_passwords = 0
+    stats = []
+    length_stats = []
 
-        for result in results:
-            filtered_words = result.get()
-            output_file.write('\n'.join(filtered_words) + '\n')
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    filtered_dir = os.path.join(script_dir, "filtered_passwords")
+    stats_dir = os.path.join(script_dir, "stats")
 
-    pool.close()
-    pool.join()
+    os.makedirs(filtered_dir, exist_ok=True)
+    os.makedirs(stats_dir, exist_ok=True)
 
-    print(f"Filtered words saved to {output_filename}")
+    filenames = [
+        os.path.join(directory, file) 
+        for file in os.listdir(directory) 
+        if os.path.splitext(file)[1] in SUPPORTED_EXTENSIONS
+    ]
+
+    num_cores = multiprocessing.cpu_count()
+    print(f"Number of CPU cores: {num_cores}")
+
+    for filename in filenames:
+        print(f"Loading file: {filename}")
+        file_total_input = 0
+        file_total_output = 0
+        parts = get_file_parts(filename, PART_SIZE)
+
+        for part_start, part_size in tqdm(parts, desc=f"Processing parts of {filename}"):
+            try:
+                print(f"Loading part {part_start}-{part_start + part_size} into memory")
+                with open(filename, 'rb') as file:
+                    file.seek(part_start)
+                    part_data = file.read(part_size).decode(encoding, errors='ignore')
+
+                print(f"Processing part {part_start}-{part_start + part_size}")
+                if len(part_data.strip()) == 0:
+                    print(f"Part {part_start}-{part_start + part_size} is empty after reading.")
+                    continue
+
+                # Process the part in parallel for each length
+                part_filtered_words, lines_read = process_part(part_data, min_length, max_length, num_cores)
+                
+                print(f"Lines read: {lines_read}")
+                file_total_input += lines_read
+                file_total_output += sum(len(words) for words in part_filtered_words.values())
+
+                print(f"Filtered words collected, writing to file.")
+                # Write filtered words to files
+                write_filtered_words(part_filtered_words, filtered_dir, filename, encoding)
+
+                print(f"Removing part {part_start}-{part_start + part_size} from memory")
+                del part_data  # Free up memory
+                del part_filtered_words
+
+            except Exception as e:
+                print(f"Error processing part {part_start}-{part_start + part_size} in file {filename}: {e}")
+
+        total_input_passwords += file_total_input
+        total_output_passwords += file_total_output
+
+        stats.append({
+            'filename': filename,
+            'input_passwords': file_total_input,
+            'output_passwords': file_total_output
+        })
+
+    with open(os.path.join(stats_dir, 'total_password_count.csv'), 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(['total_input_passwords', 'total_output_passwords'])
+        writer.writerow([total_input_passwords, total_output_passwords])
+
+    with open(os.path.join(stats_dir, 'file_password_counts.csv'), 'w', newline='') as csvfile:
+        fieldnames = ['filename', 'input_passwords', 'output_passwords']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for stat in stats:
+            writer.writerow(stat)
+
+    with open(os.path.join(stats_dir, 'length_password_counts.csv'), 'w', newline='') as csvfile:
+        fieldnames = ['filename', 'length', 'filtered_passwords']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for stat in length_stats:
+            writer.writerow(stat)
+
+    print(f"Total input passwords: {total_input_passwords}")
+    print(f"Total output passwords: {total_output_passwords}")
+
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Filter words by length from a large text file.")
-    parser.add_argument('--filename', type=str, default="H:\\PartsOutputs\\00000001.txt",help='The path to the large text file.')
-    parser.add_argument('--word_length', type=int,default=8, help='The length of words to filter.')
-    parser.add_argument('--num_chunks', type=int, default=10, help='Number of chunks to split the file into for parallel processing.')
-    parser.add_argument('--subchunk_size', type=int, default=1024*1024, help='Size of subchunks to process at a time (in bytes).')
+    parser = argparse.ArgumentParser(description="Filter words by length from multiple large text files.")
+    parser.add_argument('--directory', type=str, default='PasswrodsBIG', help='The directory containing the large text files.')
+    parser.add_argument('--min_length', type=int, default=5, help='The minimum length of words to filter.')
+    parser.add_argument('--max_length', type=int, default=8, help='The maximum length of words to filter.')
     parser.add_argument('--encoding', type=str, default='utf-8', help='File encoding (default: utf-8).')
 
     args = parser.parse_args()
 
-    parallel_filter_words(args.filename, args.word_length, args.num_chunks, args.subchunk_size, args.encoding)
+    parallel_filter_words(args.directory, args.min_length, args.max_length, args.encoding)
