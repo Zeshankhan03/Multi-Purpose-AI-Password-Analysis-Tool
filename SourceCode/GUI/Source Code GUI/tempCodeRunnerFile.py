@@ -1,10 +1,7 @@
 import tkinter as tk
-from tkinter import filedialog
-from tkinter import messagebox
+from tkinter import filedialog, messagebox
 import subprocess
 import os
-from PIL import Image, ImageTk
-
 
 class HashcatGUI(tk.Tk):
     def __init__(self):
@@ -12,36 +9,28 @@ class HashcatGUI(tk.Tk):
         self.title("Multi-purpose AI Password Analysis Tool - Dictionary Attack")
         self.geometry("700x850")
 
-        # Load background image (JPEG format)
-        self.background_image = Image.open("SourceCode\GUI\Images\Background-image.jpg")  # Save your image as background.jpg in the project directory
-        self.background_image = self.background_image.resize((700, 850), Image.LANCZOS)  # Resize to fit the window
-        self.background_photo = ImageTk.PhotoImage(self.background_image)
-        
-        self.background_label = tk.Label(self, image=self.background_photo)
-        self.background_label.place(relwidth=1, relheight=1)  # Set image to fill the window
-
         # Set theme to black with light cyan text
         self.configure(bg="black")
 
         # Hash File Selection
-        self.hash_file_label = tk.Label(self, text="Select Hash File:", fg="light cyan", bg="black")
-        self.hash_file_label.pack()
-        self.hash_file_entry = tk.Entry(self, width=40, bg="black", fg="light cyan")
-        self.hash_file_entry.pack()
-        self.browse_hash_button = tk.Button(self, text="Browse", command=self.browse_hash_file, bg="black", fg="light cyan")
-        self.browse_hash_button.pack()
+        self.hash_file_label = tk.Label(self, text="Select Hash File:", fg="light cyan", bg="black", font=("Arial", 12))
+        self.hash_file_label.pack(pady=5)
+        self.hash_file_entry = tk.Entry(self, width=40, bg="black", fg="light cyan", font=("Arial", 12))
+        self.hash_file_entry.pack(pady=5)
+        self.browse_hash_button = self.create_button("Browse", self.browse_hash_file)
+        self.browse_hash_button.pack(pady=5)
 
         # Wordlist (Dictionary) Selection
-        self.wordlist_label = tk.Label(self, text="Select Wordlist (Dictionary) File:", fg="light cyan", bg="black")
-        self.wordlist_label.pack()
-        self.wordlist_entry = tk.Entry(self, width=40, bg="black", fg="light cyan")
-        self.wordlist_entry.pack()
-        self.browse_wordlist_button = tk.Button(self, text="Browse", command=self.browse_wordlist, bg="black", fg="light cyan")
-        self.browse_wordlist_button.pack()
+        self.wordlist_label = tk.Label(self, text="Select Wordlist (Dictionary) File:", fg="light cyan", bg="black", font=("Arial", 12))
+        self.wordlist_label.pack(pady=5)
+        self.wordlist_entry = tk.Entry(self, width=40, bg="black", fg="light cyan", font=("Arial", 12))
+        self.wordlist_entry.pack(pady=5)
+        self.browse_wordlist_button = self.create_button("Browse", self.browse_wordlist)
+        self.browse_wordlist_button.pack(pady=5)
 
         # Hash Type Selection (Dropdown)
-        self.hash_type_label = tk.Label(self, text="Select Hash Type:", fg="light cyan", bg="black")
-        self.hash_type_label.pack()
+        self.hash_type_label = tk.Label(self, text="Select Hash Type:", fg="light cyan", bg="black", font=("Arial", 12))
+        self.hash_type_label.pack(pady=5)
 
         # List of common hash types (expandable)
         self.hash_types = {
@@ -67,51 +56,59 @@ class HashcatGUI(tk.Tk):
 
         # Dropdown menu for hash types
         self.hash_type_menu = tk.OptionMenu(self, self.hash_type_var, *self.hash_types.keys())
-        self.hash_type_menu.config(bg="black", fg="light cyan", highlightbackground="black")
-        self.hash_type_menu.pack()
+        self.hash_type_menu.config(bg="black", fg="light cyan", highlightbackground="black", font=("Arial", 12))
+        self.hash_type_menu.pack(pady=5)
 
         # GPU Selection
-        self.gpu_label = tk.Label(self, text="Use GPU:", fg="light cyan", bg="black")
-        self.gpu_label.pack()
+        self.gpu_label = tk.Label(self, text="Use GPU:", fg="light cyan", bg="black", font=("Arial", 12))
+        self.gpu_label.pack(pady=5)
         self.gpu_var = tk.BooleanVar(value=True)  # Default to True
-        self.gpu_checkbox = tk.Checkbutton(self, text="Enable GPU", variable=self.gpu_var, bg="black", fg="light cyan", selectcolor="light cyan")
-        self.gpu_checkbox.pack()
+        self.gpu_checkbox = tk.Checkbutton(self, text="Enable GPU", variable=self.gpu_var, bg="black", fg="light cyan", selectcolor="light cyan", font=("Arial", 12))
+        self.gpu_checkbox.pack(pady=5)
 
         # Workload Profile
-        self.workload_label = tk.Label(self, text="Workload Profile (1 to 4):", fg="light cyan", bg="black")
-        self.workload_label.pack()
-        self.workload_entry = tk.Entry(self, width=5, bg="black", fg="light cyan")
-        self.workload_entry.pack()
+        self.workload_label = tk.Label(self, text="Workload Profile (1 to 4):", fg="light cyan", bg="black", font=("Arial", 12))
+        self.workload_label.pack(pady=5)
+        self.workload_entry = tk.Entry(self, width=5, bg="black", fg="light cyan", font=("Arial", 12))
+        self.workload_entry.pack(pady=5)
 
         # Temperature Monitoring Option
-        self.temp_option_label = tk.Label(self, text="Use Temperature Abortion Threshold:", fg="light cyan", bg="black")
-        self.temp_option_label.pack()
+        self.temp_option_label = tk.Label(self, text="Use Temperature Abortion Threshold:", fg="light cyan", bg="black", font=("Arial", 12))
+        self.temp_option_label.pack(pady=5)
         self.temp_option_var = tk.BooleanVar(value=False)  # Default to False
-        self.temp_option_checkbox = tk.Checkbutton(self, text="Enable", variable=self.temp_option_var, bg="black", fg="light cyan", selectcolor="light cyan")
-        self.temp_option_checkbox.pack()
+        self.temp_option_checkbox = tk.Checkbutton(self, text="Enable", variable=self.temp_option_var, bg="black", fg="light cyan", selectcolor="light cyan", font=("Arial", 12))
+        self.temp_option_checkbox.pack(pady=5)
 
         # Temperature Abortion Threshold Slider
-        self.temp_label = tk.Label(self, text="Temperature Abortion Threshold (°C):", fg="light cyan", bg="black")
-        self.temp_label.pack()
-        self.temp_slider = tk.Scale(self, from_=70, to=100, orient=tk.HORIZONTAL, bg="black", fg="light cyan")
-        self.temp_slider.pack()
+        self.temp_label = tk.Label(self, text="Temperature Abortion Threshold (°C):", fg="light cyan", bg="black", font=("Arial", 12))
+        self.temp_label.pack(pady=5)
+        self.temp_slider = tk.Scale(self, from_=70, to=250, orient=tk.HORIZONTAL, bg="black", fg="light cyan")  # Updated max to 250°C
+        self.temp_slider.pack(pady=5)
 
         # Kernel Execution
-        self.kernel_label = tk.Label(self, text="Optimized Kernel:", fg="light cyan", bg="black")
-        self.kernel_label.pack()
+        self.kernel_label = tk.Label(self, text="Optimized Kernel:", fg="light cyan", bg="black", font=("Arial", 12))
+        self.kernel_label.pack(pady=5)
         self.kernel_var = tk.BooleanVar(value=True)  # Default to True
-        self.kernel_checkbox = tk.Checkbutton(self, text="Use Optimized Kernel", variable=self.kernel_var, bg="black", fg="light cyan", selectcolor="light cyan")
-        self.kernel_checkbox.pack()
+        self.kernel_checkbox = tk.Checkbutton(self, text="Use Optimized Kernel", variable=self.kernel_var, bg="black", fg="light cyan", selectcolor="light cyan", font=("Arial", 12))
+        self.kernel_checkbox.pack(pady=5)
 
         # Output and Run Button
-        self.output_label = tk.Label(self, text="Hashcat Output:", fg="light cyan", bg="black")
-        self.output_label.pack()
-        self.output_text = tk.Text(self, height=10, width=60, bg="black", fg="light cyan")
-        self.output_text.pack()
+        self.output_label = tk.Label(self, text="Hashcat Output:", fg="light cyan", bg="black", font=("Arial", 12))
+        self.output_label.pack(pady=5)
+        # Adjusted size for the output text box
+        self.output_text = tk.Text(self, height=5, width=60, bg="black", fg="light cyan", font=("Arial", 12))
+        self.output_text.pack(pady=5)
 
         # Run Hashcat Button
-        self.run_button = tk.Button(self, text="Run Hashcat", command=self.run_hashcat, bg="black", fg="light cyan")
-        self.run_button.pack()
+        self.run_button = self.create_button("Run Hashcat", self.run_hashcat)
+        self.run_button.pack(pady=20)
+
+    def create_button(self, text, command):
+        """Create a styled button with hover effects."""
+        button = tk.Button(self, text=text, command=command, bg="#4CAF50", fg="white", font=("Arial", 12, "bold"), bd=3)
+        button.bind("<Enter>", lambda e: button.config(bg="#45a049"))  # Hover effect
+        button.bind("<Leave>", lambda e: button.config(bg="#4CAF50"))  # Reset color
+        return button
 
     def browse_hash_file(self):
         """Browse for the hash file."""
@@ -133,9 +130,6 @@ class HashcatGUI(tk.Tk):
         temp_abort_enabled = self.temp_option_var.get()  # Check if temperature abortion is enabled
         temp_abort_value = self.temp_slider.get()  # Get temperature abortion threshold
         optimized_kernel = self.kernel_var.get()
-
-        # Print the state of the checkboxes
-        print(f"GPU Enabled: {gpu_enabled}, Temperature Abort Enabled: {temp_abort_enabled}, Optimized Kernel: {optimized_kernel}")
 
         # Validate inputs
         if not os.path.isfile(hash_file):
@@ -171,31 +165,14 @@ class HashcatGUI(tk.Tk):
 
         # Output estimated time
         file_size = os.path.getsize(wordlist)
-        estimated_time = self.estimate_time(file_size)
-        self.output_text.insert(tk.END, f"Estimated Time: {estimated_time} seconds\n")
+        self.output_text.insert(tk.END, f"Estimated time: {file_size // 1024} seconds\n")
 
-        # Execute the command
+        # Execute the command and handle output
         try:
-            self.output_text.insert(tk.END, "Running Hashcat...\n")
-            self.output_text.see(tk.END)
-
-            process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-            for line in process.stdout:
-                self.output_text.insert(tk.END, line)
-                self.output_text.see(tk.END)
-            process.stdout.close()
-            process.wait()
+            result = subprocess.run(command, capture_output=True, text=True)
+            self.output_text.insert(tk.END, result.stdout)
         except Exception as e:
-            messagebox.showerror("Error", f"Failed to run Hashcat: {str(e)}")
-            return
-
-    def estimate_time(self, file_size):
-        """Estimate time based on file size."""
-        # This is just an arbitrary calculation for demo purposes.
-        # A better estimate would depend on the specific hardware and hash type.
-        estimated_time = file_size / 1e6  # Simulating a time estimate based on file size
-        return round(estimated_time, 2)
-
+            messagebox.showerror("Error", f"Failed to execute Hashcat: {e}")
 
 if __name__ == "__main__":
     app = HashcatGUI()
