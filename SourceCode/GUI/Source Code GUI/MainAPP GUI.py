@@ -5,6 +5,7 @@ from tkinter import font as tkFont
 root = tk.Tk()
 root.title("Multipurpose AI Password Analysis Tool")
 
+
 # Make the window resizable and set minimum size
 root.geometry("800x600")
 root.minsize(800, 600)  # Prevent the window from being too small
@@ -34,7 +35,7 @@ def create_widgets():
     # Create buttons
     dictionary_button = tk.Button(button_frame, text="Dictionary Attack", 
                                   font=tkFont.Font(size=20), width=20, height=2, 
-                                  bg="light gray", fg="black")
+                                  bg="light gray", fg="black" )
     dictionary_button.grid(row=0, column=0, padx=20)
 
     analysis_button = tk.Button(button_frame, text="Password Analysis", 
