@@ -191,13 +191,20 @@ class HashcatGUI(tk.Tk):
     def go_back(self):
         self.destroy()
         # Add the parent directory to sys.path
-        parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        parent_dir = os.path.dirname(current_dir)
         sys.path.append(parent_dir)
         
-        # Import and run the MainAPP GUI
-        from MainAPP_GUI import MainAppGUI
-        main_app = MainAppGUI()
-        main_app.mainloop()
+        try:
+            from MainAPP_GUI import MainAppGUI # type: ignore
+            main_app = MainAppGUI()
+            main_app.mainloop()
+        except ImportError as e:
+            print(f"Error importing MainAppGUI: {e}")
+            print(f"sys.path: {sys.path}")
+            print(f"Current directory: {os.getcwd()}")
+            # Optionally, list files in the directory:
+            print(f"Files in {parent_dir}: {os.listdir(parent_dir)}")
 
 if __name__ == "__main__":
     app = HashcatGUI()
