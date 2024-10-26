@@ -1,5 +1,8 @@
 import tkinter as tk
 from tkinter import font as tkFont
+import subprocess
+import sys
+import os
 
 # Create the root window with a default title bar
 root = tk.Tk()
@@ -32,16 +35,31 @@ def create_widgets():
     button_frame = tk.Frame(root, bg="black")
     button_frame.pack(expand=True, pady=20)  # Use expand to center it vertically
 
-    # Create buttons
+    # Create buttons with command bindings
     dictionary_button = tk.Button(button_frame, text="Dictionary Attack", 
                                   font=tkFont.Font(size=20), width=20, height=2, 
-                                  bg="light gray", fg="black" )
+                                  bg="light gray", fg="black",
+                                  command=open_dictionary_attack)
     dictionary_button.grid(row=0, column=0, padx=20)
 
     analysis_button = tk.Button(button_frame, text="Password Analysis", 
                                 font=tkFont.Font(size=20), width=20, height=2, 
-                                bg="light gray", fg="black")
+                                bg="light gray", fg="black",
+                                command=open_password_analysis)
     analysis_button.grid(row=0, column=1, padx=20)
+
+# Navigation functions
+def open_dictionary_attack():
+    root.destroy()  # Close the current window
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    script_path = os.path.join(script_dir, "DICT ATTACK GUI_2.py")
+    subprocess.run([sys.executable, script_path])
+
+def open_password_analysis():
+    root.destroy()  # Close the current window
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    script_path = os.path.join(script_dir, "Pass Analysis.py")
+    subprocess.run([sys.executable, script_path])
 
 # Create widgets after the root window is initialized
 create_widgets()
