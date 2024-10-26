@@ -8,7 +8,7 @@ class HashcatGUI(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Multi-purpose AI Password Analysis Tool - Dictionary Attack")
-        self.geometry("900x600")
+        self.geometry(f"{1100}x{700}+{133}+{34}")
         self.configure(bg="black")
 
         # Add back button

@@ -7,11 +7,16 @@ import os
 # Create the root window with a default title bar
 root = tk.Tk()
 root.title("Multipurpose AI Password Analysis Tool")
+window_width = 1100
+window_height = 700
+x_position = 133 # Distance from the left side of the screen
+y_position = 34
+root.geometry(f"{window_width}x{window_height}+{x_position}+{y_position}")
 
 
 # Make the window resizable and set minimum size
-root.geometry("800x600")
-root.minsize(800, 600)  # Prevent the window from being too small
+#root.geometry("800x600")
+#root.minsize(800, 600)  # Prevent the window from being too small
 
 # Set a canvas for the background (with black background)
 background_canvas = tk.Canvas(root, bg="black")
@@ -50,13 +55,13 @@ def create_widgets():
 
 # Navigation functions
 def open_dictionary_attack():
-    root.destroy()  # Close the current window
+    #root.destroy()  # Close the current window
     script_dir = os.path.dirname(os.path.abspath(__file__))
     script_path = os.path.join(script_dir, "DICT ATTACK GUI_2.py")
     subprocess.run([sys.executable, script_path])
 
 def open_password_analysis():
-    root.destroy()  # Close the current window
+    #root.destroy()  # Close the current window
     script_dir = os.path.dirname(os.path.abspath(__file__))
     script_path = os.path.join(script_dir, "Pass Analysis.py")
     subprocess.run([sys.executable, script_path])

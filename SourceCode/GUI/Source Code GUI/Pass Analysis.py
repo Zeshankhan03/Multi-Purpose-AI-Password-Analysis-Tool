@@ -12,13 +12,33 @@ class PasswordAnalysisApp(tk.Tk):
         self.configure(bg="black")
 
         # Set window to fit the screen size with default title bar
-        self.geometry(f"{self.winfo_screenwidth()}x{self.winfo_screenheight()}+0+0")
+        self.geometry(f"{1100}x{700}+{133}+{34}")
+
+
+        # Create the back button
+        self.create_back_button()
 
         # Create the heading for the app
         self.create_heading()
 
         # Create the file selection button to load the AI model
         self.create_file_selection_button()
+
+    def create_back_button(self):
+        """Create a back button in the top right corner."""
+        back_button = tk.Button(self, text="Back", command=self.go_back, font=("Helvetica", 12), bg="dark cyan", fg="black")
+        back_button.place(relx=1.0, rely=0,x =-10, y=10, anchor="ne")
+        
+
+    def go_back(self):
+        """Function to handle the back button click."""
+        # You'll need to implement the logic to go back to the previous screen
+        # For now, we'll just print a message
+        print("Back button clicked")
+        # Uncomment and modify the next line when you have the previous screen implemented
+        self.destroy()  # Close current window
+        #previous_screen = PreviousScreenClass()  # Create instance of previous screen
+        #previous_screen.mainloop()  # Start the previous screen's main loop
 
     def create_heading(self):
         """Create the app heading label."""
@@ -64,4 +84,3 @@ class PasswordAnalysisApp(tk.Tk):
 if __name__ == "__main__":
     app = PasswordAnalysisApp()
     app.mainloop()
-
