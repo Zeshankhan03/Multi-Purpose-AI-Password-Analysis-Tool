@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 import subprocess
 import os
+import sys
 
 class HashcatGUI(tk.Tk):
     def __init__(self):
@@ -9,6 +10,14 @@ class HashcatGUI(tk.Tk):
         self.title("Multi-purpose AI Password Analysis Tool - Dictionary Attack")
         self.geometry("900x600")
         self.configure(bg="black")
+
+        # Add back button
+        self.back_button = self.create_button(self, "Back", self.go_back)
+        self.back_button.place(relx=1.0, rely=0, x=-10, y=10, anchor="ne")
+
+        # Create main frame to hold all other widgets
+        main_frame = tk.Frame(self, bg="black")
+        main_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=40)  # Add top padding for the back button
 
         # Define hash types
         self.hash_types = {
@@ -19,11 +28,11 @@ class HashcatGUI(tk.Tk):
             "NTLM": 1000
         }
 
-        # Create left and right frames
-        left_frame = tk.Frame(self, bg="black")
-        left_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True, padx=10)
-        right_frame = tk.Frame(self, bg="black")
-        right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=10)
+        # Create left and right frames inside the main frame
+        left_frame = tk.Frame(main_frame, bg="black")
+        left_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        right_frame = tk.Frame(main_frame, bg="black")
+        right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
 
         # Left frame elements
         self.create_left_frame(left_frame)
@@ -179,6 +188,22 @@ class HashcatGUI(tk.Tk):
         except Exception as e:
             messagebox.showerror("Error", f"Failed to execute Hashcat: {e}")
 
+    def go_back(self):
+        self.destroy()
+        # Add the parent directory to sys.path
+        parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        sys.path.append(parent_dir)
+        
+        # Import and run the MainAPP GUI
+        from MainAPP_GUI import MainAppGUI
+        main_app = MainAppGUI()
+        main_app.mainloop()
+
 if __name__ == "__main__":
     app = HashcatGUI()
     app.mainloop()
+else:
+    # This allows the MainAppGUI to create an instance of HashcatGUI
+    def run_hashcat_gui():
+        app = HashcatGUI()
+        app.mainloop()
