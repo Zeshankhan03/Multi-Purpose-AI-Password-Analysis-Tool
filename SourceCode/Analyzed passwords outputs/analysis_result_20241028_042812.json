@@ -1,0 +1,12 @@
+{
+    "timestamp": "2024-10-28T04:28:12.376918",
+    "strength_score": 80,
+    "vulnerabilities": [
+        "Missing special characters"
+    ],
+    "patterns": [],
+    "recommendations": [
+        "Address the following vulnerabilities:",
+        "- Missing special characters"
+    ]
+}

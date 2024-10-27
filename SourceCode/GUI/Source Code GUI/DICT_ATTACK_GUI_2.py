@@ -53,14 +53,28 @@ class HashcatGUI(QMainWindow):
         self.create_widgets()
 
     def create_widgets(self):
+        # Main layout
+        main_content = QVBoxLayout()
+        
+        # Add title at the top
+        title_label = QLabel("AI-Powered Dictionary Attack")
+        title_label.setFont(QFont("Helvetica", 16))
+        title_label.setAlignment(Qt.AlignCenter)
+        title_label.setStyleSheet("color: white; margin: 10px 0;")  # Add margin for spacing
+        main_content.addWidget(title_label)
+        
         # Back button at top right
+        back_button_layout = QHBoxLayout()
+        back_button_layout.addStretch()  # Push button to right
         self.back_button = QPushButton("Back")
         self.back_button.setFixedSize(100, 40)
         self.back_button.clicked.connect(self.go_back)
-        self.main_layout.addWidget(self.back_button, alignment=Qt.AlignTop | Qt.AlignRight)
-
+        back_button_layout.addWidget(self.back_button)
+        main_content.addLayout(back_button_layout)
+        
         # Main content layout
         content_layout = QHBoxLayout()
+        self.main_layout.addLayout(main_content)
         self.main_layout.addLayout(content_layout)
 
         # Left side - Options
@@ -168,15 +182,16 @@ class HashcatGUI(QMainWindow):
         optimized_kernel = self.kernel_checkbox.isChecked()
 
         if not os.path.isfile(hash_file):
-            msg = QMessageBox()
+            msg = QMessageBox(self)  # Add parent
             msg.setIcon(QMessageBox.Critical)
             msg.setWindowTitle("Error")
             msg.setText("Invalid hash file.")
+            msg.setWindowModality(Qt.WindowModal)  # Make it modal
             msg.setStyleSheet("""
                 QMessageBox {
                     background-color: white;
                 }
-                QLabel {
+                QMessageBox QLabel {
                     color: black;
                     font-size: 12pt;
                 }
