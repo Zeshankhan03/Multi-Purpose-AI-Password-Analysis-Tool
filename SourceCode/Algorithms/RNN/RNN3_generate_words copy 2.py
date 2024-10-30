@@ -7,7 +7,6 @@ import tqdm
 from datetime import datetime
 import platform
 import psutil
-from collections import defaultdict, Counter
 
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -45,9 +44,10 @@ print(f"Device: {device}")
 print(f"Platform: {platform.system()} {platform.release()} ({platform.processor()})")
 print(f"Total Memory: {psutil.virtual_memory().total / (1024 ** 3):.2f} GB")
 
-# Directory setup for output
+# Directory setup
 output_dir = "SourceCode/Generated_Dict"
 os.makedirs(output_dir, exist_ok=True)
+output_file = os.path.join(output_dir, f"generated_words_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
 
 # Function to generate a single word
 def generate_word(model, start_char, length, temperature=1.0):
@@ -68,42 +68,28 @@ def generate_word(model, start_char, length, temperature=1.0):
     
     return word
 
-# Configuration
+# Main word generation with multithreading for individual words
+start_char = 'o'
 word_length = 8
 temperature = 0.5
 total_words = 1000000
-most_common_count = 10  # Number of top starting characters to create sets
+#max_concurrent_threads = 128  # Max number of threads to run at a time
 
-# Generate words with progress monitoring and track starting characters
-start_char_count = Counter()
-generated_words = defaultdict(list)
-
+# Display thread and generation information
 print(f"Total words to generate: {total_words}")
+#print(f"Max concurrent threads: {max_concurrent_threads}")
 
-with tqdm.tqdm(total=total_words, desc="Generating Words") as total_progress:
-    with ThreadPoolExecutor() as executor:
-        futures = [executor.submit(generate_word, model, start_char, word_length, temperature) for _ in range(total_words)]
-        
-        for future in as_completed(futures):
-            word = future.result()
-            start_char = word[0]
-            start_char_count[start_char] += 1
-            generated_words[start_char].append(word)
-            total_progress.update(1)
+# File output with combined progress monitoring
+with open(output_file, "w") as file:
+    with tqdm.tqdm(total=total_words, desc="Total Progress") as total_progress:
+        #with ThreadPoolExecutor(max_workers=max_concurrent_threads) as executor:
+        with ThreadPoolExecutor() as executor:
+            futures = [executor.submit(generate_word, model, start_char, word_length, temperature) for _ in range(total_words)]
+            
+            # Process each generated word as it completes
+            for future in as_completed(futures):
+                word = future.result()
+                file.write(word + '\n')  # Write each word to file
+                total_progress.update(1)  # Update combined progress bar
 
-# Select the most common starting characters and equally divide words among them
-most_common_starts = [char for char, _ in start_char_count.most_common(most_common_count)]
-output_files = {}
-
-# Save divided sets to separate files
-for start_char in most_common_starts:
-    set_filename = os.path.join(output_dir, f"generated_words_{start_char}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
-    output_files[start_char] = set_filename
-    with open(set_filename, "w") as file:
-        for word in generated_words[start_char]:
-            file.write(word + '\n')
-
-print(f"Word generation complete. Output saved to individual files for each starting character.")
-print("Files created for each set:")
-for char, filepath in output_files.items():
-    print(f" - {char}: {filepath}")
+print(f"Word generation complete. Output saved to {output_file}")

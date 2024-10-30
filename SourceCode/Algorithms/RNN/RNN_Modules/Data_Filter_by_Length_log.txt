@@ -1,4 +1,0 @@
-Processed input file: ML_Algorithms\RNN\Human\Dic\drealhuman_phill.txt, Output file: ML_Algorithms\RNN\Human\length_5\filtered_words_drealhuman_phill.txt
-Processed input file: ML_Algorithms\RNN\Human\Dic\drealhuman_phill.txt, Output file: ML_Algorithms\RNN\Human\length_6\filtered_words_drealhuman_phill.txt
-Processed input file: ML_Algorithms\RNN\Human\Dic\drealhuman_phill.txt, Output file: ML_Algorithms\RNN\Human\length_7\filtered_words_drealhuman_phill.txt
-Processed input file: ML_Algorithms\RNN\Human\Dic\drealhuman_phill.txt, Output file: ML_Algorithms\RNN\Human\length_8\filtered_words_drealhuman_phill.txt
