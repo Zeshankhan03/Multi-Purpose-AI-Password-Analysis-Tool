@@ -7,7 +7,6 @@ import tqdm
 from datetime import datetime
 import platform
 import psutil
-from collections import defaultdict, Counter
 
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -45,9 +44,17 @@ print(f"Device: {device}")
 print(f"Platform: {platform.system()} {platform.release()} ({platform.processor()})")
 print(f"Total Memory: {psutil.virtual_memory().total / (1024 ** 3):.2f} GB")
 
-# Directory setup for output
+# Directory setup
 output_dir = "SourceCode/Generated_Dict"
 os.makedirs(output_dir, exist_ok=True)
+
+# Character groups for password generation
+uppercase_chars = [chr(i) for i in range(65, 91)]  # A-Z
+lowercase_chars = [chr(i) for i in range(97, 123)] # a-z
+special_chars = ['!', '@', '#', '$', '%', '^', '&', '(', ')', '_', '+', '-', '=']
+
+# Combined set of characters for iteration
+starting_chars = uppercase_chars + lowercase_chars
 
 # Function to generate a single word
 def generate_word(model, start_char, length, temperature=1.0):
@@ -68,42 +75,45 @@ def generate_word(model, start_char, length, temperature=1.0):
     
     return word
 
-# Configuration
+# Generate words for each starting character and save them in separate files
 word_length = 8
 temperature = 0.5
-total_words = 1000000
-most_common_count = 10  # Number of top starting characters to create sets
+words_per_char = 10000  # Number of words per starting character 65*count
+#max_concurrent_threads = 128  # Max number of threads to run at a time
 
-# Generate words with progress monitoring and track starting characters
-start_char_count = Counter()
-generated_words = defaultdict(list)
 
-print(f"Total words to generate: {total_words}")
+# Generate words starting with uppercase and lowercase characters separately
+for start_char in starting_chars:
+    output_file = os.path.join(output_dir, f"generated_words_{start_char}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
+    print(f"Generating words starting with '{start_char}'...")
+    
+    with open(output_file, "w") as file:
+        with tqdm.tqdm(total=words_per_char, desc=f"Generating for {start_char}") as progress_bar:
+            #with ThreadPoolExecutor(max_workers=max_concurrent_threads) as executor:
+            with ThreadPoolExecutor() as executor:
+                futures = [executor.submit(generate_word, model, start_char, word_length, temperature) for _ in range(words_per_char)]
+                
+                for future in as_completed(futures):
+                    word = future.result()
+                    file.write(word + '\n')
+                    progress_bar.update(1)
 
-with tqdm.tqdm(total=total_words, desc="Generating Words") as total_progress:
-    with ThreadPoolExecutor() as executor:
-        futures = [executor.submit(generate_word, model, start_char, word_length, temperature) for _ in range(total_words)]
-        
-        for future in as_completed(futures):
-            word = future.result()
-            start_char = word[0]
-            start_char_count[start_char] += 1
-            generated_words[start_char].append(word)
-            total_progress.update(1)
+    print(f"Words starting with '{start_char}' saved to {output_file}")
 
-# Select the most common starting characters and equally divide words among them
-most_common_starts = [char for char, _ in start_char_count.most_common(most_common_count)]
-output_files = {}
+# Generate all special character words in a single file
+special_output_file = os.path.join(output_dir, f"generated_words_special_chars_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
+print("Generating words starting with special characters...")
 
-# Save divided sets to separate files
-for start_char in most_common_starts:
-    set_filename = os.path.join(output_dir, f"generated_words_{start_char}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
-    output_files[start_char] = set_filename
-    with open(set_filename, "w") as file:
-        for word in generated_words[start_char]:
-            file.write(word + '\n')
+with open(special_output_file, "w") as special_file:
+    with tqdm.tqdm(total=words_per_char * len(special_chars), desc="Generating for special characters") as progress_bar:
+        with ThreadPoolExecutor() as executor:
+            for start_char in special_chars:
+                futures = [executor.submit(generate_word, model, start_char, word_length, temperature) for _ in range(words_per_char)]
+                
+                for future in as_completed(futures):
+                    word = future.result()
+                    special_file.write(word + '\n')
+                    progress_bar.update(1)
 
-print(f"Word generation complete. Output saved to individual files for each starting character.")
-print("Files created for each set:")
-for char, filepath in output_files.items():
-    print(f" - {char}: {filepath}")
+print(f"Words starting with special characters saved to {special_output_file}")
+print("Word generation complete for all specified starting characters.")
