@@ -23,8 +23,8 @@ class RNNModel(nn.Module):
 #device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 device = torch.device('cuda')
 print(device)
-char_to_idx = torch.load('ML_Algorithms/RNN/Human/char_to_idx.pth')
-idx_to_char = torch.load('ML_Algorithms/RNN/Human/idx_to_char.pth')
+char_to_idx = torch.load(R'SourceCode\Algorithms\RNN\char_to_idx.pth')
+idx_to_char = torch.load(R'SourceCode\Algorithms\RNN\idx_to_char.pth')
 chars = sorted(char_to_idx.keys())
 
 input_size = len(chars)
@@ -32,7 +32,7 @@ hidden_size = 64
 num_layers = 2
 
 model = RNNModel(input_size, hidden_size, num_layers, len(chars)).to(device)
-model.load_state_dict(torch.load('ML_Algorithms/RNN/Human/rnn_model.pth'))
+model.load_state_dict(torch.load(R'SourceCode\Algorithms\RNN\rnn_model.pth'))
 
 def generate_word(model, start_char, length, temperature=1.0):
     model.eval()
