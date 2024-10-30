@@ -1,0 +1,3 @@
+-m hashtypes -a attack mode -I or -II for Backend Info -w workloadprofile 
+
+hashcat -a 0 -m 0 I:\Project AI Password\Multi-Purpose-AI-Password-Analysis-Tool\SourceCode\Demo_Hashes\md5-hashes.txt I:\Project AI\FYP Part 1\AI Codes\Filtered_Passwords_Dataset\length_8\filtered_words_00000032.txt
