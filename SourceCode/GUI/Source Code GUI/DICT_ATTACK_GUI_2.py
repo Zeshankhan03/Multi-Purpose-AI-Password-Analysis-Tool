@@ -235,7 +235,7 @@ class HashcatGUI(QMainWindow):
             msg.exec_()
             return
 
-        command = ["hashcat", "-m", str(selected_hash_type), hash_file, wordlist]
+        command = [f"I:\Project AI Password\Multi-Purpose-AI-Password-Analysis-Tool\SourceCode\hashcat-6.2.6.\hashcat.exe", "-m", str(selected_hash_type), hash_file, wordlist]
 
         if gpu_enabled:
             command.append("--opencl-device-types=1")
