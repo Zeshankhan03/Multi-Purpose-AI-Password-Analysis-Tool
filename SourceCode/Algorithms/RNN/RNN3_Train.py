@@ -10,7 +10,7 @@ hidden_size = 64
 num_layers = 2
 num_epochs = 50  # Reduced epochs for demonstration; increase as needed
 learning_rate = 0.003
-batch_size = 222000  # Adjust batch size here
+batch_size = 5000  # Adjust batch size here
 
 print("Reading the Dataset.")
 def read_words(file_path):
