@@ -281,8 +281,26 @@ class HashcatGUI(QMainWindow):
         self.output_text.append(f"Estimated time: {file_size // 1024} seconds")
 
         try:
-            result = subprocess.run(command, capture_output=True, text=True)
-            self.output_text.append(result.stdout)
+            # Create a new console window for Hashcat
+            startupinfo = None
+            if os.name == 'nt':  # Windows
+                import subprocess
+                startupinfo = subprocess.STARTUPINFO()
+                startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+                creationflags = subprocess.CREATE_NEW_CONSOLE
+            else:  # Unix-like systems
+                creationflags = 0
+
+            self.output_text.append(f"Starting Hashcat in a new window...")
+            process = subprocess.Popen(
+                command,
+                creationflags=creationflags,
+                startupinfo=startupinfo
+            )
+            
+            # Don't wait for the process to complete
+            self.output_text.append("Hashcat is running in a separate window. Please check the other window for progress.")
+            
         except Exception as e:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Critical)
