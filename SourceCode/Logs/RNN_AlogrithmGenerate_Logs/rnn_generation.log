@@ -412,3 +412,279 @@
 2024-11-10 01:31:16,415 - INFO - Completed generation for special character '='
 2024-11-10 01:31:16,421 - INFO - Special characters generation complete. Total: 1300, Errors: 0
 2024-11-10 01:31:16,421 - INFO - === Generation Session Completed ===
+2024-11-10 01:33:41,764 - INFO - === New Generation Session Started ===
+2024-11-10 01:33:41,765 - INFO - Device: cuda
+2024-11-10 01:33:41,765 - INFO - Platform: Windows 10 (Intel64 Family 6 Model 79 Stepping 1, GenuineIntel)
+2024-11-10 01:33:41,771 - INFO - Total Memory: 63.92 GB
+2024-11-10 01:33:41,772 - INFO - Model Configuration - Input Size: 432, Hidden Size: 64, Num Layers: 2
+2024-11-10 01:33:41,773 - INFO - Starting generation for character 'A' -> SourceCode/Generated_Dict\generated_words_A_20241110_013341.txt
+2024-11-10 01:33:42,474 - INFO - Completed generation for 'A'. Total: 100, Errors: 0
+2024-11-10 01:33:42,475 - INFO - Starting generation for character 'B' -> SourceCode/Generated_Dict\generated_words_B_20241110_013342.txt
+2024-11-10 01:33:42,915 - INFO - Completed generation for 'B'. Total: 100, Errors: 0
+2024-11-10 01:33:42,916 - INFO - Starting generation for character 'C' -> SourceCode/Generated_Dict\generated_words_C_20241110_013342.txt
+2024-11-10 01:33:43,358 - INFO - Completed generation for 'C'. Total: 100, Errors: 0
+2024-11-10 01:33:43,359 - INFO - Starting generation for character 'D' -> SourceCode/Generated_Dict\generated_words_D_20241110_013343.txt
+2024-11-10 01:33:43,805 - INFO - Completed generation for 'D'. Total: 100, Errors: 0
+2024-11-10 01:33:43,805 - INFO - Starting generation for character 'E' -> SourceCode/Generated_Dict\generated_words_E_20241110_013343.txt
+2024-11-10 01:33:44,254 - INFO - Completed generation for 'E'. Total: 100, Errors: 0
+2024-11-10 01:33:44,255 - INFO - Starting generation for character 'F' -> SourceCode/Generated_Dict\generated_words_F_20241110_013344.txt
+2024-11-10 01:33:44,708 - INFO - Completed generation for 'F'. Total: 100, Errors: 0
+2024-11-10 01:33:44,708 - INFO - Starting generation for character 'G' -> SourceCode/Generated_Dict\generated_words_G_20241110_013344.txt
+2024-11-10 01:33:45,156 - INFO - Completed generation for 'G'. Total: 100, Errors: 0
+2024-11-10 01:33:45,157 - INFO - Starting generation for character 'H' -> SourceCode/Generated_Dict\generated_words_H_20241110_013345.txt
+2024-11-10 01:33:45,603 - INFO - Completed generation for 'H'. Total: 100, Errors: 0
+2024-11-10 01:33:45,604 - INFO - Starting generation for character 'I' -> SourceCode/Generated_Dict\generated_words_I_20241110_013345.txt
+2024-11-10 01:33:46,051 - INFO - Completed generation for 'I'. Total: 100, Errors: 0
+2024-11-10 01:33:46,052 - INFO - Starting generation for character 'J' -> SourceCode/Generated_Dict\generated_words_J_20241110_013346.txt
+2024-11-10 01:33:46,505 - INFO - Completed generation for 'J'. Total: 100, Errors: 0
+2024-11-10 01:33:46,506 - INFO - Starting generation for character 'K' -> SourceCode/Generated_Dict\generated_words_K_20241110_013346.txt
+2024-11-10 01:33:46,946 - INFO - Completed generation for 'K'. Total: 100, Errors: 0
+2024-11-10 01:33:46,947 - INFO - Starting generation for character 'L' -> SourceCode/Generated_Dict\generated_words_L_20241110_013346.txt
+2024-11-10 01:33:47,387 - INFO - Completed generation for 'L'. Total: 100, Errors: 0
+2024-11-10 01:33:47,388 - INFO - Starting generation for character 'M' -> SourceCode/Generated_Dict\generated_words_M_20241110_013347.txt
+2024-11-10 01:33:47,832 - INFO - Completed generation for 'M'. Total: 100, Errors: 0
+2024-11-10 01:33:47,833 - INFO - Starting generation for character 'N' -> SourceCode/Generated_Dict\generated_words_N_20241110_013347.txt
+2024-11-10 01:33:48,301 - INFO - Completed generation for 'N'. Total: 100, Errors: 0
+2024-11-10 01:33:48,302 - INFO - Starting generation for character 'O' -> SourceCode/Generated_Dict\generated_words_O_20241110_013348.txt
+2024-11-10 01:33:48,776 - INFO - Completed generation for 'O'. Total: 100, Errors: 0
+2024-11-10 01:33:48,777 - INFO - Starting generation for character 'P' -> SourceCode/Generated_Dict\generated_words_P_20241110_013348.txt
+2024-11-10 01:33:49,240 - INFO - Completed generation for 'P'. Total: 100, Errors: 0
+2024-11-10 01:33:49,241 - INFO - Starting generation for character 'Q' -> SourceCode/Generated_Dict\generated_words_Q_20241110_013349.txt
+2024-11-10 01:33:49,718 - INFO - Completed generation for 'Q'. Total: 100, Errors: 0
+2024-11-10 01:33:49,719 - INFO - Starting generation for character 'R' -> SourceCode/Generated_Dict\generated_words_R_20241110_013349.txt
+2024-11-10 01:33:50,180 - INFO - Completed generation for 'R'. Total: 100, Errors: 0
+2024-11-10 01:33:50,181 - INFO - Starting generation for character 'S' -> SourceCode/Generated_Dict\generated_words_S_20241110_013350.txt
+2024-11-10 01:33:50,676 - INFO - Completed generation for 'S'. Total: 100, Errors: 0
+2024-11-10 01:33:50,677 - INFO - Starting generation for character 'T' -> SourceCode/Generated_Dict\generated_words_T_20241110_013350.txt
+2024-11-10 01:33:51,167 - INFO - Completed generation for 'T'. Total: 100, Errors: 0
+2024-11-10 01:33:51,167 - INFO - Starting generation for character 'U' -> SourceCode/Generated_Dict\generated_words_U_20241110_013351.txt
+2024-11-10 01:33:51,660 - INFO - Completed generation for 'U'. Total: 100, Errors: 0
+2024-11-10 01:33:51,661 - INFO - Starting generation for character 'V' -> SourceCode/Generated_Dict\generated_words_V_20241110_013351.txt
+2024-11-10 01:33:52,199 - INFO - Completed generation for 'V'. Total: 100, Errors: 0
+2024-11-10 01:33:52,200 - INFO - Starting generation for character 'W' -> SourceCode/Generated_Dict\generated_words_W_20241110_013352.txt
+2024-11-10 01:33:52,679 - INFO - Completed generation for 'W'. Total: 100, Errors: 0
+2024-11-10 01:33:52,680 - INFO - Starting generation for character 'X' -> SourceCode/Generated_Dict\generated_words_X_20241110_013352.txt
+2024-11-10 01:33:53,158 - INFO - Completed generation for 'X'. Total: 100, Errors: 0
+2024-11-10 01:33:53,159 - INFO - Starting generation for character 'Y' -> SourceCode/Generated_Dict\generated_words_Y_20241110_013353.txt
+2024-11-10 01:33:53,641 - INFO - Completed generation for 'Y'. Total: 100, Errors: 0
+2024-11-10 01:33:53,642 - INFO - Starting generation for character 'Z' -> SourceCode/Generated_Dict\generated_words_Z_20241110_013353.txt
+2024-11-10 01:33:54,183 - INFO - Completed generation for 'Z'. Total: 100, Errors: 0
+2024-11-10 01:33:54,183 - INFO - Starting generation for character 'a' -> SourceCode/Generated_Dict\generated_words_a_20241110_013354.txt
+2024-11-10 01:33:54,666 - INFO - Completed generation for 'a'. Total: 100, Errors: 0
+2024-11-10 01:33:54,667 - INFO - Starting generation for character 'b' -> SourceCode/Generated_Dict\generated_words_b_20241110_013354.txt
+2024-11-10 01:33:55,130 - INFO - Completed generation for 'b'. Total: 100, Errors: 0
+2024-11-10 01:33:55,131 - INFO - Starting generation for character 'c' -> SourceCode/Generated_Dict\generated_words_c_20241110_013355.txt
+2024-11-10 01:33:55,602 - INFO - Completed generation for 'c'. Total: 100, Errors: 0
+2024-11-10 01:33:55,603 - INFO - Starting generation for character 'd' -> SourceCode/Generated_Dict\generated_words_d_20241110_013355.txt
+2024-11-10 01:33:56,081 - INFO - Completed generation for 'd'. Total: 100, Errors: 0
+2024-11-10 01:33:56,081 - INFO - Starting generation for character 'e' -> SourceCode/Generated_Dict\generated_words_e_20241110_013356.txt
+2024-11-10 01:33:56,635 - INFO - Completed generation for 'e'. Total: 100, Errors: 0
+2024-11-10 01:33:56,636 - INFO - Starting generation for character 'f' -> SourceCode/Generated_Dict\generated_words_f_20241110_013356.txt
+2024-11-10 01:33:57,142 - INFO - Completed generation for 'f'. Total: 100, Errors: 0
+2024-11-10 01:33:57,143 - INFO - Starting generation for character 'g' -> SourceCode/Generated_Dict\generated_words_g_20241110_013357.txt
+2024-11-10 01:33:57,602 - INFO - Completed generation for 'g'. Total: 100, Errors: 0
+2024-11-10 01:33:57,603 - INFO - Starting generation for character 'h' -> SourceCode/Generated_Dict\generated_words_h_20241110_013357.txt
+2024-11-10 01:33:58,064 - INFO - Completed generation for 'h'. Total: 100, Errors: 0
+2024-11-10 01:33:58,065 - INFO - Starting generation for character 'i' -> SourceCode/Generated_Dict\generated_words_i_20241110_013358.txt
+2024-11-10 01:33:58,535 - INFO - Completed generation for 'i'. Total: 100, Errors: 0
+2024-11-10 01:33:58,536 - INFO - Starting generation for character 'j' -> SourceCode/Generated_Dict\generated_words_j_20241110_013358.txt
+2024-11-10 01:33:59,049 - INFO - Completed generation for 'j'. Total: 100, Errors: 0
+2024-11-10 01:33:59,050 - INFO - Starting generation for character 'k' -> SourceCode/Generated_Dict\generated_words_k_20241110_013359.txt
+2024-11-10 01:33:59,590 - INFO - Completed generation for 'k'. Total: 100, Errors: 0
+2024-11-10 01:33:59,591 - INFO - Starting generation for character 'l' -> SourceCode/Generated_Dict\generated_words_l_20241110_013359.txt
+2024-11-10 01:34:00,058 - INFO - Completed generation for 'l'. Total: 100, Errors: 0
+2024-11-10 01:34:00,059 - INFO - Starting generation for character 'm' -> SourceCode/Generated_Dict\generated_words_m_20241110_013400.txt
+2024-11-10 01:34:00,528 - INFO - Completed generation for 'm'. Total: 100, Errors: 0
+2024-11-10 01:34:00,529 - INFO - Starting generation for character 'n' -> SourceCode/Generated_Dict\generated_words_n_20241110_013400.txt
+2024-11-10 01:34:00,988 - INFO - Completed generation for 'n'. Total: 100, Errors: 0
+2024-11-10 01:34:00,989 - INFO - Starting generation for character 'o' -> SourceCode/Generated_Dict\generated_words_o_20241110_013400.txt
+2024-11-10 01:34:01,510 - INFO - Completed generation for 'o'. Total: 100, Errors: 0
+2024-11-10 01:34:01,511 - INFO - Starting generation for character 'p' -> SourceCode/Generated_Dict\generated_words_p_20241110_013401.txt
+2024-11-10 01:34:01,976 - INFO - Completed generation for 'p'. Total: 100, Errors: 0
+2024-11-10 01:34:01,976 - INFO - Starting generation for character 'q' -> SourceCode/Generated_Dict\generated_words_q_20241110_013401.txt
+2024-11-10 01:34:02,452 - INFO - Completed generation for 'q'. Total: 100, Errors: 0
+2024-11-10 01:34:02,453 - INFO - Starting generation for character 'r' -> SourceCode/Generated_Dict\generated_words_r_20241110_013402.txt
+2024-11-10 01:34:02,925 - INFO - Completed generation for 'r'. Total: 100, Errors: 0
+2024-11-10 01:34:02,926 - INFO - Starting generation for character 's' -> SourceCode/Generated_Dict\generated_words_s_20241110_013402.txt
+2024-11-10 01:34:03,548 - INFO - Completed generation for 's'. Total: 100, Errors: 0
+2024-11-10 01:34:03,548 - INFO - Starting generation for character 't' -> SourceCode/Generated_Dict\generated_words_t_20241110_013403.txt
+2024-11-10 01:34:04,012 - INFO - Completed generation for 't'. Total: 100, Errors: 0
+2024-11-10 01:34:04,012 - INFO - Starting generation for character 'u' -> SourceCode/Generated_Dict\generated_words_u_20241110_013404.txt
+2024-11-10 01:34:04,476 - INFO - Completed generation for 'u'. Total: 100, Errors: 0
+2024-11-10 01:34:04,477 - INFO - Starting generation for character 'v' -> SourceCode/Generated_Dict\generated_words_v_20241110_013404.txt
+2024-11-10 01:34:04,940 - INFO - Completed generation for 'v'. Total: 100, Errors: 0
+2024-11-10 01:34:04,940 - INFO - Starting generation for character 'w' -> SourceCode/Generated_Dict\generated_words_w_20241110_013404.txt
+2024-11-10 01:34:05,419 - INFO - Completed generation for 'w'. Total: 100, Errors: 0
+2024-11-10 01:34:05,419 - INFO - Starting generation for character 'x' -> SourceCode/Generated_Dict\generated_words_x_20241110_013405.txt
+2024-11-10 01:34:05,963 - INFO - Completed generation for 'x'. Total: 100, Errors: 0
+2024-11-10 01:34:05,964 - INFO - Starting generation for character 'y' -> SourceCode/Generated_Dict\generated_words_y_20241110_013405.txt
+2024-11-10 01:34:06,519 - INFO - Completed generation for 'y'. Total: 100, Errors: 0
+2024-11-10 01:34:06,519 - INFO - Starting generation for character 'z' -> SourceCode/Generated_Dict\generated_words_z_20241110_013406.txt
+2024-11-10 01:34:06,997 - INFO - Completed generation for 'z'. Total: 100, Errors: 0
+2024-11-10 01:34:06,998 - INFO - Starting special characters generation
+2024-11-10 01:34:07,000 - INFO - Starting generation for special character '!'
+2024-11-10 01:34:07,464 - INFO - Completed generation for special character '!'
+2024-11-10 01:34:07,465 - INFO - Starting generation for special character '@'
+2024-11-10 01:34:07,917 - INFO - Completed generation for special character '@'
+2024-11-10 01:34:07,918 - INFO - Starting generation for special character '#'
+2024-11-10 01:34:08,376 - INFO - Completed generation for special character '#'
+2024-11-10 01:34:08,377 - INFO - Starting generation for special character '$'
+2024-11-10 01:34:08,909 - INFO - Completed generation for special character '$'
+2024-11-10 01:34:08,910 - INFO - Starting generation for special character '%'
+2024-11-10 01:34:09,446 - INFO - Completed generation for special character '%'
+2024-11-10 01:34:09,447 - INFO - Starting generation for special character '^'
+2024-11-10 01:34:09,891 - INFO - Completed generation for special character '^'
+2024-11-10 01:34:09,892 - INFO - Starting generation for special character '&'
+2024-11-10 01:34:10,350 - INFO - Completed generation for special character '&'
+2024-11-10 01:34:10,351 - INFO - Starting generation for special character '('
+2024-11-10 01:34:10,797 - INFO - Completed generation for special character '('
+2024-11-10 01:34:10,797 - INFO - Starting generation for special character ')'
+2024-11-10 01:34:11,256 - INFO - Completed generation for special character ')'
+2024-11-10 01:34:11,257 - INFO - Starting generation for special character '_'
+2024-11-10 01:34:11,737 - INFO - Completed generation for special character '_'
+2024-11-10 01:34:11,738 - INFO - Starting generation for special character '+'
+2024-11-10 01:34:12,187 - INFO - Completed generation for special character '+'
+2024-11-10 01:34:12,188 - INFO - Starting generation for special character '-'
+2024-11-10 01:34:12,633 - INFO - Completed generation for special character '-'
+2024-11-10 01:34:12,634 - INFO - Starting generation for special character '='
+2024-11-10 01:34:13,083 - INFO - Completed generation for special character '='
+2024-11-10 01:34:13,088 - INFO - Special characters generation complete. Total: 1300, Errors: 0
+2024-11-10 01:34:13,089 - INFO - === Generation Session Completed ===
+2024-11-10 01:45:54,094 - INFO - === New Generation Session Started ===
+2024-11-10 01:45:54,095 - INFO - Device: cuda
+2024-11-10 01:45:54,095 - INFO - Platform: Windows 10 (Intel64 Family 6 Model 79 Stepping 1, GenuineIntel)
+2024-11-10 01:45:54,102 - INFO - Total Memory: 63.92 GB
+2024-11-10 01:45:54,102 - INFO - Model Configuration - Input Size: 432, Hidden Size: 64, Num Layers: 2
+2024-11-10 01:45:54,103 - INFO - Starting generation for character 'A' -> SourceCode/Generated_Dict\generated_words_A_20241110_014554.txt
+2024-11-10 01:45:54,940 - INFO - Completed generation for 'A'. Total: 100, Errors: 0
+2024-11-10 01:45:54,941 - INFO - Starting generation for character 'B' -> SourceCode/Generated_Dict\generated_words_B_20241110_014554.txt
+2024-11-10 01:45:55,404 - INFO - Completed generation for 'B'. Total: 100, Errors: 0
+2024-11-10 01:45:55,404 - INFO - Starting generation for character 'C' -> SourceCode/Generated_Dict\generated_words_C_20241110_014555.txt
+2024-11-10 01:45:55,871 - INFO - Completed generation for 'C'. Total: 100, Errors: 0
+2024-11-10 01:45:55,872 - INFO - Starting generation for character 'D' -> SourceCode/Generated_Dict\generated_words_D_20241110_014555.txt
+2024-11-10 01:45:56,344 - INFO - Completed generation for 'D'. Total: 100, Errors: 0
+2024-11-10 01:45:56,345 - INFO - Starting generation for character 'E' -> SourceCode/Generated_Dict\generated_words_E_20241110_014556.txt
+2024-11-10 01:45:56,820 - INFO - Completed generation for 'E'. Total: 100, Errors: 0
+2024-11-10 01:45:56,821 - INFO - Starting generation for character 'F' -> SourceCode/Generated_Dict\generated_words_F_20241110_014556.txt
+2024-11-10 01:45:57,304 - INFO - Completed generation for 'F'. Total: 100, Errors: 0
+2024-11-10 01:45:57,304 - INFO - Starting generation for character 'G' -> SourceCode/Generated_Dict\generated_words_G_20241110_014557.txt
+2024-11-10 01:45:57,783 - INFO - Completed generation for 'G'. Total: 100, Errors: 0
+2024-11-10 01:45:57,783 - INFO - Starting generation for character 'H' -> SourceCode/Generated_Dict\generated_words_H_20241110_014557.txt
+2024-11-10 01:45:58,270 - INFO - Completed generation for 'H'. Total: 100, Errors: 0
+2024-11-10 01:45:58,271 - INFO - Starting generation for character 'I' -> SourceCode/Generated_Dict\generated_words_I_20241110_014558.txt
+2024-11-10 01:45:58,740 - INFO - Completed generation for 'I'. Total: 100, Errors: 0
+2024-11-10 01:45:58,740 - INFO - Starting generation for character 'J' -> SourceCode/Generated_Dict\generated_words_J_20241110_014558.txt
+2024-11-10 01:45:59,205 - INFO - Completed generation for 'J'. Total: 100, Errors: 0
+2024-11-10 01:45:59,206 - INFO - Starting generation for character 'K' -> SourceCode/Generated_Dict\generated_words_K_20241110_014559.txt
+2024-11-10 01:45:59,684 - INFO - Completed generation for 'K'. Total: 100, Errors: 0
+2024-11-10 01:45:59,685 - INFO - Starting generation for character 'L' -> SourceCode/Generated_Dict\generated_words_L_20241110_014559.txt
+2024-11-10 01:46:00,167 - INFO - Completed generation for 'L'. Total: 100, Errors: 0
+2024-11-10 01:46:00,167 - INFO - Starting generation for character 'M' -> SourceCode/Generated_Dict\generated_words_M_20241110_014600.txt
+2024-11-10 01:46:00,634 - INFO - Completed generation for 'M'. Total: 100, Errors: 0
+2024-11-10 01:46:00,635 - INFO - Starting generation for character 'N' -> SourceCode/Generated_Dict\generated_words_N_20241110_014600.txt
+2024-11-10 01:46:01,106 - INFO - Completed generation for 'N'. Total: 100, Errors: 0
+2024-11-10 01:46:01,107 - INFO - Starting generation for character 'O' -> SourceCode/Generated_Dict\generated_words_O_20241110_014601.txt
+2024-11-10 01:46:01,583 - INFO - Completed generation for 'O'. Total: 100, Errors: 0
+2024-11-10 01:46:01,584 - INFO - Starting generation for character 'P' -> SourceCode/Generated_Dict\generated_words_P_20241110_014601.txt
+2024-11-10 01:46:02,101 - INFO - Completed generation for 'P'. Total: 100, Errors: 0
+2024-11-10 01:46:02,102 - INFO - Starting generation for character 'Q' -> SourceCode/Generated_Dict\generated_words_Q_20241110_014602.txt
+2024-11-10 01:46:02,632 - INFO - Completed generation for 'Q'. Total: 100, Errors: 0
+2024-11-10 01:46:02,633 - INFO - Starting generation for character 'R' -> SourceCode/Generated_Dict\generated_words_R_20241110_014602.txt
+2024-11-10 01:46:03,163 - INFO - Completed generation for 'R'. Total: 100, Errors: 0
+2024-11-10 01:46:03,164 - INFO - Starting generation for character 'S' -> SourceCode/Generated_Dict\generated_words_S_20241110_014603.txt
+2024-11-10 01:46:03,705 - INFO - Completed generation for 'S'. Total: 100, Errors: 0
+2024-11-10 01:46:03,705 - INFO - Starting generation for character 'T' -> SourceCode/Generated_Dict\generated_words_T_20241110_014603.txt
+2024-11-10 01:46:04,261 - INFO - Completed generation for 'T'. Total: 100, Errors: 0
+2024-11-10 01:46:04,261 - INFO - Starting generation for character 'U' -> SourceCode/Generated_Dict\generated_words_U_20241110_014604.txt
+2024-11-10 01:46:04,804 - INFO - Completed generation for 'U'. Total: 100, Errors: 0
+2024-11-10 01:46:04,805 - INFO - Starting generation for character 'V' -> SourceCode/Generated_Dict\generated_words_V_20241110_014604.txt
+2024-11-10 01:46:05,340 - INFO - Completed generation for 'V'. Total: 100, Errors: 0
+2024-11-10 01:46:05,340 - INFO - Starting generation for character 'W' -> SourceCode/Generated_Dict\generated_words_W_20241110_014605.txt
+2024-11-10 01:46:05,870 - INFO - Completed generation for 'W'. Total: 100, Errors: 0
+2024-11-10 01:46:05,871 - INFO - Starting generation for character 'X' -> SourceCode/Generated_Dict\generated_words_X_20241110_014605.txt
+2024-11-10 01:46:06,422 - INFO - Completed generation for 'X'. Total: 100, Errors: 0
+2024-11-10 01:46:06,423 - INFO - Starting generation for character 'Y' -> SourceCode/Generated_Dict\generated_words_Y_20241110_014606.txt
+2024-11-10 01:46:06,966 - INFO - Completed generation for 'Y'. Total: 100, Errors: 0
+2024-11-10 01:46:06,966 - INFO - Starting generation for character 'Z' -> SourceCode/Generated_Dict\generated_words_Z_20241110_014606.txt
+2024-11-10 01:46:07,539 - INFO - Completed generation for 'Z'. Total: 100, Errors: 0
+2024-11-10 01:46:07,540 - INFO - Starting generation for character 'a' -> SourceCode/Generated_Dict\generated_words_a_20241110_014607.txt
+2024-11-10 01:46:08,071 - INFO - Completed generation for 'a'. Total: 100, Errors: 0
+2024-11-10 01:46:08,071 - INFO - Starting generation for character 'b' -> SourceCode/Generated_Dict\generated_words_b_20241110_014608.txt
+2024-11-10 01:46:08,581 - INFO - Completed generation for 'b'. Total: 100, Errors: 0
+2024-11-10 01:46:08,581 - INFO - Starting generation for character 'c' -> SourceCode/Generated_Dict\generated_words_c_20241110_014608.txt
+2024-11-10 01:46:09,107 - INFO - Completed generation for 'c'. Total: 100, Errors: 0
+2024-11-10 01:46:09,108 - INFO - Starting generation for character 'd' -> SourceCode/Generated_Dict\generated_words_d_20241110_014609.txt
+2024-11-10 01:46:09,663 - INFO - Completed generation for 'd'. Total: 100, Errors: 0
+2024-11-10 01:46:09,664 - INFO - Starting generation for character 'e' -> SourceCode/Generated_Dict\generated_words_e_20241110_014609.txt
+2024-11-10 01:46:10,216 - INFO - Completed generation for 'e'. Total: 100, Errors: 0
+2024-11-10 01:46:10,217 - INFO - Starting generation for character 'f' -> SourceCode/Generated_Dict\generated_words_f_20241110_014610.txt
+2024-11-10 01:46:10,769 - INFO - Completed generation for 'f'. Total: 100, Errors: 0
+2024-11-10 01:46:10,770 - INFO - Starting generation for character 'g' -> SourceCode/Generated_Dict\generated_words_g_20241110_014610.txt
+2024-11-10 01:46:11,357 - INFO - Completed generation for 'g'. Total: 100, Errors: 0
+2024-11-10 01:46:11,358 - INFO - Starting generation for character 'h' -> SourceCode/Generated_Dict\generated_words_h_20241110_014611.txt
+2024-11-10 01:46:11,933 - INFO - Completed generation for 'h'. Total: 100, Errors: 0
+2024-11-10 01:46:11,934 - INFO - Starting generation for character 'i' -> SourceCode/Generated_Dict\generated_words_i_20241110_014611.txt
+2024-11-10 01:46:12,447 - INFO - Completed generation for 'i'. Total: 100, Errors: 0
+2024-11-10 01:46:12,448 - INFO - Starting generation for character 'j' -> SourceCode/Generated_Dict\generated_words_j_20241110_014612.txt
+2024-11-10 01:46:12,986 - INFO - Completed generation for 'j'. Total: 100, Errors: 0
+2024-11-10 01:46:12,986 - INFO - Starting generation for character 'k' -> SourceCode/Generated_Dict\generated_words_k_20241110_014612.txt
+2024-11-10 01:46:13,510 - INFO - Completed generation for 'k'. Total: 100, Errors: 0
+2024-11-10 01:46:13,511 - INFO - Starting generation for character 'l' -> SourceCode/Generated_Dict\generated_words_l_20241110_014613.txt
+2024-11-10 01:46:14,049 - INFO - Completed generation for 'l'. Total: 100, Errors: 0
+2024-11-10 01:46:14,050 - INFO - Starting generation for character 'm' -> SourceCode/Generated_Dict\generated_words_m_20241110_014614.txt
+2024-11-10 01:46:14,605 - INFO - Completed generation for 'm'. Total: 100, Errors: 0
+2024-11-10 01:46:14,606 - INFO - Starting generation for character 'n' -> SourceCode/Generated_Dict\generated_words_n_20241110_014614.txt
+2024-11-10 01:46:15,149 - INFO - Completed generation for 'n'. Total: 100, Errors: 0
+2024-11-10 01:46:15,150 - INFO - Starting generation for character 'o' -> SourceCode/Generated_Dict\generated_words_o_20241110_014615.txt
+2024-11-10 01:46:15,701 - INFO - Completed generation for 'o'. Total: 100, Errors: 0
+2024-11-10 01:46:15,702 - INFO - Starting generation for character 'p' -> SourceCode/Generated_Dict\generated_words_p_20241110_014615.txt
+2024-11-10 01:46:16,251 - INFO - Completed generation for 'p'. Total: 100, Errors: 0
+2024-11-10 01:46:16,252 - INFO - Starting generation for character 'q' -> SourceCode/Generated_Dict\generated_words_q_20241110_014616.txt
+2024-11-10 01:46:16,836 - INFO - Completed generation for 'q'. Total: 100, Errors: 0
+2024-11-10 01:46:16,837 - INFO - Starting generation for character 'r' -> SourceCode/Generated_Dict\generated_words_r_20241110_014616.txt
+2024-11-10 01:46:17,397 - INFO - Completed generation for 'r'. Total: 100, Errors: 0
+2024-11-10 01:46:17,398 - INFO - Starting generation for character 's' -> SourceCode/Generated_Dict\generated_words_s_20241110_014617.txt
+2024-11-10 01:46:17,944 - INFO - Completed generation for 's'. Total: 100, Errors: 0
+2024-11-10 01:46:17,944 - INFO - Starting generation for character 't' -> SourceCode/Generated_Dict\generated_words_t_20241110_014617.txt
+2024-11-10 01:46:18,486 - INFO - Completed generation for 't'. Total: 100, Errors: 0
+2024-11-10 01:46:18,487 - INFO - Starting generation for character 'u' -> SourceCode/Generated_Dict\generated_words_u_20241110_014618.txt
+2024-11-10 01:46:19,017 - INFO - Completed generation for 'u'. Total: 100, Errors: 0
+2024-11-10 01:46:19,018 - INFO - Starting generation for character 'v' -> SourceCode/Generated_Dict\generated_words_v_20241110_014619.txt
+2024-11-10 01:46:19,571 - INFO - Completed generation for 'v'. Total: 100, Errors: 0
+2024-11-10 01:46:19,572 - INFO - Starting generation for character 'w' -> SourceCode/Generated_Dict\generated_words_w_20241110_014619.txt
+2024-11-10 01:46:20,186 - INFO - Completed generation for 'w'. Total: 100, Errors: 0
+2024-11-10 01:46:20,186 - INFO - Starting generation for character 'x' -> SourceCode/Generated_Dict\generated_words_x_20241110_014620.txt
+2024-11-10 01:46:20,729 - INFO - Completed generation for 'x'. Total: 100, Errors: 0
+2024-11-10 01:46:20,730 - INFO - Starting generation for character 'y' -> SourceCode/Generated_Dict\generated_words_y_20241110_014620.txt
+2024-11-10 01:46:21,257 - INFO - Completed generation for 'y'. Total: 100, Errors: 0
+2024-11-10 01:46:21,258 - INFO - Starting generation for character 'z' -> SourceCode/Generated_Dict\generated_words_z_20241110_014621.txt
+2024-11-10 01:46:21,810 - INFO - Completed generation for 'z'. Total: 100, Errors: 0
+2024-11-10 01:46:21,811 - INFO - Starting special characters generation
+2024-11-10 01:46:21,814 - INFO - Starting generation for special character '!'
+2024-11-10 01:46:22,276 - INFO - Completed generation for special character '!'
+2024-11-10 01:46:22,277 - INFO - Starting generation for special character '@'
+2024-11-10 01:46:22,736 - INFO - Completed generation for special character '@'
+2024-11-10 01:46:22,737 - INFO - Starting generation for special character '#'
+2024-11-10 01:46:23,185 - INFO - Completed generation for special character '#'
+2024-11-10 01:46:23,186 - INFO - Starting generation for special character '$'
+2024-11-10 01:46:23,652 - INFO - Completed generation for special character '$'
+2024-11-10 01:46:23,653 - INFO - Starting generation for special character '%'
+2024-11-10 01:46:24,127 - INFO - Completed generation for special character '%'
+2024-11-10 01:46:24,128 - INFO - Starting generation for special character '^'
+2024-11-10 01:46:24,575 - INFO - Completed generation for special character '^'
+2024-11-10 01:46:24,576 - INFO - Starting generation for special character '&'
+2024-11-10 01:46:25,057 - INFO - Completed generation for special character '&'
+2024-11-10 01:46:25,058 - INFO - Starting generation for special character '('
+2024-11-10 01:46:25,567 - INFO - Completed generation for special character '('
+2024-11-10 01:46:25,568 - INFO - Starting generation for special character ')'
+2024-11-10 01:46:26,110 - INFO - Completed generation for special character ')'
+2024-11-10 01:46:26,111 - INFO - Starting generation for special character '_'
+2024-11-10 01:46:26,640 - INFO - Completed generation for special character '_'
+2024-11-10 01:46:26,642 - INFO - Starting generation for special character '+'
+2024-11-10 01:46:27,199 - INFO - Completed generation for special character '+'
+2024-11-10 01:46:27,199 - INFO - Starting generation for special character '-'
+2024-11-10 01:46:27,746 - INFO - Completed generation for special character '-'
+2024-11-10 01:46:27,747 - INFO - Starting generation for special character '='
+2024-11-10 01:46:28,265 - INFO - Completed generation for special character '='
+2024-11-10 01:46:28,269 - INFO - Special characters generation complete. Total: 1300, Errors: 0
+2024-11-10 01:46:28,270 - INFO - === Generation Session Completed ===

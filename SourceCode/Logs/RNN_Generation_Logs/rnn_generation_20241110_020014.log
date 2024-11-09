@@ -1,0 +1,93 @@
+2024-11-10 02:00:14 - INFO - Logging initialized
+2024-11-10 02:00:14 - INFO - Log file created at: SourceCode/Logs/RNN_Generation_Logs\rnn_generation_20241110_020014.log
+2024-11-10 02:00:16 - INFO - ==================================================
+2024-11-10 02:00:16 - INFO - SYSTEM INFORMATION
+2024-11-10 02:00:16 - INFO - ==================================================
+2024-11-10 02:00:16 - INFO - 
+Python Environment:
+2024-11-10 02:00:16 - INFO - Python Version: 3.12.3 (tags/v3.12.3:f6650f9, Apr  9 2024, 14:05:25) [MSC v.1938 64 bit (AMD64)]
+2024-11-10 02:00:16 - INFO - Python Implementation: CPython
+2024-11-10 02:00:16 - INFO - 
+Operating System:
+2024-11-10 02:00:16 - INFO - System: Windows
+2024-11-10 02:00:16 - INFO - Release: 10
+2024-11-10 02:00:16 - INFO - Version: 10.0.19045
+2024-11-10 02:00:16 - INFO - Machine: AMD64
+2024-11-10 02:00:16 - INFO - Processor: Intel64 Family 6 Model 79 Stepping 1, GenuineIntel
+2024-11-10 02:00:18 - INFO - 
+CPU Information:
+2024-11-10 02:00:18 - INFO - CPU Brand: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+2024-11-10 02:00:18 - INFO - CPU Cores (Physical): 28
+2024-11-10 02:00:18 - INFO - CPU Cores (Logical): 56
+2024-11-10 02:00:18 - INFO - 
+Memory Information:
+2024-11-10 02:00:18 - INFO - Total Memory: 63.92 GB
+2024-11-10 02:00:18 - INFO - Available Memory: 49.64 GB
+2024-11-10 02:00:18 - INFO - Memory Usage: 22.3%
+2024-11-10 02:00:18 - INFO - 
+GPU Information:
+2024-11-10 02:00:18 - INFO - 
+GPU 0:
+2024-11-10 02:00:18 - INFO - Name: NVIDIA GeForce RTX 3070 Ti
+2024-11-10 02:00:18 - INFO - CUDA Version: 12.4
+2024-11-10 02:00:18 - INFO - Total Memory: 8191.50 MB
+2024-11-10 02:00:18 - INFO - CUDA Capability: 8.6
+2024-11-10 02:00:18 - INFO - 
+PyTorch Information:
+2024-11-10 02:00:18 - INFO - PyTorch Version: 2.4.1+cu124
+2024-11-10 02:00:18 - INFO - CUDA Available: True
+2024-11-10 02:00:18 - INFO - CUDA Device Count: 1
+2024-11-10 02:00:18 - INFO - 
+Installed Dependencies:
+2024-11-10 02:00:18 - INFO - Jinja2: 3.1.3
+2024-11-10 02:00:18 - INFO - MarkupSafe: 2.1.5
+2024-11-10 02:00:18 - INFO - PyQt5: 5.15.11
+2024-11-10 02:00:18 - INFO - PyQt5-Qt5: 5.15.2
+2024-11-10 02:00:18 - INFO - PyQt5_sip: 12.15.0
+2024-11-10 02:00:18 - INFO - Pygments: 2.18.0
+2024-11-10 02:00:18 - INFO - asttokens: 2.4.1
+2024-11-10 02:00:18 - INFO - colorama: 0.4.6
+2024-11-10 02:00:18 - INFO - comm: 0.2.2
+2024-11-10 02:00:18 - INFO - debugpy: 1.8.7
+2024-11-10 02:00:18 - INFO - decorator: 5.1.1
+2024-11-10 02:00:18 - INFO - executing: 2.1.0
+2024-11-10 02:00:18 - INFO - filelock: 3.13.1
+2024-11-10 02:00:18 - INFO - fsspec: 2024.2.0
+2024-11-10 02:00:18 - INFO - ipykernel: 6.29.5
+2024-11-10 02:00:18 - INFO - ipython: 8.28.0
+2024-11-10 02:00:18 - INFO - jedi: 0.19.1
+2024-11-10 02:00:18 - INFO - jupyter_client: 8.6.3
+2024-11-10 02:00:18 - INFO - jupyter_core: 5.7.2
+2024-11-10 02:00:18 - INFO - matplotlib-inline: 0.1.7
+2024-11-10 02:00:18 - INFO - mpmath: 1.3.0
+2024-11-10 02:00:18 - INFO - nest-asyncio: 1.6.0
+2024-11-10 02:00:18 - INFO - networkx: 3.2.1
+2024-11-10 02:00:18 - INFO - numpy: 1.26.3
+2024-11-10 02:00:18 - INFO - packaging: 24.1
+2024-11-10 02:00:18 - INFO - parso: 0.8.4
+2024-11-10 02:00:18 - INFO - pillow: 10.2.0
+2024-11-10 02:00:18 - INFO - pip: 24.0
+2024-11-10 02:00:18 - INFO - platformdirs: 4.3.6
+2024-11-10 02:00:18 - INFO - prompt_toolkit: 3.0.48
+2024-11-10 02:00:18 - INFO - psutil: 6.1.0
+2024-11-10 02:00:18 - INFO - pure_eval: 0.2.3
+2024-11-10 02:00:18 - INFO - py-cpuinfo: 9.0.0
+2024-11-10 02:00:18 - INFO - python-dateutil: 2.9.0.post0
+2024-11-10 02:00:18 - INFO - pywin32: 308
+2024-11-10 02:00:18 - INFO - pyzmq: 26.2.0
+2024-11-10 02:00:18 - INFO - setuptools: 70.0.0
+2024-11-10 02:00:18 - INFO - six: 1.16.0
+2024-11-10 02:00:18 - INFO - stack-data: 0.6.3
+2024-11-10 02:00:18 - INFO - sympy: 1.12
+2024-11-10 02:00:18 - INFO - torch: 2.4.1+cu124
+2024-11-10 02:00:18 - INFO - torchaudio: 2.4.1+cu124
+2024-11-10 02:00:18 - INFO - torchvision: 0.19.1+cu124
+2024-11-10 02:00:18 - INFO - tornado: 6.4.1
+2024-11-10 02:00:18 - INFO - tqdm: 4.66.5
+2024-11-10 02:00:18 - INFO - traitlets: 5.14.3
+2024-11-10 02:00:18 - INFO - typing_extensions: 4.9.0
+2024-11-10 02:00:18 - INFO - wcwidth: 0.2.13
+2024-11-10 02:00:18 - INFO - ==================================================
+2024-11-10 02:00:18 - INFO - Loading model from SourceCode\Algorithms\RNN\RNN_Modules\rnn_model.pth
+2024-11-10 02:00:18 - ERROR - Failed to load model: 'model_state'
+2024-11-10 02:00:18 - ERROR - Error during main execution: Failed to load model: 'model_state'
