@@ -11,33 +11,58 @@ class CustomGUI:
         self.root = tk.Tk()
         self.root.title("Hashcat GUI")
         
-        # Set the size of the window
-        self.root.geometry("800x600")  # Set an initial size, but no max size
+        # Configure style for modern look
+        self.style = ttk.Style()
+        self.style.configure('Modern.TButton',
+            padding=10,
+            font=('Segoe UI', 10),
+            background='#2196F3',
+            foreground='white'
+        )
+        
+        # Modern color scheme
+        self.colors = {
+            'primary': '#2196F3',    # Blue
+            'secondary': '#1976D2',   # Darker Blue
+            'accent': '#4CAF50',      # Green
+            'background': '#F5F5F5',  # Light Gray
+            'text': '#212121',        # Dark Gray
+            'white': '#FFFFFF'
+        }
+        
+        # Set fixed size and prevent resizing
+        self.root.geometry("800x600")
+        self.root.resizable(False, False)
+        
+        # Configure root background
+        self.root.configure(bg='black')  # Set root background to black
+        
+        # Configure ttk styles for comboboxes
+        self.style.configure('Modern.TCombobox',
+            padding=5,
+            relief='flat',
+            background=self.colors['primary']
+        )
+        
+        # Configure style for the slider
+        self.style.configure('Modern.Horizontal.TScale',
+            background=self.colors['background'],
+            troughcolor=self.colors['primary'],
+            sliderwidth=15,
+            sliderlength=20
+        )
         
         # Load the background image
         self.background_image = Image.open(image_path)
         self.background_photo = None
         
-        # Create a frame that expands and fills the window
-        self.frame = tk.Frame(self.root)
-        self.frame.pack(expand=True, fill=tk.BOTH)
+        # Create a frame that fills the window completely without padding
+        self.frame = tk.Frame(self.root, bg='black')  # Set frame background to black
+        self.frame.pack(expand=True, fill=tk.BOTH, padx=0, pady=0)  # Remove padding
         
-        # Configure grid to allow for resizing
-        self.frame.grid_rowconfigure(0, weight=1)
-        self.frame.grid_rowconfigure(1, weight=1)
-        self.frame.grid_rowconfigure(2, weight=1)
-        self.frame.grid_rowconfigure(3, weight=1)
-        self.frame.grid_rowconfigure(4, weight=1)
-        self.frame.grid_rowconfigure(5, weight=1)
-        self.frame.grid_rowconfigure(6, weight=1)
-        self.frame.grid_rowconfigure(7, weight=1)
-        self.frame.grid_columnconfigure(0, weight=1)
-        self.frame.grid_columnconfigure(1, weight=1)
-        self.frame.grid_columnconfigure(2, weight=1)
-
-        # Create a label for the background image
+        # Create a label for the background image that fills the frame
         self.background_label = tk.Label(self.frame)
-        self.background_label.place(relwidth=1, relheight=1)
+        self.background_label.place(x=0, y=0, relwidth=1, relheight=1)  # Fill entire frame
         
         # Load hash types from CSV
         self.hash_types = self.load_hash_types(r"SourceCode\GUI\Source Code GUI\Hash_Types\hash_types.csv")
@@ -62,6 +87,31 @@ class CustomGUI:
         # Bind the resize event to update the background image
         self.root.bind("<Configure>", self.update_background_image)
 
+        # Add consistent button style
+        self.button_style = {
+            'font': ('Segoe UI', 11),
+            'bg': self.colors['primary'],  # Blue for regular buttons
+            'fg': self.colors['white'],
+            'activebackground': self.colors['secondary'],
+            'activeforeground': self.colors['white'],
+            'relief': 'flat',
+            'pady': 5,
+            'padx': 15,
+            'cursor': 'hand2'
+        }
+        
+        self.green_button_style = {
+            'font': ('Segoe UI', 11),
+            'bg': self.colors['accent'],  # Green for special actions
+            'fg': self.colors['white'],
+            'activebackground': '#388E3C',
+            'activeforeground': self.colors['white'],
+            'relief': 'flat',
+            'pady': 5,
+            'padx': 15,
+            'cursor': 'hand2'
+        }
+
     def load_hash_types(self, file_path):
         hash_types = {}
         with open(file_path, mode='r', newline='', encoding='utf-8') as file:
@@ -73,26 +123,66 @@ class CustomGUI:
         return hash_types
 
     def create_hash_file_selection(self):
-        self.hash_file_label = tk.Label(self.frame, text="Select the Hash File:", fg="black", font=("Helvetica", 12, "bold"))
-        self.hash_file_label.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
+        # Modern styling for labels and entries
+        label_style = {
+            'bg': self.colors['background'],
+            'fg': self.colors['text'],
+            'font': ('Segoe UI', 11),
+            'pady': 5
+        }
         
-        self.hash_file_entry = tk.Entry(self.frame, width=50, font=("Helvetica", 12))
-        self.hash_file_entry.grid(row=0, column=1, padx=10, pady=10, sticky="nsew")
+        entry_style = {
+            'font': ('Segoe UI', 11),
+            'relief': 'flat',
+            'bd': 1,
+            'highlightthickness': 1,
+            'highlightcolor': self.colors['primary'],
+            'highlightbackground': '#E0E0E0'
+        }
         
-        self.browse_hash_button = tk.Button(self.frame, text="Browse", command=self.browse_hash_file, font=("Helvetica", 12), bg="#4CAF50", fg="white", activebackground="#45a049")
-        self.browse_hash_button.grid(row=0, column=2, padx=10, pady=10, sticky="nsew")
+        self.hash_file_label = tk.Label(self.frame, text="Select the Hash File:", **label_style)
+        self.hash_file_label.grid(row=0, column=0, padx=10, pady=10, sticky="w")
+        
+        self.hash_file_entry = tk.Entry(self.frame, width=50, **entry_style)
+        self.hash_file_entry.grid(row=0, column=1, padx=10, pady=10, sticky="ew")
+        
+        self.browse_hash_button = tk.Button(
+            self.frame,
+            text="Browse",
+            command=self.browse_hash_file,
+            **self.button_style
+        )
+        self.browse_hash_button.grid(row=0, column=2, padx=10, pady=10, sticky="ew")
+        
+        # Add hover effect
+        self.browse_hash_button.bind('<Enter>', 
+            lambda e: self.browse_hash_button.configure(bg=self.colors['secondary']))
+        self.browse_hash_button.bind('<Leave>', 
+            lambda e: self.browse_hash_button.configure(bg=self.colors['primary']))
 
     def create_hash_type_selection(self):
-        self.hash_type_label = tk.Label(self.frame, text="Select Hash Type:", fg="black", font=("Helvetica", 12, "bold"))
-        self.hash_type_label.grid(row=1, column=0, padx=10, pady=10, sticky="nsew")
+        label_style = {
+            'bg': self.colors['background'],
+            'fg': self.colors['text'],
+            'font': ('Segoe UI', 11),
+            'pady': 5
+        }
         
-        self.hash_type_combobox = ttk.Combobox(self.frame, values=list(self.hash_types.keys()), state="readonly", width=72)
-        self.hash_type_combobox.grid(row=1, column=1, padx=10, pady=10, sticky="nsew")
+        self.hash_type_label = tk.Label(self.frame, text="Select Hash Type:", **label_style)
+        self.hash_type_label.grid(row=1, column=0, padx=10, pady=10, sticky="w")
+        
+        self.hash_type_combobox = ttk.Combobox(
+            self.frame,
+            values=list(self.hash_types.keys()),
+            state="readonly",
+            width=50,
+            style='Modern.TCombobox',
+            font=('Segoe UI', 10)
+        )
+        self.hash_type_combobox.grid(row=1, column=1, padx=10, pady=10, sticky="ew")
         
         if self.hash_types:
             self.hash_type_combobox.current(0)
-        else:
-            print("No hash types available.")
 
     def get_hash_file(self):
         hash_file = self.hash_file_entry.get()
@@ -112,17 +202,48 @@ class CustomGUI:
             return None
 
     def create_dict_file_selection(self):
+        label_style = {
+            'bg': self.colors['background'],
+            'fg': self.colors['text'],
+            'font': ('Segoe UI', 11),
+            'pady': 5
+        }
+        
+        entry_style = {
+            'font': ('Segoe UI', 11),
+            'relief': 'flat',
+            'bd': 1,
+            'highlightthickness': 1,
+            'highlightcolor': self.colors['primary'],
+            'highlightbackground': '#E0E0E0'
+        }
+        
         self.dict_file_entries = []
         for i in range(3):
-            dict_file_label = tk.Label(self.frame, text=f"Select Dictionary File {i + 1}:", fg="black", font=("Helvetica", 12, "bold"))
-            dict_file_label.grid(row=i + 2, column=0, padx=10, pady=10, sticky="nsew")
+            dict_file_label = tk.Label(
+                self.frame,
+                text=f"Select Dictionary File {i + 1}:",
+                **label_style
+            )
+            dict_file_label.grid(row=i + 2, column=0, padx=10, pady=10, sticky="w")
             
-            dict_file_entry = tk.Entry(self.frame, width=50, font=("Helvetica", 12))
-            dict_file_entry.grid(row=i + 2, column=1, padx=10, pady=10, sticky="nsew")
+            dict_file_entry = tk.Entry(self.frame, width=50, **entry_style)
+            dict_file_entry.grid(row=i + 2, column=1, padx=10, pady=10, sticky="ew")
             self.dict_file_entries.append(dict_file_entry)
             
-            browse_dict_button = tk.Button(self.frame, text="Browse", command=lambda entry=dict_file_entry: self.browse_dict_file(entry), font=("Helvetica", 12), bg="#4CAF50", fg="white", activebackground="#45a049")
-            browse_dict_button.grid(row=i + 2, column=2, padx=10, pady=10, sticky="nsew")
+            browse_button = tk.Button(
+                self.frame,
+                text="Browse",
+                command=lambda entry=dict_file_entry: self.browse_dict_file(entry),
+                **self.button_style
+            )
+            browse_button.grid(row=i + 2, column=2, padx=10, pady=10, sticky="ew")
+            
+            # Add hover effects
+            browse_button.bind('<Enter>', 
+                lambda e, btn=browse_button: btn.configure(bg=self.colors['secondary']))
+            browse_button.bind('<Leave>', 
+                lambda e, btn=browse_button: btn.configure(bg=self.colors['primary']))
 
     def browse_hash_file(self):
         file_path = filedialog.askopenfilename(title="Select Hash File", filetypes=(("Text Files", "*.txt"), ("All Files", "*.*")))
@@ -137,14 +258,41 @@ class CustomGUI:
             entry.insert(0, file_path)
 
     def create_output_file_selection(self):
-        self.output_file_label = tk.Label(self.frame, text="Define Output File:", fg="black", font=("Helvetica", 12, "bold"))
-        self.output_file_label.grid(row=5, column=0, padx=10, pady=10, sticky="nsew")
+        label_style = {
+            'bg': self.colors['background'],
+            'fg': self.colors['text'],
+            'font': ('Segoe UI', 11),
+            'pady': 5
+        }
         
-        self.output_file_entry = tk.Entry(self.frame, width=50, font=("Helvetica", 12))
-        self.output_file_entry.grid(row=5, column=1, padx=10, pady=10, sticky="nsew")
+        entry_style = {
+            'font': ('Segoe UI', 11),
+            'relief': 'flat',
+            'bd': 1,
+            'highlightthickness': 1,
+            'highlightcolor': self.colors['primary'],
+            'highlightbackground': '#E0E0E0'
+        }
         
-        self.browse_output_file_button = tk.Button(self.frame, text="Browse", command=self.browse_output_file, font=("Helvetica", 12), bg="#4CAF50", fg="white", activebackground="#45a049")
-        self.browse_output_file_button.grid(row=5, column=2, padx=10, pady=10, sticky="nsew")
+        self.output_file_label = tk.Label(self.frame, text="Define Output File:", **label_style)
+        self.output_file_label.grid(row=5, column=0, padx=10, pady=10, sticky="w")
+        
+        self.output_file_entry = tk.Entry(self.frame, width=50, **entry_style)
+        self.output_file_entry.grid(row=5, column=1, padx=10, pady=10, sticky="ew")
+        
+        self.browse_output_file_button = tk.Button(
+            self.frame,
+            text="Browse",
+            command=self.browse_output_file,
+            **self.green_button_style
+        )
+        self.browse_output_file_button.grid(row=5, column=2, padx=10, pady=10, sticky="ew")
+        
+        # Add hover effect
+        self.browse_output_file_button.bind('<Enter>', 
+            lambda e: self.browse_output_file_button.configure(bg='#388E3C'))
+        self.browse_output_file_button.bind('<Leave>', 
+            lambda e: self.browse_output_file_button.configure(bg=self.colors['accent']))
 
     def browse_output_file(self):
         file_path = filedialog.asksaveasfilename(title="Define Output File", defaultextension=".txt", filetypes=(("Text Files", "*.txt"), ("All Files", "*.*")))
@@ -175,12 +323,39 @@ class CustomGUI:
         return output_file
 
     def create_workload_profile_selection(self):
-        self.workload_profile_label = tk.Label(self.frame, text="Select Workload Profile:", fg="black", font=("Helvetica", 12, "bold"))
-        self.workload_profile_label.grid(row=6, column=0, padx=10, pady=10, sticky="nsew")
+        label_style = {
+            'bg': self.colors['background'],
+            'fg': self.colors['text'],
+            'font': ('Segoe UI', 11),
+            'pady': 5
+        }
         
-        self.workload_profile_combobox = ttk.Combobox(self.frame, values=["1 - Low", "2 - Default", "3 - High", "4 - Nightmare"], state="readonly", width=70)
-        self.workload_profile_combobox.grid(row=6, column=1, padx=10, pady=10, sticky="nsew")
-        self.workload_profile_combobox.current(1)  # Default to "2 - Default"
+        # Configure combobox style
+        self.style.configure('Workload.TCombobox',
+            background=self.colors['primary'],
+            fieldbackground='white',
+            selectbackground=self.colors['primary'],
+            selectforeground='white',
+            padding=5
+        )
+        
+        self.workload_profile_label = tk.Label(
+            self.frame,
+            text="Select Workload Profile:",
+            **label_style
+        )
+        self.workload_profile_label.grid(row=6, column=0, padx=10, pady=10, sticky="w")
+        
+        self.workload_profile_combobox = ttk.Combobox(
+            self.frame,
+            values=["1 - Low", "2 - Default", "3 - High", "4 - Nightmare"],
+            state="readonly",
+            width=50,
+            style='Workload.TCombobox',
+            font=('Segoe UI', 10)
+        )
+        self.workload_profile_combobox.grid(row=6, column=1, padx=10, pady=10, sticky="ew")
+        self.workload_profile_combobox.current(1)
 
     def get_workload_profile(self):
         selected_profile = self.workload_profile_combobox.get()
@@ -189,43 +364,97 @@ class CustomGUI:
         return None
 
     def create_temperature_selection(self):
-        self.temp_label = tk.Label(self.frame, text="Select Abort Temperature (°C):", fg="black", font=("Helvetica", 12, "bold"))
-        self.temp_label.grid(row=7, column=0, padx=10, pady=10, sticky="nsew")
+        label_style = {
+            'bg': self.colors['background'],
+            'fg': self.colors['text'],
+            'font': ('Segoe UI', 11),
+            'pady': 5
+        }
         
-        self.temp_slider = tk.Scale(self.frame, from_=80, to=100, orient=tk.HORIZONTAL, length=300, command=self.update_temp_label)
-        self.temp_slider.set(100)  # Default to 100
-        self.temp_slider.grid(row=7, column=1, padx=10, pady=10, sticky="nsew")
+        frame_style = {
+            'bg': self.colors['background'],
+            'highlightthickness': 0,
+            'bd': 0
+        }
         
-        self.temp_value_label = tk.Label(self.frame, text="100 °C", fg="black", font=("Helvetica", 12))
-        self.temp_value_label.grid(row=7, column=2, padx=10, pady=10, sticky="nsew")
+        temp_frame = tk.Frame(self.frame, **frame_style)
+        temp_frame.grid(row=7, column=0, columnspan=3, padx=10, pady=10, sticky="ew")
+        
+        self.temp_label = tk.Label(
+            temp_frame,
+            text="Select Abort Temperature (°C):",
+            **label_style
+        )
+        self.temp_label.pack(side=tk.LEFT, padx=(0, 10))
+        
+        self.temp_slider = ttk.Scale(
+            temp_frame,
+            from_=80,
+            to=100,
+            orient=tk.HORIZONTAL,
+            style='Temp.Horizontal.TScale',
+            command=lambda v: self.update_temp_label(int(float(v))),  # Convert to int
+        )
+        self.temp_slider.set(100)
+        self.temp_slider.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=10)
+        
+        self.temp_value_label = tk.Label(
+            temp_frame,
+            text="100 °C",
+            font=('Segoe UI', 11),
+            bg=self.colors['background'],
+            fg=self.colors['primary']
+        )
+        self.temp_value_label.pack(side=tk.LEFT, padx=(10, 0))
 
     def update_temp_label(self, value):
-        self.temp_value_label.config(text=f"{value} °C")
+        """Update temperature label with integer values only"""
+        self.temp_value_label.config(text=f"{int(value)} °C")
 
     def get_abort_temperature(self):
-        return self.temp_slider.get()  # Return the current value of the temperature slider
+        """Return integer temperature value"""
+        return int(self.temp_slider.get())
 
     def show_blurred_background(self):
-        blurred_image = self.background_image.filter(ImageFilter.GaussianBlur(radius=10))
+        # Initial background setup with exact dimensions
+        width = 800
+        height = 600
+        resized_image = self.background_image.resize((width, height), Image.LANCZOS)
+        blurred_image = resized_image.filter(ImageFilter.GaussianBlur(radius=15))
+        darkened_image = Image.new('RGBA', blurred_image.size, (0, 0, 0, 130))
+        blurred_image = Image.alpha_composite(blurred_image.convert('RGBA'), darkened_image)
         self.background_photo = ImageTk.PhotoImage(blurred_image)
         self.background_label.config(image=self.background_photo)
 
     def update_background_image(self, event=None):
         """Update the background image to fit the window size."""
-        width = self.frame.winfo_width()
-        height = self.frame.winfo_height()
+        width = 800
+        height = 600
         
-        # Resize the original image to fit the window
+        # Resize the original image to fit the window exactly
         resized_image = self.background_image.resize((width, height), Image.LANCZOS)
         
-        # Apply blur to the resized image
-        blurred_image = resized_image.filter(ImageFilter.GaussianBlur(radius=10))  # Adjust radius as needed
+        # Apply blur and overlay effect
+        blurred_image = resized_image.filter(ImageFilter.GaussianBlur(radius=15))
+        darkened_image = Image.new('RGBA', blurred_image.size, (0, 0, 0, 130))
+        blurred_image = Image.alpha_composite(blurred_image.convert('RGBA'), darkened_image)
+        
         self.background_photo = ImageTk.PhotoImage(blurred_image)
         self.background_label.config(image=self.background_photo)
 
     def create_execute_button(self):
-        execute_button = tk.Button(self.frame, text="Execute", command=self.run_hashcat, font=("Helvetica", 12), bg="#4CAF50", fg="white", activebackground="#45a049")
+        execute_button = tk.Button(
+            self.frame,
+            text="Execute",
+            command=self.run_hashcat,
+            font=('Segoe UI', 12, 'bold'),  # Slightly larger font for execute button
+            **self.green_button_style
+        )
         execute_button.grid(row=8, column=1, padx=10, pady=20, sticky="nsew")
+        
+        # Add hover effect
+        execute_button.bind('<Enter>', lambda e: execute_button.configure(bg='#388E3C'))
+        execute_button.bind('<Leave>', lambda e: execute_button.configure(bg=self.colors['accent']))
 
     def run_hashcat(self):
         """Run the Hashcat software with the selected options."""
