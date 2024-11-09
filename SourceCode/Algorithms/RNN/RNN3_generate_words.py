@@ -10,6 +10,12 @@ import psutil
 import logging
 import sys
 from typing import Optional, Tuple
+import time
+import torch.cuda as cuda
+import cpuinfo
+import pkg_resources
+import subprocess
+from typing import Dict, Any
 
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -240,3 +246,207 @@ with open(special_output_file, "w") as special_file:
 
 logging.info(f"Special characters generation complete. Total: {total_special_words}, Errors: {total_special_errors}")
 logging.info("=== Generation Session Completed ===")
+
+def get_system_info() -> Dict[str, Any]:
+    """
+    Collect comprehensive system information
+    """
+    try:
+        # CPU Information
+        cpu_info = cpuinfo.get_cpu_info()
+        
+        # GPU Information
+        gpu_info = []
+        if torch.cuda.is_available():
+            for i in range(torch.cuda.device_count()):
+                gpu_info.append({
+                    'name': torch.cuda.get_device_name(i),
+                    'capability': torch.cuda.get_device_capability(i),
+                    'memory_total': torch.cuda.get_device_properties(i).total_memory,
+                    'memory_free': torch.cuda.memory_allocated(i),
+                    'memory_used': torch.cuda.memory_reserved(i)
+                })
+
+        # System Memory
+        memory = psutil.virtual_memory()
+        
+        # Collect all dependencies
+        dependencies = {pkg.key: pkg.version for pkg in pkg_resources.working_set}
+        
+        # CUDA version
+        cuda_version = torch.version.cuda if torch.cuda.is_available() else "Not available"
+        
+        system_info = {
+            'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            'platform': {
+                'system': platform.system(),
+                'release': platform.release(),
+                'version': platform.version(),
+                'machine': platform.machine(),
+                'processor': platform.processor()
+            },
+            'cpu': {
+                'brand': cpu_info.get('brand_raw', 'Unknown'),
+                'cores_physical': psutil.cpu_count(logical=False),
+                'cores_logical': psutil.cpu_count(logical=True),
+                'frequency': psutil.cpu_freq()._asdict() if psutil.cpu_freq() else None
+            },
+            'memory': {
+                'total': memory.total,
+                'available': memory.available,
+                'used': memory.used,
+                'percent': memory.percent
+            },
+            'gpu': gpu_info,
+            'python': {
+                'version': sys.version,
+                'implementation': platform.python_implementation()
+            },
+            'dependencies': {
+                'pytorch': torch.__version__,
+                'cuda': cuda_version,
+                'numpy': np.__version__,
+                **dependencies
+            }
+        }
+        
+        return system_info
+        
+    except Exception as e:
+        logging.error(f"Error collecting system information: {str(e)}")
+        return {}
+
+def log_system_info(system_info: Dict[str, Any]) -> None:
+    """
+    Log detailed system information
+    """
+    logging.info("=== System Information ===")
+    
+    # Platform
+    logging.info("Platform Information:")
+    for key, value in system_info['platform'].items():
+        logging.info(f"  {key}: {value}")
+    
+    # CPU
+    logging.info("\nCPU Information:")
+    for key, value in system_info['cpu'].items():
+        logging.info(f"  {key}: {value}")
+    
+    # Memory
+    logging.info("\nMemory Information:")
+    for key, value in system_info['memory'].items():
+        if 'total' in key or 'available' in key or 'used' in key:
+            logging.info(f"  {key}: {value / (1024**3):.2f} GB")
+        else:
+            logging.info(f"  {key}: {value}")
+    
+    # GPU
+    logging.info("\nGPU Information:")
+    if system_info['gpu']:
+        for i, gpu in enumerate(system_info['gpu']):
+            logging.info(f"  GPU {i}:")
+            for key, value in gpu.items():
+                if 'memory' in key:
+                    logging.info(f"    {key}: {value / (1024**3):.2f} GB")
+                else:
+                    logging.info(f"    {key}: {value}")
+    else:
+        logging.info("  No GPU detected")
+    
+    # Dependencies
+    logging.info("\nDependencies:")
+    for key, value in system_info['dependencies'].items():
+        logging.info(f"  {key}: {value}")
+
+# Update the main generation loop with performance metrics
+def main():
+    try:
+        # Log system information
+        system_info = get_system_info()
+        log_system_info(system_info)
+        
+        # Initialize performance metrics
+        performance_metrics = {
+            'start_time': time.time(),
+            'total_words': 0,
+            'total_chars': 0,
+            'generation_times': []
+        }
+
+        for start_char in starting_chars:
+            char_start_time = time.time()
+            words_generated = 0
+            chars_generated = 0
+            
+            # ... existing generation code ...
+            
+            with ThreadPoolExecutor() as executor:
+                futures = [executor.submit(generate_word, model, start_char, word_length, temperature) 
+                          for _ in range(words_per_char)]
+                
+                for future in as_completed(futures):
+                    try:
+                        word = future.result()
+                        if word:
+                            words_generated += 1
+                            chars_generated += len(word)
+                            performance_metrics['total_words'] += 1
+                            performance_metrics['total_chars'] += len(word)
+                            
+                            # Log performance every 1000 words
+                            if words_generated % 1000 == 0:
+                                current_time = time.time()
+                                elapsed_time = current_time - char_start_time
+                                words_per_second = words_generated / elapsed_time
+                                chars_per_second = chars_generated / elapsed_time
+                                
+                                logging.info(
+                                    f"Performance metrics for '{start_char}' after {words_generated} words:\n"
+                                    f"  Words per second: {words_per_second:.2f}\n"
+                                    f"  Characters per second: {chars_per_second:.2f}"
+                                )
+                    
+                    except Exception as e:
+                        logging.error(f"Error in word generation: {str(e)}")
+            
+            # Log performance metrics for this character
+            char_end_time = time.time()
+            char_elapsed_time = char_end_time - char_start_time
+            performance_metrics['generation_times'].append({
+                'char': start_char,
+                'time': char_elapsed_time,
+                'words': words_generated,
+                'chars': chars_generated
+            })
+            
+            logging.info(
+                f"\nPerformance Summary for '{start_char}':\n"
+                f"  Total time: {char_elapsed_time:.2f} seconds\n"
+                f"  Average words per second: {words_generated/char_elapsed_time:.2f}\n"
+                f"  Average chars per second: {chars_generated/char_elapsed_time:.2f}"
+            )
+        
+        # Log final performance metrics
+        end_time = time.time()
+        total_time = end_time - performance_metrics['start_time']
+        
+        logging.info("\n=== Final Performance Metrics ===")
+        logging.info(f"Total execution time: {total_time:.2f} seconds")
+        logging.info(f"Total words generated: {performance_metrics['total_words']}")
+        logging.info(f"Total characters generated: {performance_metrics['total_chars']}")
+        logging.info(f"Overall words per second: {performance_metrics['total_words']/total_time:.2f}")
+        logging.info(f"Overall chars per second: {performance_metrics['total_chars']/total_time:.2f}")
+        
+        # Log performance by character
+        logging.info("\nPerformance by Character:")
+        for metric in performance_metrics['generation_times']:
+            logging.info(
+                f"  Character '{metric['char']}':\n"
+                f"    Time: {metric['time']:.2f} seconds\n"
+                f"    Words/second: {metric['words']/metric['time']:.2f}\n"
+                f"    Chars/second: {metric['chars']/metric['time']:.2f}"
+            )
+        
+    except Exception as e:
+        logging.critical(f"Critical error in main execution: {str(e)}")
+        raise
