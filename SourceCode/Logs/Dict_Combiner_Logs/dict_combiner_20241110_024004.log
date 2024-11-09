@@ -27,3 +27,7 @@
 2024-11-10 02:50:48 - INFO - Successfully read 28788503 lines from: SourceCode/Datasets_Filtered/length_8\filtered_words_00000018.txt
 2024-11-10 02:51:24 - INFO - Successfully read 24384473 lines from: SourceCode/Datasets_Filtered/length_8\filtered_words_00000019.txt
 2024-11-10 02:51:57 - INFO - Successfully read 30016905 lines from: SourceCode/Datasets_Filtered/length_8\filtered_words_00000020.txt
+2024-11-10 02:52:29 - INFO - Processed 20/46 files. Total unique lines: 543497786
+2024-11-10 02:52:41 - INFO - Successfully read 37103990 lines from: SourceCode/Datasets_Filtered/length_8\filtered_words_00000021.txt
+2024-11-10 02:53:24 - INFO - Successfully read 21563537 lines from: SourceCode/Datasets_Filtered/length_8\filtered_words_00000022.txt
+2024-11-10 02:53:53 - INFO - Successfully read 25767303 lines from: SourceCode/Datasets_Filtered/length_8\filtered_words_00000023.txt

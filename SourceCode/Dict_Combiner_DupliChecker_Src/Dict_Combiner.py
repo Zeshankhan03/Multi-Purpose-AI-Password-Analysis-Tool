@@ -146,7 +146,7 @@ def main():
 
         # Configuration
         input_folder = "SourceCode/Datasets_Filtered/length_8"
-        output_file = "SourceCode/Main_Dict/combined_output.txt"
+        output_file = "SourceCode/Main_Dict/Main_Dict_8.txt"
         
         # Log configuration
         log_event("Configuration:")
