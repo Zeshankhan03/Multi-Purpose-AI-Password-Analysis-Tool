@@ -89,7 +89,7 @@ def main(input_folder, output_folder, log_folder):
 
 # Example usage
 if __name__ == "__main__":
-    input_folder = r'SourceCode\Generated_Dict'  # Replace with your input folder path
+    input_folder = r'SourceCode\Datasets_Filtered\length_8'  # Replace with your input folder path
     output_folder = r'SourceCode\Main_Dict'  # Replace with your output folder path
     log_folder = r'SourceCode\Logs\Dict_Combiner_Logs'  # Replace with your log folder path
     main(input_folder, output_folder, log_folder)

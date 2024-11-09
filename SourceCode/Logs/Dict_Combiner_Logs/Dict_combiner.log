@@ -921,3 +921,12 @@ Total number of duplicate words removed: 105211
 2024-11-09 13:19:02 - Total number of duplicate words removed: 105211
 2024-11-09 13:19:02 - Processing complete. Statistics logged.
 2024-11-09 13:19:02 - File combining process completed.
+2024-11-09 13:21:56 - Starting the file combining process.
+2024-11-09 13:22:01 - Read file: SourceCode\Datasets_Filtered\length_8\filtered_words_00000002.txt
+2024-11-09 13:22:07 - Read file: SourceCode\Datasets_Filtered\length_8\filtered_words_00000046.txt
+2024-11-09 13:23:34 - Read file: SourceCode\Datasets_Filtered\length_8\filtered_words_00000045.txt
+2024-11-09 13:23:55 - Read file: SourceCode\Datasets_Filtered\length_8\filtered_words_00000007.txt
+2024-11-09 13:23:56 - Read file: SourceCode\Datasets_Filtered\length_8\filtered_words_00000020.txt
+2024-11-09 13:23:58 - Read file: SourceCode\Datasets_Filtered\length_8\filtered_words_00000017.txt
+2024-11-09 13:24:02 - Read file: SourceCode\Datasets_Filtered\length_8\filtered_words_00000028.txt
+2024-11-09 13:24:05 - Read file: SourceCode\Datasets_Filtered\length_8\filtered_words_00000008.txt
