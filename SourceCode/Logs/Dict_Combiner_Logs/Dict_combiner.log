@@ -1247,3 +1247,5 @@ Total number of duplicate words removed: 105211
 2024-11-09 15:51:05 - Read file: SourceCode\Datasets_Filtered\length_8\filtered_words_00000005.txt
 2024-11-09 15:51:11 - Wrote content from filtered_words_00000005.txt to output file.
 2024-11-09 15:51:15 - Read file: SourceCode\Datasets_Filtered\length_8\filtered_words_00000006.txt
+2024-11-09 15:51:20 - Wrote content from filtered_words_00000006.txt to output file.
+2024-11-09 15:51:24 - Read file: SourceCode\Datasets_Filtered\length_8\filtered_words_00000007.txt
