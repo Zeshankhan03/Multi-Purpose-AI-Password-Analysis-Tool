@@ -18,6 +18,22 @@ def log_message(log_file, message):
         timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         log.write(f"{timestamp} - {message}\n")
 
+# Function to remove duplicate words from the output file
+def remove_duplicates(output_file, log_file):
+    try:
+        with open(output_file, 'r', encoding='utf-8') as file:
+            content = file.read()
+            words = content.split()
+            unique_words = set(words)  # Use a set to remove duplicates
+
+        # Write unique words back to the output file
+        with open(output_file, 'w', encoding='utf-8') as file:
+            file.write(' '.join(unique_words))
+        
+        log_message(log_file, "Removed duplicate words from the output file.")
+    except Exception as e:
+        log_message(log_file, f"Error removing duplicates: {e}")
+
 # Main function to execute the script
 def main(input_folder, output_file, log_file):
     if not os.path.exists(input_folder):
@@ -36,6 +52,9 @@ def main(input_folder, output_file, log_file):
                 with open(output_file, 'a', encoding='utf-8') as output:
                     output.write(content + '\n')  # Write content to output file
                 log_message(log_file, f"Wrote content from {filename} to output file.")
+
+    # Remove duplicates from the output file
+    remove_duplicates(output_file, log_file)
 
     # Log the completion of the process
     log_message(log_file, "File combining process completed.")
