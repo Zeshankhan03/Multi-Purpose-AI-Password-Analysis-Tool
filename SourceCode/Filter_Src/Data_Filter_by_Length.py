@@ -141,7 +141,7 @@ if __name__ == "__main__":
     parser.add_argument('--num_chunks', type=int, default=20, help='Number of chunks to split each file into for parallel processing.')
     parser.add_argument('--subchunk_size', type=int, default=1024*1024, help='Size of subchunks to process at a time (in bytes).')
     parser.add_argument('--encoding', type=str, default='utf-8', help='File encoding (default: utf-8).')
-    parser.add_argument('--output_directory', type=str, default='.', help='The directory to save filtered words.')
+    parser.add_argument('--output_directory', type=str, default=r'SourceCode\Datasets_Filtered', help='The directory to save filtered words.')
 
     args = parser.parse_args()
 
