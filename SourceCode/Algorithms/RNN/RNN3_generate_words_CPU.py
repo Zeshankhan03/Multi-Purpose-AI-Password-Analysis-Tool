@@ -29,20 +29,20 @@ class RNNModel(nn.Module):
         return torch.zeros(self.num_layers, batch_size, self.hidden_size).to(device)
 
 # Load model and character mappings
-char_to_idx = torch.load(R'SourceCode\Algorithms\RNN\RNN_Modules\char_to_idx.pth')
-idx_to_char = torch.load(R'SourceCode\Algorithms\RNN\RNN_Modules\idx_to_char.pth')
+char_to_idx = torch.load(R'SourceCode\Algorithms\RNN\RNN_Modules\char_to_idx.pth', map_location=torch.device('cpu'), weights_only=True)
+idx_to_char = torch.load(R'SourceCode\Algorithms\RNN\RNN_Modules\idx_to_char.pth', map_location=torch.device('cpu'), weights_only=True)
 chars = sorted(char_to_idx.keys())
 input_size = len(chars)
 hidden_size = 64
 num_layers = 2
 
 model = RNNModel(input_size, hidden_size, num_layers, len(chars)).to(device)
-model.load_state_dict(torch.load(R'SourceCode\Algorithms\RNN\RNN_Modules\rnn_model.pth'))
+model.load_state_dict(torch.load(R'SourceCode\Algorithms\RNN\RNN_Modules\rnn_model.pth', map_location=torch.device('cpu'), weights_only=True))
 
 # System information display
-print(f"Device: {device}")
-print(f"Platform: {platform.system()} {platform.release()} ({platform.processor()})")
-print(f"Total Memory: {psutil.virtual_memory().total / (1024 ** 3):.2f} GB")
+#print(f"Device: {device}")
+#print(f"Platform: {platform.system()} {platform.release()} ({platform.processor()})")
+#print(f"Total Memory: {psutil.virtual_memory().total / (1024 ** 3):.2f} GB")
 
 # Directory setup
 output_dir = "SourceCode/Generated_Dict"
@@ -72,7 +72,7 @@ def generate_word(model, start_char, length, temperature=1.0):
 start_char = 'o'
 word_length = 8
 temperature = 0.5
-total_words = 1000000
+total_words = 1000
 #max_concurrent_threads = 128  # Max number of threads to run at a time
 
 # Display thread and generation information
