@@ -1,0 +1,914 @@
+2024-11-10 02:12:55 - INFO - Logging initialized. Log file: SourceCode/Logs/RNN_Generation_Logs\rnn_generation_20241110_021255.log
+2024-11-10 02:12:55 - INFO - Using device: cuda
+2024-11-10 02:12:55 - INFO - Character mappings loaded successfully
+2024-11-10 02:12:55 - INFO - Model loaded successfully
+2024-11-10 02:12:55 - INFO - Starting generation for character 'A'
+2024-11-10 02:12:56 - INFO - Generated word: ALEXXX13
+2024-11-10 02:12:56 - INFO - Generated word: ARTIEROY
+2024-11-10 02:12:56 - INFO - Generated word: ALEXITO1
+2024-11-10 02:12:56 - INFO - Generated word: ADATHEAD
+2024-11-10 02:12:56 - INFO - Generated word: AMILEY89
+2024-11-10 02:12:56 - INFO - Generated word: ALEXFRAN
+2024-11-10 02:12:56 - INFO - Generated word: ARTENATA
+2024-11-10 02:12:56 - INFO - Generated word: AVIEROUX
+2024-11-10 02:12:56 - INFO - Generated word: AL-AITAL
+2024-11-10 02:12:56 - INFO - Generated word: ALLERICE
+2024-11-10 02:12:56 - INFO - Completed generation for 'A'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'B'
+2024-11-10 02:12:56 - INFO - Generated word: BABYTOME
+2024-11-10 02:12:56 - INFO - Generated word: BABYATEN
+2024-11-10 02:12:56 - INFO - Generated word: BABY2000
+2024-11-10 02:12:56 - INFO - Generated word: BIGCATS1
+2024-11-10 02:12:56 - INFO - Generated word: BIGIANA1
+2024-11-10 02:12:56 - INFO - Generated word: BULLY222
+2024-11-10 02:12:56 - INFO - Generated word: BABYLEE5
+2024-11-10 02:12:56 - INFO - Generated word: BIGAMERO
+2024-11-10 02:12:56 - INFO - Generated word: BALETHAN
+2024-11-10 02:12:56 - INFO - Generated word: BORICH82
+2024-11-10 02:12:56 - INFO - Completed generation for 'B'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'C'
+2024-11-10 02:12:56 - INFO - Generated word: CARIAPAT
+2024-11-10 02:12:56 - INFO - Generated word: CITALANT
+2024-11-10 02:12:56 - INFO - Generated word: CATINIAT
+2024-11-10 02:12:56 - INFO - Generated word: CALIADRO
+2024-11-10 02:12:56 - INFO - Generated word: CARRONE1
+2024-11-10 02:12:56 - INFO - Generated word: COLERTAR
+2024-11-10 02:12:56 - INFO - Generated word: CONTERTS
+2024-11-10 02:12:56 - INFO - Generated word: CORANDAN
+2024-11-10 02:12:56 - INFO - Generated word: CALARIAN
+2024-11-10 02:12:56 - INFO - Generated word: CARA1987
+2024-11-10 02:12:56 - INFO - Completed generation for 'C'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'D'
+2024-11-10 02:12:56 - INFO - Generated word: DARKSHAY
+2024-11-10 02:12:56 - INFO - Generated word: DESTERIS
+2024-11-10 02:12:56 - INFO - Generated word: DEMANDAN
+2024-11-10 02:12:56 - INFO - Generated word: DADELLEN
+2024-11-10 02:12:56 - INFO - Generated word: DENARA'S
+2024-11-10 02:12:56 - INFO - Generated word: DANOKOAN
+2024-11-10 02:12:56 - INFO - Generated word: DOOLET94
+2024-11-10 02:12:56 - INFO - Generated word: DLEANDAT
+2024-11-10 02:12:56 - INFO - Generated word: DESONY11
+2024-11-10 02:12:56 - INFO - Generated word: DISCHICK
+2024-11-10 02:12:56 - INFO - Completed generation for 'D'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'E'
+2024-11-10 02:12:56 - INFO - Generated word: ELESALAS
+2024-11-10 02:12:56 - INFO - Generated word: ESSERENA
+2024-11-10 02:12:56 - INFO - Generated word: ELADOLLY
+2024-11-10 02:12:56 - INFO - Generated word: ELEVINGA
+2024-11-10 02:12:56 - INFO - Generated word: ELCATO01
+2024-11-10 02:12:56 - INFO - Generated word: ELLIEN11
+2024-11-10 02:12:56 - INFO - Generated word: ELLERAIN
+2024-11-10 02:12:56 - INFO - Generated word: ELMANA14
+2024-11-10 02:12:56 - INFO - Generated word: ECATONIA
+2024-11-10 02:12:56 - INFO - Generated word: ELMARY69
+2024-11-10 02:12:56 - INFO - Completed generation for 'E'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'F'
+2024-11-10 02:12:56 - INFO - Generated word: FINDYBUG
+2024-11-10 02:12:56 - INFO - Generated word: FREDIE'S
+2024-11-10 02:12:56 - INFO - Generated word: FAILEY28
+2024-11-10 02:12:56 - INFO - Generated word: FACTALEK
+2024-11-10 02:12:56 - INFO - Generated word: FARNOELS
+2024-11-10 02:12:56 - INFO - Generated word: FREDDY12
+2024-11-10 02:12:56 - INFO - Generated word: FARANITA
+2024-11-10 02:12:56 - INFO - Generated word: FLASTING
+2024-11-10 02:12:56 - INFO - Generated word: FELLYX13
+2024-11-10 02:12:56 - INFO - Generated word: FIYCOTTE
+2024-11-10 02:12:56 - INFO - Completed generation for 'F'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'G'
+2024-11-10 02:12:56 - INFO - Generated word: GIGANAIN
+2024-11-10 02:12:56 - INFO - Generated word: GOLISHEL
+2024-11-10 02:12:56 - INFO - Generated word: GENTERED
+2024-11-10 02:12:56 - INFO - Generated word: GARLANES
+2024-11-10 02:12:56 - INFO - Generated word: GARDONER
+2024-11-10 02:12:56 - INFO - Generated word: GOLFIRES
+2024-11-10 02:12:56 - INFO - Generated word: GULUMANI
+2024-11-10 02:12:56 - INFO - Generated word: GOSHAS24
+2024-11-10 02:12:56 - INFO - Generated word: GARDYCAR
+2024-11-10 02:12:56 - INFO - Generated word: GURLIE23
+2024-11-10 02:12:56 - INFO - Completed generation for 'G'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'H'
+2024-11-10 02:12:56 - INFO - Generated word: HOTTER21
+2024-11-10 02:12:56 - INFO - Generated word: HAKELINA
+2024-11-10 02:12:56 - INFO - Generated word: HARIVINA
+2024-11-10 02:12:56 - INFO - Generated word: HARMANE4
+2024-11-10 02:12:56 - INFO - Generated word: HILLENED
+2024-11-10 02:12:56 - INFO - Generated word: HANGENDE
+2024-11-10 02:12:56 - INFO - Generated word: HAMANOVA
+2024-11-10 02:12:56 - INFO - Generated word: HANETACA
+2024-11-10 02:12:56 - INFO - Generated word: HATERORA
+2024-11-10 02:12:56 - INFO - Generated word: HATIRA87
+2024-11-10 02:12:56 - INFO - Completed generation for 'H'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'I'
+2024-11-10 02:12:56 - INFO - Generated word: IMMA1983
+2024-11-10 02:12:56 - INFO - Generated word: IMASANAI
+2024-11-10 02:12:56 - INFO - Generated word: INTOSS01
+2024-11-10 02:12:56 - INFO - Generated word: IMONESET
+2024-11-10 02:12:56 - INFO - Generated word: ILUVKS25
+2024-11-10 02:12:56 - INFO - Generated word: ILOVEH22
+2024-11-10 02:12:56 - INFO - Generated word: INDETONO
+2024-11-10 02:12:56 - INFO - Generated word: IRASAMAR
+2024-11-10 02:12:56 - INFO - Generated word: ILOVEMOO
+2024-11-10 02:12:56 - INFO - Generated word: INGIOSIA
+2024-11-10 02:12:56 - INFO - Completed generation for 'I'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'J'
+2024-11-10 02:12:56 - INFO - Generated word: JAYU2006
+2024-11-10 02:12:56 - INFO - Generated word: JAMERONE
+2024-11-10 02:12:56 - INFO - Generated word: JANIES12
+2024-11-10 02:12:56 - INFO - Generated word: JAMESTAT
+2024-11-10 02:12:56 - INFO - Generated word: JESSER28
+2024-11-10 02:12:56 - INFO - Generated word: JOSHANE1
+2024-11-10 02:12:56 - INFO - Generated word: JAY20070
+2024-11-10 02:12:56 - INFO - Generated word: JUFELINA
+2024-11-10 02:12:56 - INFO - Generated word: JANMAN83
+2024-11-10 02:12:56 - INFO - Generated word: JAYPARTS
+2024-11-10 02:12:56 - INFO - Completed generation for 'J'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'K'
+2024-11-10 02:12:56 - INFO - Generated word: KILLYTOM
+2024-11-10 02:12:56 - INFO - Generated word: KARAYIE1
+2024-11-10 02:12:56 - INFO - Generated word: KRISSIES
+2024-11-10 02:12:56 - INFO - Generated word: KARISAUM
+2024-11-10 02:12:56 - INFO - Generated word: KANZY123
+2024-11-10 02:12:56 - INFO - Generated word: KURARATI
+2024-11-10 02:12:56 - INFO - Generated word: KOLAKILI
+2024-11-10 02:12:56 - INFO - Generated word: KARATORA
+2024-11-10 02:12:56 - INFO - Generated word: KOLANVIL
+2024-11-10 02:12:56 - INFO - Generated word: KOUTERED
+2024-11-10 02:12:56 - INFO - Completed generation for 'K'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'L'
+2024-11-10 02:12:56 - INFO - Generated word: LEESHIS1
+2024-11-10 02:12:56 - INFO - Generated word: LOVETANA
+2024-11-10 02:12:56 - INFO - Generated word: LOBIBASS
+2024-11-10 02:12:56 - INFO - Generated word: LANDOLIS
+2024-11-10 02:12:56 - INFO - Generated word: LINGSTAN
+2024-11-10 02:12:56 - INFO - Generated word: LILE1985
+2024-11-10 02:12:56 - INFO - Generated word: LILLAY09
+2024-11-10 02:12:56 - INFO - Generated word: LILOSMAN
+2024-11-10 02:12:56 - INFO - Generated word: LYNNATAY
+2024-11-10 02:12:56 - INFO - Generated word: LEELAFER
+2024-11-10 02:12:56 - INFO - Completed generation for 'L'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'M'
+2024-11-10 02:12:56 - INFO - Generated word: MONABUAN
+2024-11-10 02:12:56 - INFO - Generated word: MOMPERES
+2024-11-10 02:12:56 - INFO - Generated word: MILLANTA
+2024-11-10 02:12:56 - INFO - Generated word: MARKARIA
+2024-11-10 02:12:56 - INFO - Generated word: MASIANES
+2024-11-10 02:12:56 - INFO - Generated word: MONKER23
+2024-11-10 02:12:56 - INFO - Generated word: MARIANA1
+2024-11-10 02:12:56 - INFO - Generated word: MARCHABE
+2024-11-10 02:12:56 - INFO - Generated word: MARIKITO
+2024-11-10 02:12:56 - INFO - Generated word: MARCALAS
+2024-11-10 02:12:56 - INFO - Completed generation for 'M'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'N'
+2024-11-10 02:12:56 - INFO - Generated word: NATERLIA
+2024-11-10 02:12:56 - INFO - Generated word: NOHONGEL
+2024-11-10 02:12:56 - INFO - Generated word: NEMANDOR
+2024-11-10 02:12:56 - INFO - Generated word: NAMONE04
+2024-11-10 02:12:56 - INFO - Generated word: NTREDING
+2024-11-10 02:12:56 - INFO - Generated word: NESTALIA
+2024-11-10 02:12:56 - INFO - Generated word: NANAHITO
+2024-11-10 02:12:56 - INFO - Generated word: NICKYLEY
+2024-11-10 02:12:56 - INFO - Generated word: NIKALA01
+2024-11-10 02:12:56 - INFO - Generated word: NAKESTAR
+2024-11-10 02:12:56 - INFO - Completed generation for 'N'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'O'
+2024-11-10 02:12:56 - INFO - Generated word: ODHARALE
+2024-11-10 02:12:56 - INFO - Generated word: ONIACHEE
+2024-11-10 02:12:56 - INFO - Generated word: OTHARINA
+2024-11-10 02:12:56 - INFO - Generated word: ONESTORE
+2024-11-10 02:12:56 - INFO - Generated word: ORLISTIE
+2024-11-10 02:12:56 - INFO - Generated word: OPONELID
+2024-11-10 02:12:56 - INFO - Generated word: OMADIARI
+2024-11-10 02:12:56 - INFO - Generated word: ONERSONS
+2024-11-10 02:12:56 - INFO - Generated word: OSTERIES
+2024-11-10 02:12:56 - INFO - Generated word: OMARIDER
+2024-11-10 02:12:56 - INFO - Completed generation for 'O'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'P'
+2024-11-10 02:12:56 - INFO - Generated word: PARTAN11
+2024-11-10 02:12:56 - INFO - Generated word: PATATATE
+2024-11-10 02:12:56 - INFO - Generated word: PIRONORA
+2024-11-10 02:12:56 - INFO - Generated word: PERUTAES
+2024-11-10 02:12:56 - INFO - Generated word: PUTERAIN
+2024-11-10 02:12:56 - INFO - Generated word: PARALISH
+2024-11-10 02:12:56 - INFO - Generated word: PORTAMAT
+2024-11-10 02:12:56 - INFO - Generated word: PANCEREN
+2024-11-10 02:12:56 - INFO - Generated word: PIMMY696
+2024-11-10 02:12:56 - INFO - Generated word: PARKHAND
+2024-11-10 02:12:56 - INFO - Completed generation for 'P'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'Q'
+2024-11-10 02:12:56 - INFO - Generated word: QUESTAVA
+2024-11-10 02:12:56 - INFO - Generated word: QUINGALE
+2024-11-10 02:12:56 - INFO - Generated word: QUISSESS
+2024-11-10 02:12:56 - INFO - Generated word: QUEENSAN
+2024-11-10 02:12:56 - INFO - Generated word: QUESTARS
+2024-11-10 02:12:56 - INFO - Generated word: QUINISEA
+2024-11-10 02:12:56 - INFO - Generated word: QUANOTTY
+2024-11-10 02:12:56 - INFO - Generated word: Q1827876
+2024-11-10 02:12:56 - INFO - Generated word: QUINGERA
+2024-11-10 02:12:56 - INFO - Generated word: QUARDORA
+2024-11-10 02:12:56 - INFO - Completed generation for 'Q'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'R'
+2024-11-10 02:12:56 - INFO - Generated word: RETELICE
+2024-11-10 02:12:56 - INFO - Generated word: RICK2001
+2024-11-10 02:12:56 - INFO - Generated word: ROSSEY23
+2024-11-10 02:12:56 - INFO - Generated word: RANTALIA
+2024-11-10 02:12:56 - INFO - Generated word: RENTING1
+2024-11-10 02:12:56 - INFO - Generated word: ROMERS19
+2024-11-10 02:12:56 - INFO - Generated word: ROBELDOE
+2024-11-10 02:12:56 - INFO - Generated word: REYAAMAR
+2024-11-10 02:12:56 - INFO - Generated word: REISEA25
+2024-11-10 02:12:56 - INFO - Generated word: ROZARDES
+2024-11-10 02:12:56 - INFO - Completed generation for 'R'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'S'
+2024-11-10 02:12:56 - INFO - Generated word: SUSANA23
+2024-11-10 02:12:56 - INFO - Generated word: SELA2008
+2024-11-10 02:12:56 - INFO - Generated word: SINKINGS
+2024-11-10 02:12:56 - INFO - Generated word: SWEETY12
+2024-11-10 02:12:56 - INFO - Generated word: SCATON09
+2024-11-10 02:12:56 - INFO - Generated word: SKIPSORI
+2024-11-10 02:12:56 - INFO - Generated word: SABAKULA
+2024-11-10 02:12:56 - INFO - Generated word: SHORENES
+2024-11-10 02:12:56 - INFO - Generated word: SOLOCHAN
+2024-11-10 02:12:56 - INFO - Generated word: STATTICK
+2024-11-10 02:12:56 - INFO - Completed generation for 'S'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'T'
+2024-11-10 02:12:56 - INFO - Generated word: TOMERTUD
+2024-11-10 02:12:56 - INFO - Generated word: TAPITOSU
+2024-11-10 02:12:56 - INFO - Generated word: TAMIRE24
+2024-11-10 02:12:56 - INFO - Generated word: TROYALES
+2024-11-10 02:12:56 - INFO - Generated word: TAYDANA3
+2024-11-10 02:12:56 - INFO - Generated word: TINKARAI
+2024-11-10 02:12:56 - INFO - Generated word: TELLERSE
+2024-11-10 02:12:56 - INFO - Generated word: TRIPLE10
+2024-11-10 02:12:56 - INFO - Generated word: TATIES24
+2024-11-10 02:12:56 - INFO - Generated word: THE-ASSA
+2024-11-10 02:12:56 - INFO - Completed generation for 'T'. Generated 10 words
+2024-11-10 02:12:56 - INFO - Starting generation for character 'U'
+2024-11-10 02:12:57 - INFO - Generated word: UNIPUTIA
+2024-11-10 02:12:57 - INFO - Generated word: USANCHIN
+2024-11-10 02:12:57 - INFO - Generated word: UROSER'S
+2024-11-10 02:12:57 - INFO - Generated word: USPATSUS
+2024-11-10 02:12:57 - INFO - Generated word: USORCHEN
+2024-11-10 02:12:57 - INFO - Generated word: UBSHILES
+2024-11-10 02:12:57 - INFO - Generated word: UALEINDE
+2024-11-10 02:12:57 - INFO - Generated word: USIMARAS
+2024-11-10 02:12:57 - INFO - Generated word: USCORICO
+2024-11-10 02:12:57 - INFO - Generated word: UMARIA69
+2024-11-10 02:12:57 - INFO - Completed generation for 'U'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'V'
+2024-11-10 02:12:57 - INFO - Generated word: VALERIAN
+2024-11-10 02:12:57 - INFO - Generated word: VENNOSET
+2024-11-10 02:12:57 - INFO - Generated word: VERELOIS
+2024-11-10 02:12:57 - INFO - Generated word: VIRFARTE
+2024-11-10 02:12:57 - INFO - Generated word: VALLITIS
+2024-11-10 02:12:57 - INFO - Generated word: VINMANA1
+2024-11-10 02:12:57 - INFO - Generated word: VINOSITA
+2024-11-10 02:12:57 - INFO - Generated word: VANDALLI
+2024-11-10 02:12:57 - INFO - Generated word: VISZINES
+2024-11-10 02:12:57 - INFO - Generated word: VITOMAN4
+2024-11-10 02:12:57 - INFO - Completed generation for 'V'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'W'
+2024-11-10 02:12:57 - INFO - Generated word: WERRUBER
+2024-11-10 02:12:57 - INFO - Generated word: WHOTTERS
+2024-11-10 02:12:57 - INFO - Generated word: WILLIE97
+2024-11-10 02:12:57 - INFO - Generated word: WEETTONE
+2024-11-10 02:12:57 - INFO - Generated word: WAWABURA
+2024-11-10 02:12:57 - INFO - Generated word: WILLEN06
+2024-11-10 02:12:57 - INFO - Generated word: WOKINDAI
+2024-11-10 02:12:57 - INFO - Generated word: WIENNIES
+2024-11-10 02:12:57 - INFO - Generated word: WALLANOA
+2024-11-10 02:12:57 - INFO - Generated word: WESTY111
+2024-11-10 02:12:57 - INFO - Completed generation for 'W'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'X'
+2024-11-10 02:12:57 - INFO - Generated word: XVVIPYAU
+2024-11-10 02:12:57 - INFO - Generated word: XIDIGARS
+2024-11-10 02:12:57 - INFO - Generated word: XXXXXXXI
+2024-11-10 02:12:57 - INFO - Generated word: XENGLENA
+2024-11-10 02:12:57 - INFO - Generated word: XITITA08
+2024-11-10 02:12:57 - INFO - Generated word: XIKALESI
+2024-11-10 02:12:57 - INFO - Generated word: XALINE44
+2024-11-10 02:12:57 - INFO - Generated word: XXE-POLY
+2024-11-10 02:12:57 - INFO - Generated word: XLISZUFO
+2024-11-10 02:12:57 - INFO - Generated word: XALTEMIS
+2024-11-10 02:12:57 - INFO - Completed generation for 'X'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'Y'
+2024-11-10 02:12:57 - INFO - Generated word: YALANARI
+2024-11-10 02:12:57 - INFO - Generated word: YOTIANIN
+2024-11-10 02:12:57 - INFO - Generated word: YOSILOVE
+2024-11-10 02:12:57 - INFO - Generated word: YLEKOWAY
+2024-11-10 02:12:57 - INFO - Generated word: YUNGLOGA
+2024-11-10 02:12:57 - INFO - Generated word: YEARONSE
+2024-11-10 02:12:57 - INFO - Generated word: YUWICHET
+2024-11-10 02:12:57 - INFO - Generated word: YUNG-TOO
+2024-11-10 02:12:57 - INFO - Generated word: YUKILLA1
+2024-11-10 02:12:57 - INFO - Generated word: YITAMAHI
+2024-11-10 02:12:57 - INFO - Completed generation for 'Y'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'Z'
+2024-11-10 02:12:57 - INFO - Generated word: ZZ1HKCDF
+2024-11-10 02:12:57 - INFO - Generated word: ZANGAS12
+2024-11-10 02:12:57 - INFO - Generated word: ZANGER11
+2024-11-10 02:12:57 - INFO - Generated word: ZAKERMEN
+2024-11-10 02:12:57 - INFO - Generated word: ZAKALINA
+2024-11-10 02:12:57 - INFO - Generated word: ZANIIS01
+2024-11-10 02:12:57 - INFO - Generated word: ZANYOLAS
+2024-11-10 02:12:57 - INFO - Generated word: ZINGER'S
+2024-11-10 02:12:57 - INFO - Generated word: ZAPOLATO
+2024-11-10 02:12:57 - INFO - Generated word: ZIANEEUS
+2024-11-10 02:12:57 - INFO - Completed generation for 'Z'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'a'
+2024-11-10 02:12:57 - INFO - Generated word: amariala
+2024-11-10 02:12:57 - INFO - Generated word: angels05
+2024-11-10 02:12:57 - INFO - Generated word: andy2009
+2024-11-10 02:12:57 - INFO - Generated word: adelanes
+2024-11-10 02:12:57 - INFO - Generated word: alimes24
+2024-11-10 02:12:57 - INFO - Generated word: al-redia
+2024-11-10 02:12:57 - INFO - Generated word: amistati
+2024-11-10 02:12:57 - INFO - Generated word: asininge
+2024-11-10 02:12:57 - INFO - Generated word: alex7677
+2024-11-10 02:12:57 - INFO - Generated word: alexmore
+2024-11-10 02:12:57 - INFO - Completed generation for 'a'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'b'
+2024-11-10 02:12:57 - INFO - Generated word: beachar3
+2024-11-10 02:12:57 - INFO - Generated word: bellan11
+2024-11-10 02:12:57 - INFO - Generated word: bardades
+2024-11-10 02:12:57 - INFO - Generated word: bloodene
+2024-11-10 02:12:57 - INFO - Generated word: breggy14
+2024-11-10 02:12:57 - INFO - Generated word: barzus05
+2024-11-10 02:12:57 - INFO - Generated word: bollilee
+2024-11-10 02:12:57 - INFO - Generated word: babyna12
+2024-11-10 02:12:57 - INFO - Generated word: babybaby
+2024-11-10 02:12:57 - INFO - Generated word: beckie22
+2024-11-10 02:12:57 - INFO - Completed generation for 'b'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'c'
+2024-11-10 02:12:57 - INFO - Generated word: candytop
+2024-11-10 02:12:57 - INFO - Generated word: castinas
+2024-11-10 02:12:57 - INFO - Generated word: chassier
+2024-11-10 02:12:57 - INFO - Generated word: collygin
+2024-11-10 02:12:57 - INFO - Generated word: conarash
+2024-11-10 02:12:57 - INFO - Generated word: cantinis
+2024-11-10 02:12:57 - INFO - Generated word: chingane
+2024-11-10 02:12:57 - INFO - Generated word: carryski
+2024-11-10 02:12:57 - INFO - Generated word: conner30
+2024-11-10 02:12:57 - INFO - Generated word: cpostent
+2024-11-10 02:12:57 - INFO - Completed generation for 'c'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'd'
+2024-11-10 02:12:57 - INFO - Generated word: davido's
+2024-11-10 02:12:57 - INFO - Generated word: dandross
+2024-11-10 02:12:57 - INFO - Generated word: denuntia
+2024-11-10 02:12:57 - INFO - Generated word: deballie
+2024-11-10 02:12:57 - INFO - Generated word: dentos08
+2024-11-10 02:12:57 - INFO - Generated word: dondie05
+2024-11-10 02:12:57 - INFO - Generated word: dennybee
+2024-11-10 02:12:57 - INFO - Generated word: dfcjaili
+2024-11-10 02:12:57 - INFO - Generated word: deritm13
+2024-11-10 02:12:57 - INFO - Generated word: dinagido
+2024-11-10 02:12:57 - INFO - Completed generation for 'd'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'e'
+2024-11-10 02:12:57 - INFO - Generated word: emaisesh
+2024-11-10 02:12:57 - INFO - Generated word: elesters
+2024-11-10 02:12:57 - INFO - Generated word: ellers03
+2024-11-10 02:12:57 - INFO - Generated word: elices42
+2024-11-10 02:12:57 - INFO - Generated word: enci2004
+2024-11-10 02:12:57 - INFO - Generated word: elessett
+2024-11-10 02:12:57 - INFO - Generated word: ellerede
+2024-11-10 02:12:57 - INFO - Generated word: elengolo
+2024-11-10 02:12:57 - INFO - Generated word: elecis11
+2024-11-10 02:12:57 - INFO - Generated word: ericanda
+2024-11-10 02:12:57 - INFO - Completed generation for 'e'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'f'
+2024-11-10 02:12:57 - INFO - Generated word: foller11
+2024-11-10 02:12:57 - INFO - Generated word: freakors
+2024-11-10 02:12:57 - INFO - Generated word: flea1990
+2024-11-10 02:12:57 - INFO - Generated word: furaka22
+2024-11-10 02:12:57 - INFO - Generated word: fundacat
+2024-11-10 02:12:57 - INFO - Generated word: farstone
+2024-11-10 02:12:57 - INFO - Generated word: fropetes
+2024-11-10 02:12:57 - INFO - Generated word: farrian1
+2024-11-10 02:12:57 - INFO - Generated word: funner05
+2024-11-10 02:12:57 - INFO - Generated word: firasted
+2024-11-10 02:12:57 - INFO - Completed generation for 'f'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'g'
+2024-11-10 02:12:57 - INFO - Generated word: genica07
+2024-11-10 02:12:57 - INFO - Generated word: gordanda
+2024-11-10 02:12:57 - INFO - Generated word: goraimas
+2024-11-10 02:12:57 - INFO - Generated word: garone11
+2024-11-10 02:12:57 - INFO - Generated word: gerton13
+2024-11-10 02:12:57 - INFO - Generated word: gabrasa1
+2024-11-10 02:12:57 - INFO - Generated word: gagapich
+2024-11-10 02:12:57 - INFO - Generated word: graister
+2024-11-10 02:12:57 - INFO - Generated word: gente123
+2024-11-10 02:12:57 - INFO - Generated word: grandy08
+2024-11-10 02:12:57 - INFO - Completed generation for 'g'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'h'
+2024-11-10 02:12:57 - INFO - Generated word: hikokash
+2024-11-10 02:12:57 - INFO - Generated word: harial12
+2024-11-10 02:12:57 - INFO - Generated word: honeylon
+2024-11-10 02:12:57 - INFO - Generated word: himpie01
+2024-11-10 02:12:57 - INFO - Generated word: herrys27
+2024-11-10 02:12:57 - INFO - Generated word: hongley1
+2024-11-10 02:12:57 - INFO - Generated word: hunty-si
+2024-11-10 02:12:57 - INFO - Generated word: hoting07
+2024-11-10 02:12:57 - INFO - Generated word: hardamau
+2024-11-10 02:12:57 - INFO - Generated word: heireand
+2024-11-10 02:12:57 - INFO - Completed generation for 'h'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'i'
+2024-11-10 02:12:57 - INFO - Generated word: iluvboxo
+2024-11-10 02:12:57 - INFO - Generated word: imverico
+2024-11-10 02:12:57 - INFO - Generated word: iluvadog
+2024-11-10 02:12:57 - INFO - Generated word: isculise
+2024-11-10 02:12:57 - INFO - Generated word: iluvpore
+2024-11-10 02:12:57 - INFO - Generated word: iceloto1
+2024-11-10 02:12:57 - INFO - Generated word: idstores
+2024-11-10 02:12:57 - INFO - Generated word: ing10003
+2024-11-10 02:12:57 - INFO - Generated word: insassub
+2024-11-10 02:12:57 - INFO - Generated word: ilovemar
+2024-11-10 02:12:57 - INFO - Completed generation for 'i'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'j'
+2024-11-10 02:12:57 - INFO - Generated word: jack1990
+2024-11-10 02:12:57 - INFO - Generated word: jaster00
+2024-11-10 02:12:57 - INFO - Generated word: juster01
+2024-11-10 02:12:57 - INFO - Generated word: joysie07
+2024-11-10 02:12:57 - INFO - Generated word: jammer87
+2024-11-10 02:12:57 - INFO - Generated word: joella23
+2024-11-10 02:12:57 - INFO - Generated word: jersjash
+2024-11-10 02:12:57 - INFO - Generated word: jessertm
+2024-11-10 02:12:57 - INFO - Generated word: jharding
+2024-11-10 02:12:57 - INFO - Generated word: joeyeste
+2024-11-10 02:12:57 - INFO - Completed generation for 'j'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'k'
+2024-11-10 02:12:57 - INFO - Generated word: kaelin23
+2024-11-10 02:12:57 - INFO - Generated word: kalita23
+2024-11-10 02:12:57 - INFO - Generated word: karony12
+2024-11-10 02:12:57 - INFO - Generated word: karins06
+2024-11-10 02:12:57 - INFO - Generated word: kaminous
+2024-11-10 02:12:57 - INFO - Generated word: kaybear1
+2024-11-10 02:12:57 - INFO - Generated word: kingin12
+2024-11-10 02:12:57 - INFO - Generated word: konlbung
+2024-11-10 02:12:57 - INFO - Generated word: karinnon
+2024-11-10 02:12:57 - INFO - Generated word: katinhay
+2024-11-10 02:12:57 - INFO - Completed generation for 'k'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'l'
+2024-11-10 02:12:57 - INFO - Generated word: luckine1
+2024-11-10 02:12:57 - INFO - Generated word: lainer11
+2024-11-10 02:12:57 - INFO - Generated word: luciame2
+2024-11-10 02:12:57 - INFO - Generated word: lazy1234
+2024-11-10 02:12:57 - INFO - Generated word: lovesen1
+2024-11-10 02:12:57 - INFO - Generated word: lilysman
+2024-11-10 02:12:57 - INFO - Generated word: landemay
+2024-11-10 02:12:57 - INFO - Generated word: lani1983
+2024-11-10 02:12:57 - INFO - Generated word: lastinee
+2024-11-10 02:12:57 - INFO - Generated word: lenmattb
+2024-11-10 02:12:57 - INFO - Completed generation for 'l'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'm'
+2024-11-10 02:12:57 - INFO - Generated word: marita13
+2024-11-10 02:12:57 - INFO - Generated word: moohacks
+2024-11-10 02:12:57 - INFO - Generated word: marieang
+2024-11-10 02:12:57 - INFO - Generated word: mattie18
+2024-11-10 02:12:57 - INFO - Generated word: missett1
+2024-11-10 02:12:57 - INFO - Generated word: managila
+2024-11-10 02:12:57 - INFO - Generated word: markania
+2024-11-10 02:12:57 - INFO - Generated word: mantibur
+2024-11-10 02:12:57 - INFO - Generated word: mamo1967
+2024-11-10 02:12:57 - INFO - Generated word: maryar23
+2024-11-10 02:12:57 - INFO - Completed generation for 'm'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'n'
+2024-11-10 02:12:57 - INFO - Generated word: natorama
+2024-11-10 02:12:57 - INFO - Generated word: nago1985
+2024-11-10 02:12:57 - INFO - Generated word: noreshor
+2024-11-10 02:12:57 - INFO - Generated word: neria420
+2024-11-10 02:12:57 - INFO - Generated word: nomakson
+2024-11-10 02:12:57 - INFO - Generated word: nicole05
+2024-11-10 02:12:57 - INFO - Generated word: nater123
+2024-11-10 02:12:57 - INFO - Generated word: nikana19
+2024-11-10 02:12:57 - INFO - Generated word: nowssien
+2024-11-10 02:12:57 - INFO - Generated word: nbrigner
+2024-11-10 02:12:57 - INFO - Completed generation for 'n'. Generated 10 words
+2024-11-10 02:12:57 - INFO - Starting generation for character 'o'
+2024-11-10 02:12:58 - INFO - Generated word: otiamari
+2024-11-10 02:12:58 - INFO - Generated word: olester1
+2024-11-10 02:12:58 - INFO - Generated word: oneyouse
+2024-11-10 02:12:58 - INFO - Generated word: ormanuca
+2024-11-10 02:12:58 - INFO - Generated word: opidenoo
+2024-11-10 02:12:58 - INFO - Generated word: ordaka13
+2024-11-10 02:12:58 - INFO - Generated word: onettite
+2024-11-10 02:12:58 - INFO - Generated word: ostark89
+2024-11-10 02:12:58 - INFO - Generated word: ookinder
+2024-11-10 02:12:58 - INFO - Generated word: orinapas
+2024-11-10 02:12:58 - INFO - Completed generation for 'o'. Generated 10 words
+2024-11-10 02:12:58 - INFO - Starting generation for character 'p'
+2024-11-10 02:12:58 - INFO - Generated word: parkin13
+2024-11-10 02:12:58 - INFO - Generated word: paster20
+2024-11-10 02:12:58 - INFO - Generated word: phonenic
+2024-11-10 02:12:58 - INFO - Generated word: peteria1
+2024-11-10 02:12:58 - INFO - Generated word: pipentia
+2024-11-10 02:12:58 - INFO - Generated word: pinky316
+2024-11-10 02:12:58 - INFO - Generated word: poppie18
+2024-11-10 02:12:58 - INFO - Generated word: parrod00
+2024-11-10 02:12:58 - INFO - Generated word: pristist
+2024-11-10 02:12:58 - INFO - Generated word: philynet
+2024-11-10 02:12:58 - INFO - Completed generation for 'p'. Generated 10 words
+2024-11-10 02:12:58 - INFO - Starting generation for character 'q'
+2024-11-10 02:12:58 - INFO - Generated word: quidla12
+2024-11-10 02:12:58 - INFO - Generated word: quitkill
+2024-11-10 02:12:58 - INFO - Generated word: qwerty10
+2024-11-10 02:12:58 - INFO - Generated word: quita123
+2024-11-10 02:12:58 - INFO - Generated word: qangala1
+2024-11-10 02:12:58 - INFO - Generated word: qatopate
+2024-11-10 02:12:58 - INFO - Generated word: quirtang
+2024-11-10 02:12:58 - INFO - Generated word: qlishala
+2024-11-10 02:12:58 - INFO - Generated word: quenides
+2024-11-10 02:12:58 - INFO - Generated word: quinting
+2024-11-10 02:12:58 - INFO - Completed generation for 'q'. Generated 10 words
+2024-11-10 02:12:58 - INFO - Starting generation for character 'r'
+2024-11-10 02:12:58 - INFO - Generated word: remona10
+2024-11-10 02:12:58 - INFO - Generated word: raskinde
+2024-11-10 02:12:58 - INFO - Generated word: rose1767
+2024-11-10 02:12:58 - INFO - Generated word: rxiouyst
+2024-11-10 02:12:58 - INFO - Generated word: rocker29
+2024-11-10 02:12:58 - INFO - Generated word: rose1976
+2024-11-10 02:12:58 - INFO - Generated word: redsix14
+2024-11-10 02:12:58 - INFO - Generated word: ramber01
+2024-11-10 02:12:58 - INFO - Generated word: retsabar
+2024-11-10 02:12:58 - INFO - Generated word: rhewetty
+2024-11-10 02:12:58 - INFO - Completed generation for 'r'. Generated 10 words
+2024-11-10 02:12:58 - INFO - Starting generation for character 's'
+2024-11-10 02:12:58 - INFO - Generated word: skun2004
+2024-11-10 02:12:58 - INFO - Generated word: shauno06
+2024-11-10 02:12:58 - INFO - Generated word: symtecta
+2024-11-10 02:12:58 - INFO - Generated word: steepall
+2024-11-10 02:12:58 - INFO - Generated word: sikamala
+2024-11-10 02:12:58 - INFO - Generated word: sladerja
+2024-11-10 02:12:58 - INFO - Generated word: sixconid
+2024-11-10 02:12:58 - INFO - Generated word: starring
+2024-11-10 02:12:58 - INFO - Generated word: stephill
+2024-11-10 02:12:58 - INFO - Generated word: steberis
+2024-11-10 02:12:58 - INFO - Completed generation for 's'. Generated 10 words
+2024-11-10 02:12:58 - INFO - Starting generation for character 't'
+2024-11-10 02:12:58 - INFO - Generated word: turester
+2024-11-10 02:12:58 - INFO - Generated word: tapuri12
+2024-11-10 02:12:58 - INFO - Generated word: tordalas
+2024-11-10 02:12:58 - INFO - Generated word: tony1982
+2024-11-10 02:12:58 - INFO - Generated word: tricks39
+2024-11-10 02:12:58 - INFO - Generated word: time2001
+2024-11-10 02:12:58 - INFO - Generated word: talabari
+2024-11-10 02:12:58 - INFO - Generated word: terricha
+2024-11-10 02:12:58 - INFO - Generated word: tinkatas
+2024-11-10 02:12:58 - INFO - Generated word: tarina11
+2024-11-10 02:12:58 - INFO - Completed generation for 't'. Generated 10 words
+2024-11-10 02:12:58 - INFO - Starting generation for character 'u'
+2024-11-10 02:12:58 - INFO - Generated word: unbert25
+2024-11-10 02:12:58 - INFO - Generated word: urutaras
+2024-11-10 02:12:58 - INFO - Generated word: unserios
+2024-11-10 02:12:58 - INFO - Generated word: unitaria
+2024-11-10 02:12:58 - INFO - Generated word: unituman
+2024-11-10 02:12:58 - INFO - Generated word: uniecker
+2024-11-10 02:12:58 - INFO - Generated word: umerriah
+2024-11-10 02:12:58 - INFO - Generated word: uwales21
+2024-11-10 02:12:58 - INFO - Generated word: uzsaraco
+2024-11-10 02:12:58 - INFO - Generated word: utissa13
+2024-11-10 02:12:58 - INFO - Completed generation for 'u'. Generated 10 words
+2024-11-10 02:12:58 - INFO - Starting generation for character 'v'
+2024-11-10 02:12:58 - INFO - Generated word: vistrana
+2024-11-10 02:12:58 - INFO - Generated word: visering
+2024-11-10 02:12:58 - INFO - Generated word: valearda
+2024-11-10 02:12:58 - INFO - Generated word: vanasalo
+2024-11-10 02:12:58 - INFO - Generated word: viggie13
+2024-11-10 02:12:58 - INFO - Generated word: volibami
+2024-11-10 02:12:58 - INFO - Generated word: vanses12
+2024-11-10 02:12:58 - INFO - Generated word: veraka21
+2024-11-10 02:12:58 - INFO - Generated word: viewsone
+2024-11-10 02:12:58 - INFO - Generated word: verrice7
+2024-11-10 02:12:58 - INFO - Completed generation for 'v'. Generated 10 words
+2024-11-10 02:12:58 - INFO - Starting generation for character 'w'
+2024-11-10 02:12:58 - INFO - Generated word: weezy123
+2024-11-10 02:12:58 - INFO - Generated word: webalara
+2024-11-10 02:12:58 - INFO - Generated word: widersar
+2024-11-10 02:12:58 - INFO - Generated word: wigarena
+2024-11-10 02:12:58 - INFO - Generated word: willies1
+2024-11-10 02:12:58 - INFO - Generated word: wander12
+2024-11-10 02:12:58 - INFO - Generated word: wanker57
+2024-11-10 02:12:58 - INFO - Generated word: whinaric
+2024-11-10 02:12:58 - INFO - Generated word: watersak
+2024-11-10 02:12:58 - INFO - Generated word: wella123
+2024-11-10 02:12:58 - INFO - Completed generation for 'w'. Generated 10 words
+2024-11-10 02:12:58 - INFO - Starting generation for character 'x'
+2024-11-10 02:12:58 - INFO - Generated word: xerapour
+2024-11-10 02:12:58 - INFO - Generated word: xkutz478
+2024-11-10 02:12:58 - INFO - Generated word: xxxxxxxx
+2024-11-10 02:12:58 - INFO - Generated word: xetalice
+2024-11-10 02:12:58 - INFO - Generated word: xenorath
+2024-11-10 02:12:58 - INFO - Generated word: xander86
+2024-11-10 02:12:58 - INFO - Generated word: xui-sone
+2024-11-10 02:12:58 - INFO - Generated word: xzdmqx22
+2024-11-10 02:12:58 - INFO - Generated word: xxxy9084
+2024-11-10 02:12:58 - INFO - Generated word: xainter1
+2024-11-10 02:12:58 - INFO - Completed generation for 'x'. Generated 10 words
+2024-11-10 02:12:58 - INFO - Starting generation for character 'y'
+2024-11-10 02:12:58 - INFO - Generated word: yunggang
+2024-11-10 02:12:58 - INFO - Generated word: yellones
+2024-11-10 02:12:58 - INFO - Generated word: yani2007
+2024-11-10 02:12:58 - INFO - Generated word: yellyess
+2024-11-10 02:12:58 - INFO - Generated word: yangalle
+2024-11-10 02:12:58 - INFO - Generated word: yatalie8
+2024-11-10 02:12:58 - INFO - Generated word: yasalung
+2024-11-10 02:12:58 - INFO - Generated word: yoyotana
+2024-11-10 02:12:58 - INFO - Generated word: yannia10
+2024-11-10 02:12:58 - INFO - Generated word: yatanito
+2024-11-10 02:12:58 - INFO - Completed generation for 'y'. Generated 10 words
+2024-11-10 02:12:58 - INFO - Starting generation for character 'z'
+2024-11-10 02:12:58 - INFO - Generated word: zonner69
+2024-11-10 02:12:58 - INFO - Generated word: zaytasha
+2024-11-10 02:12:58 - INFO - Generated word: zupara12
+2024-11-10 02:12:58 - INFO - Generated word: zimpus12
+2024-11-10 02:12:58 - INFO - Generated word: zarabaka
+2024-11-10 02:12:58 - INFO - Generated word: zacker04
+2024-11-10 02:12:58 - INFO - Generated word: zuriadas
+2024-11-10 02:12:58 - INFO - Generated word: zagger23
+2024-11-10 02:12:58 - INFO - Generated word: zaller17
+2024-11-10 02:12:58 - INFO - Generated word: zoopress
+2024-11-10 02:12:58 - INFO - Completed generation for 'z'. Generated 10 words
+2024-11-10 02:12:58 - INFO - Starting special characters generation
+2024-11-10 02:12:58 - INFO - Generating words for special character '!'
+2024-11-10 02:12:58 - INFO - Generated word: !Liltink
+2024-11-10 02:12:58 - INFO - Generated word: !lilbert
+2024-11-10 02:12:58 - INFO - Generated word: !FISHPIK
+2024-11-10 02:12:58 - INFO - Generated word: !MORECAS
+2024-11-10 02:12:58 - INFO - Generated word: !!@#$%^^
+2024-11-10 02:12:58 - INFO - Generated word: !canter1
+2024-11-10 02:12:58 - INFO - Generated word: !lastarg
+2024-11-10 02:12:58 - INFO - Generated word: !love587
+2024-11-10 02:12:58 - INFO - Generated word: !lilede1
+2024-11-10 02:12:58 - INFO - Generated word: !MOONEY1
+2024-11-10 02:12:58 - INFO - Generating words for special character '@'
+2024-11-10 02:12:58 - INFO - Generated word: @sbert14
+2024-11-10 02:12:58 - INFO - Generated word: @LEXY123
+2024-11-10 02:12:58 - INFO - Generated word: @landa01
+2024-11-10 02:12:58 - INFO - Generated word: @104Poos
+2024-11-10 02:12:58 - INFO - Generated word: @LORSERO
+2024-11-10 02:12:58 - INFO - Generated word: @LEXENIA
+2024-11-10 02:12:58 - INFO - Generated word: @nesta01
+2024-11-10 02:12:58 - INFO - Generated word: @LOVERO*
+2024-11-10 02:12:58 - INFO - Generated word: @ndray92
+2024-11-10 02:12:58 - INFO - Generated word: @LOVERHS
+2024-11-10 02:12:58 - INFO - Generating words for special character '#'
+2024-11-10 02:12:58 - INFO - Generated word: #1shangs
+2024-11-10 02:12:58 - INFO - Generated word: #1saarus
+2024-11-10 02:12:58 - INFO - Generated word: #1TERANA
+2024-11-10 02:12:58 - INFO - Generated word: #1weet03
+2024-11-10 02:12:58 - INFO - Generated word: #1willok
+2024-11-10 02:12:58 - INFO - Generated word: #7211792
+2024-11-10 02:12:58 - INFO - Generated word: #2Camers
+2024-11-10 02:12:58 - INFO - Generated word: #1981262
+2024-11-10 02:12:58 - INFO - Generated word: #1treese
+2024-11-10 02:12:58 - INFO - Generated word: #1Hall00
+2024-11-10 02:12:58 - INFO - Generating words for special character '$'
+2024-11-10 02:12:58 - INFO - Generated word: $ALEXION
+2024-11-10 02:12:58 - INFO - Generated word: $usser12
+2024-11-10 02:12:58 - INFO - Generated word: $latsen3
+2024-11-10 02:12:58 - INFO - Generated word: $Harries
+2024-11-10 02:12:58 - INFO - Generated word: $sarical
+2024-11-10 02:12:58 - INFO - Generated word: $TONEY07
+2024-11-10 02:12:58 - INFO - Generated word: $MARK486
+2024-11-10 02:12:58 - INFO - Generated word: $0901051
+2024-11-10 02:12:58 - INFO - Generated word: $4201624
+2024-11-10 02:12:58 - INFO - Generated word: $LOVE13!
+2024-11-10 02:12:58 - INFO - Generating words for special character '%'
+2024-11-10 02:12:58 - INFO - Generated word: %%%%%%%T
+2024-11-10 02:12:58 - INFO - Generated word: %GARRY76
+2024-11-10 02:12:58 - INFO - Generated word: %TEIARON
+2024-11-10 02:12:58 - INFO - Generated word: %MINESE)
+2024-11-10 02:12:58 - INFO - Generated word: %TACK123
+2024-11-10 02:12:58 - INFO - Generated word: %WERONT!
+2024-11-10 02:12:58 - INFO - Generated word: %quees10
+2024-11-10 02:12:58 - INFO - Generated word: %_POOKER
+2024-11-10 02:12:58 - INFO - Generated word: %o422323
+2024-11-10 02:12:58 - INFO - Generated word: %MAKERA*
+2024-11-10 02:12:58 - INFO - Generating words for special character '^'
+2024-11-10 02:12:58 - INFO - Generated word: ^MARSEY1
+2024-11-10 02:12:58 - INFO - Generated word: ^-EENTY*
+2024-11-10 02:12:58 - INFO - Generated word: ^TANGER!
+2024-11-10 02:12:58 - INFO - Generated word: ^5196412
+2024-11-10 02:12:58 - INFO - Generated word: ^^*18801
+2024-11-10 02:12:58 - INFO - Generated word: ^^^^^-**
+2024-11-10 02:12:58 - INFO - Generated word: ^^^^-103
+2024-11-10 02:12:58 - INFO - Generated word: ^^^^^^^*
+2024-11-10 02:12:58 - INFO - Generated word: ^^^*****
+2024-11-10 02:12:58 - INFO - Generated word: ^^^^^^".
+2024-11-10 02:12:58 - INFO - Generating words for special character '&'
+2024-11-10 02:12:58 - INFO - Generated word: &beart55
+2024-11-10 02:12:58 - INFO - Generated word: &MAIRONS
+2024-11-10 02:12:58 - INFO - Generated word: &MARCHES
+2024-11-10 02:12:58 - INFO - Generated word: &6978638
+2024-11-10 02:12:58 - INFO - Generated word: &MISHETS
+2024-11-10 02:12:58 - INFO - Generated word: &ERICESS
+2024-11-10 02:12:58 - INFO - Generated word: &banks12
+2024-11-10 02:12:58 - INFO - Generated word: &WATME!!
+2024-11-10 02:12:58 - INFO - Generated word: &darka16
+2024-11-10 02:12:58 - INFO - Generated word: &munters
+2024-11-10 02:12:58 - INFO - Generating words for special character '('
+2024-11-10 02:12:58 - INFO - Generated word: (GADE#1!
+2024-11-10 02:12:58 - INFO - Generated word: (dan))19
+2024-11-10 02:12:58 - INFO - Generated word: (moo6923
+2024-11-10 02:12:58 - INFO - Generated word: (LEN))**
+2024-11-10 02:12:58 - INFO - Generated word: (21)AMAN
+2024-11-10 02:12:58 - INFO - Generated word: (local21
+2024-11-10 02:12:58 - INFO - Generated word: (er4)449
+2024-11-10 02:12:58 - INFO - Generated word: (millar)
+2024-11-10 02:12:58 - INFO - Generated word: (PISTY)(
+2024-11-10 02:12:58 - INFO - Generated word: (man9409
+2024-11-10 02:12:58 - INFO - Generating words for special character ')'
+2024-11-10 02:12:58 - INFO - Generated word: ))(MAYYE
+2024-11-10 02:12:58 - INFO - Generated word: )sexy100
+2024-11-10 02:12:58 - INFO - Generated word: )GUETTY)
+2024-11-10 02:12:58 - INFO - Generated word: )MINDOGO
+2024-11-10 02:12:58 - INFO - Generated word: ))M@NNY0
+2024-11-10 02:12:58 - INFO - Generated word: )IMOVE**
+2024-11-10 02:12:58 - INFO - Generated word: )&MAND33
+2024-11-10 02:12:58 - INFO - Generated word: ))(%)%%%
+2024-11-10 02:12:58 - INFO - Generated word: )MANK1R!
+2024-11-10 02:12:58 - INFO - Generated word: )MIKE3R!
+2024-11-10 02:12:58 - INFO - Generating words for special character '_'
+2024-11-10 02:12:59 - INFO - Generated word: _ferker2
+2024-11-10 02:12:59 - INFO - Generated word: _BORABAL
+2024-11-10 02:12:59 - INFO - Generated word: _luckys1
+2024-11-10 02:12:59 - INFO - Generated word: _LANDERI
+2024-11-10 02:12:59 - INFO - Generated word: _britsha
+2024-11-10 02:12:59 - INFO - Generated word: _lindhan
+2024-11-10 02:12:59 - INFO - Generated word: _STERENG
+2024-11-10 02:12:59 - INFO - Generated word: _stal'''
+2024-11-10 02:12:59 - INFO - Generated word: _lannay2
+2024-11-10 02:12:59 - INFO - Generated word: _cassey8
+2024-11-10 02:12:59 - INFO - Generating words for special character '+'
+2024-11-10 02:12:59 - INFO - Generated word: +DATY277
+2024-11-10 02:12:59 - INFO - Generated word: ++400004
+2024-11-10 02:12:59 - INFO - Generated word: ++++****
+2024-11-10 02:12:59 - INFO - Generated word: +1612831
+2024-11-10 02:12:59 - INFO - Generated word: +-******
+2024-11-10 02:12:59 - INFO - Generated word: +MANES!!
+2024-11-10 02:12:59 - INFO - Generated word: +1200877
+2024-11-10 02:12:59 - INFO - Generated word: ++******
+2024-11-10 02:12:59 - INFO - Generated word: +54*****
+2024-11-10 02:12:59 - INFO - Generated word: +-PRETTY
+2024-11-10 02:12:59 - INFO - Generating words for special character '-'
+2024-11-10 02:12:59 - INFO - Generated word: -BENTON'
+2024-11-10 02:12:59 - INFO - Generated word: -goralla
+2024-11-10 02:12:59 - INFO - Generated word: -'''''--
+2024-11-10 02:12:59 - INFO - Generated word: -0000066
+2024-11-10 02:12:59 - INFO - Generated word: -SHENAS2
+2024-11-10 02:12:59 - INFO - Generated word: --------
+2024-11-10 02:12:59 - INFO - Generated word: -1341338
+2024-11-10 02:12:59 - INFO - Generated word: -''''---
+2024-11-10 02:12:59 - INFO - Generated word: -'''''--
+2024-11-10 02:12:59 - INFO - Generated word: -''-----
+2024-11-10 02:12:59 - INFO - Generating words for special character '='
+2024-11-10 02:12:59 - INFO - Generated word: =.......
+2024-11-10 02:12:59 - INFO - Generated word: =tretter
+2024-11-10 02:12:59 - INFO - Generated word: =NSKITI)
+2024-11-10 02:12:59 - INFO - Generated word: =unethot
+2024-11-10 02:12:59 - INFO - Generated word: ==PMZVFV
+2024-11-10 02:12:59 - INFO - Generated word: =eiring0
+2024-11-10 02:12:59 - INFO - Generated word: =THOLSEY
+2024-11-10 02:12:59 - INFO - Generated word: =yunakan
+2024-11-10 02:12:59 - INFO - Generated word: =UDESEN)
+2024-11-10 02:12:59 - INFO - Generated word: =75/25/0
+2024-11-10 02:12:59 - INFO - Completed special characters generation. Total words: 130
+2024-11-10 02:12:59 - INFO - Word generation complete for all specified starting characters.
+2024-11-10 02:12:59 - INFO - Generated word: =/07/tin
+2024-11-10 02:12:59 - INFO - Generated word: =SHINGO)
+2024-11-10 02:12:59 - INFO - Generated word: =treene1
+2024-11-10 02:12:59 - INFO - Generated word: =SHIPPY!
+2024-11-10 02:12:59 - INFO - Generated word: =FLADER)
+2024-11-10 02:12:59 - INFO - Generated word: =SHAISTE
+2024-11-10 02:12:59 - INFO - Generated word: =====...
+2024-11-10 02:12:59 - INFO - Generated word: =312174*
+2024-11-10 02:12:59 - INFO - Generated word: =DROPOTH
+2024-11-10 02:12:59 - INFO - Generated word: =LOVER36
+2024-11-10 02:12:59 - INFO - Generated word: !pandy81
+2024-11-10 02:12:59 - INFO - Generated word: !!LILES!
+2024-11-10 02:12:59 - INFO - Generated word: !PARTY))
+2024-11-10 02:12:59 - INFO - Generated word: !38413mm
+2024-11-10 02:12:59 - INFO - Generated word: !@#$$$$$
+2024-11-10 02:12:59 - INFO - Generated word: !LILEY22
+2024-11-10 02:12:59 - INFO - Generated word: !lille12
+2024-11-10 02:12:59 - INFO - Generated word: !ENNERA2
+2024-11-10 02:12:59 - INFO - Generated word: !FORALIT
+2024-11-10 02:12:59 - INFO - Generated word: !STERY88
+2024-11-10 02:12:59 - INFO - Generated word: @lex2007
+2024-11-10 02:12:59 - INFO - Generated word: @1bood3r
+2024-11-10 02:12:59 - INFO - Generated word: @1020230
+2024-11-10 02:12:59 - INFO - Generated word: @ntina18
+2024-11-10 02:12:59 - INFO - Generated word: @MALECA7
+2024-11-10 02:12:59 - INFO - Generated word: @LEIGA13
+2024-11-10 02:12:59 - INFO - Generated word: @ngelley
+2024-11-10 02:12:59 - INFO - Generated word: @teston3
+2024-11-10 02:12:59 - INFO - Generated word: @Liska24
+2024-11-10 02:12:59 - INFO - Generated word: @LAVIS#1
+2024-11-10 02:12:59 - INFO - Generated word: #1mariel
+2024-11-10 02:12:59 - INFO - Generated word: #1300FAS
+2024-11-10 02:12:59 - INFO - Generated word: #1LUVIAN
+2024-11-10 02:12:59 - INFO - Generated word: #1termet
+2024-11-10 02:12:59 - INFO - Generated word: #12dja31
+2024-11-10 02:12:59 - INFO - Generated word: #1LASING
+2024-11-10 02:12:59 - INFO - Generated word: #1FARTER
+2024-11-10 02:12:59 - INFO - Generated word: #1monkey
+2024-11-10 02:12:59 - INFO - Generated word: #123PETI
+2024-11-10 02:12:59 - INFO - Generated word: #1GOLLER
+2024-11-10 02:12:59 - INFO - Generated word: $anamies
+2024-11-10 02:12:59 - INFO - Generated word: $heeny88
+2024-11-10 02:12:59 - INFO - Generated word: $elandah
+2024-11-10 02:12:59 - INFO - Generated word: $$$$$$LI
+2024-11-10 02:12:59 - INFO - Generated word: $MARK123
+2024-11-10 02:12:59 - INFO - Generated word: $MARTY81
+2024-11-10 02:12:59 - INFO - Generated word: $MENITIE
+2024-11-10 02:12:59 - INFO - Generated word: $weeth43
+2024-11-10 02:12:59 - INFO - Generated word: $@%^M#19
+2024-11-10 02:12:59 - INFO - Generated word: $GEOSHAY
+2024-11-10 02:12:59 - INFO - Generated word: %TWINS**
+2024-11-10 02:12:59 - INFO - Generated word: %MIKEY14
+2024-11-10 02:12:59 - INFO - Generated word: %%%WELLY
+2024-11-10 02:12:59 - INFO - Generated word: %weet123
+2024-11-10 02:12:59 - INFO - Generated word: %%%MISHE
+2024-11-10 02:12:59 - INFO - Generated word: %%%%%%^^
+2024-11-10 02:12:59 - INFO - Generated word: %OFLAMES
+2024-11-10 02:12:59 - INFO - Generated word: %UFILENG
+2024-11-10 02:12:59 - INFO - Generated word: %%%$%%+=
+2024-11-10 02:12:59 - INFO - Generated word: %WERNEY1
+2024-11-10 02:12:59 - INFO - Generated word: ^%^^^...
+2024-11-10 02:12:59 - INFO - Generated word: ^^^^^***
+2024-11-10 02:12:59 - INFO - Generated word: ^^507798
+2024-11-10 02:12:59 - INFO - Generated word: ^^^^^^^.
+2024-11-10 02:12:59 - INFO - Generated word: ^^^^^^^^
+2024-11-10 02:12:59 - INFO - Generated word: ^CORMER1
+2024-11-10 02:12:59 - INFO - Generated word: ^%^^^^]]
+2024-11-10 02:12:59 - INFO - Generated word: ^MFEOSYG
+2024-11-10 02:12:59 - INFO - Generated word: ^MACTEL!
+2024-11-10 02:12:59 - INFO - Generated word: ^^^^^^^^
+2024-11-10 02:12:59 - INFO - Generated word: &DOSALAD
+2024-11-10 02:12:59 - INFO - Generated word: &MISSIDE
+2024-11-10 02:12:59 - INFO - Generated word: &1234564
+2024-11-10 02:12:59 - INFO - Generated word: &danney2
+2024-11-10 02:12:59 - INFO - Generated word: &LEVERS*
+2024-11-10 02:12:59 - INFO - Generated word: &MOPIES!
+2024-11-10 02:12:59 - INFO - Generated word: &JESSERS
+2024-11-10 02:12:59 - INFO - Generated word: &947646A
+2024-11-10 02:12:59 - INFO - Generated word: &MANDY11
+2024-11-10 02:12:59 - INFO - Generated word: &danny24
+2024-11-10 02:12:59 - INFO - Generated word: (941991*
+2024-11-10 02:12:59 - INFO - Generated word: (0puster
+2024-11-10 02:12:59 - INFO - Generated word: ((@MIN12
+2024-11-10 02:12:59 - INFO - Generated word: (L)PHR2K
+2024-11-10 02:12:59 - INFO - Generated word: (SILE135
+2024-11-10 02:12:59 - INFO - Generated word: (LISI))*
+2024-11-10 02:12:59 - INFO - Generated word: (L)URSAR
+2024-11-10 02:12:59 - INFO - Generated word: (l)03078
+2024-11-10 02:12:59 - INFO - Generated word: (ECHOLAN
+2024-11-10 02:12:59 - INFO - Generated word: (UPANGER
+2024-11-10 02:12:59 - INFO - Generated word: )MEGETO)
+2024-11-10 02:12:59 - INFO - Generated word: )megono1
+2024-11-10 02:12:59 - INFO - Generated word: )iousey6
+2024-11-10 02:12:59 - INFO - Generated word: )0Por)19
+2024-11-10 02:12:59 - INFO - Generated word: )004448*
+2024-11-10 02:12:59 - INFO - Generated word: )sandy21
+2024-11-10 02:12:59 - INFO - Generated word: )!200som
+2024-11-10 02:12:59 - INFO - Generated word: )passer1
+2024-11-10 02:12:59 - INFO - Generated word: )MAIS110
+2024-11-10 02:12:59 - INFO - Generated word: )MANKIN*
+2024-11-10 02:12:59 - INFO - Generated word: _montest
+2024-11-10 02:12:59 - INFO - Generated word: _bangasa
+2024-11-10 02:12:59 - INFO - Generated word: _lookey1
+2024-11-10 02:12:59 - INFO - Generated word: _booday6
+2024-11-10 02:12:59 - INFO - Generated word: _danital
+2024-11-10 02:12:59 - INFO - Generated word: _lassara
+2024-11-10 02:12:59 - INFO - Generated word: _rachean
+2024-11-10 02:12:59 - INFO - Generated word: _landing
+2024-11-10 02:12:59 - INFO - Generated word: _coutter
+2024-11-10 02:12:59 - INFO - Generated word: _wenders
+2024-11-10 02:12:59 - INFO - Generated word: ++******
+2024-11-10 02:12:59 - INFO - Generated word: +danker*
+2024-11-10 02:12:59 - INFO - Generated word: +++++***
+2024-11-10 02:12:59 - INFO - Generated word: +++++...
+2024-11-10 02:12:59 - INFO - Generated word: +TELLIE)
+2024-11-10 02:12:59 - INFO - Generated word: +-022009
+2024-11-10 02:12:59 - INFO - Generated word: +&ILINEY
+2024-11-10 02:12:59 - INFO - Generated word: +stor1*2
+2024-11-10 02:12:59 - INFO - Generated word: ++******
+2024-11-10 02:12:59 - INFO - Generated word: ++1978**
+2024-11-10 02:12:59 - INFO - Generated word: -'''----
+2024-11-10 02:12:59 - INFO - Generated word: -SHOLAMA
+2024-11-10 02:12:59 - INFO - Generated word: -seaser1
+2024-11-10 02:12:59 - INFO - Generated word: -SHOOTAK
+2024-11-10 02:12:59 - INFO - Generated word: -AVEN-HO
+2024-11-10 02:12:59 - INFO - Generated word: --------
+2024-11-10 02:12:59 - INFO - Generated word: --------
+2024-11-10 02:12:59 - INFO - Generated word: --------
+2024-11-10 02:12:59 - INFO - Generated word: -''''''-
+2024-11-10 02:12:59 - INFO - Generated word: --------
+2024-11-10 02:12:59 - INFO - Generated word: ==2008d0
+2024-11-10 02:12:59 - INFO - Generated word: =GORLAND
+2024-11-10 02:12:59 - INFO - Generated word: =neen-on
+2024-11-10 02:12:59 - INFO - Generated word: =DELLER1
+2024-11-10 02:12:59 - INFO - Generated word: =gerange
+2024-11-10 02:12:59 - INFO - Generated word: =110198R
+2024-11-10 02:12:59 - INFO - Generated word: =203111*
+2024-11-10 02:12:59 - INFO - Generated word: =-TATERS
+2024-11-10 02:12:59 - INFO - Generated word: =bandin*
+2024-11-10 02:12:59 - INFO - Generated word: =smart23
