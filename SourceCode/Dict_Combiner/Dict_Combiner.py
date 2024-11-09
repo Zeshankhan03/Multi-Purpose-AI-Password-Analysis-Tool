@@ -20,16 +20,21 @@ def log_message(log_file, message):
 
 # Function to remove duplicate words from the output file
 def remove_duplicates(output_file, log_file):
+    temp_file = output_file + '.tmp'  # Temporary file to store unique words
+    seen_words = set()  # Set to track unique words
+
     try:
         with open(output_file, 'r', encoding='utf-8') as file:
-            content = file.read()
-            words = content.split()
-            unique_words = set(words)  # Use a set to remove duplicates
+            for line in file:
+                words = line.split()
+                for word in words:
+                    if word not in seen_words:
+                        seen_words.add(word)  # Add unique word to the set
+                        with open(temp_file, 'a', encoding='utf-8') as temp:
+                            temp.write(word + '\n')  # Write unique word to temp file
 
-        # Write unique words back to the output file
-        with open(output_file, 'w', encoding='utf-8') as file:
-            file.write(' '.join(unique_words))
-        
+        # Replace the original output file with the temporary file
+        os.replace(temp_file, output_file)
         log_message(log_file, "Removed duplicate words from the output file.")
     except Exception as e:
         log_message(log_file, f"Error removing duplicates: {e}")
