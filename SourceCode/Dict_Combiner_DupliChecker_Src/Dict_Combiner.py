@@ -87,7 +87,6 @@ def combine_files(input_folder: str, output_file: str):
         # Initialize counters
         total_lines = 0
         total_files_processed = 0
-        unique_words = set()
 
         # Process each file
         print(f"Processing {len(txt_files)} files...")
@@ -97,11 +96,10 @@ def combine_files(input_folder: str, output_file: str):
                     file_path = os.path.join(input_folder, filename)
                     content = read_file(file_path)
                     
-                    # Add words to set and write to file
+                    # Write lines to file
                     for line in content:
                         line = line.strip()
-                        if line and line not in unique_words:
-                            unique_words.add(line)
+                        if line:  # Only write non-empty lines
                             outfile.write(line + '\n')
                             total_lines += 1
                     
@@ -110,7 +108,7 @@ def combine_files(input_folder: str, output_file: str):
                     # Log progress periodically
                     if total_files_processed % 10 == 0:
                         log_event(f"Processed {total_files_processed}/{len(txt_files)} files. "
-                                f"Total unique lines: {total_lines}")
+                                f"Total lines: {total_lines}")
                 
                 except Exception as e:
                     log_event(f"Error processing file {filename}: {str(e)}", 'error')
@@ -119,7 +117,7 @@ def combine_files(input_folder: str, output_file: str):
         log_event("=" * 50)
         log_event("Combination Complete")
         log_event(f"Total files processed: {total_files_processed}")
-        log_event(f"Total unique lines written: {total_lines}")
+        log_event(f"Total lines written: {total_lines}")
         log_event(f"Output file: {output_file}")
         log_event("=" * 50)
 
@@ -162,7 +160,7 @@ def main():
 
         print(f"\nProcess completed successfully!")
         print(f"Total files processed: {total_files}")
-        print(f"Total unique lines written: {total_lines}")
+        print(f"Total lines written: {total_lines}")
         print(f"Output saved to: {output_file}")
         
         log_event("Dictionary Combiner completed successfully")
