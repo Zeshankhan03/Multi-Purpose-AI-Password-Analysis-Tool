@@ -121,27 +121,39 @@ def analyze_transition_probabilities(words: List[str], save_path: str):
     # Increased DPI and figure size
     plt.figure(figsize=(20, 20), dpi=300)
     
-    # Enhanced heatmap styling
+    # Enhanced heatmap styling with better visibility
     sns.heatmap(transition_probs, 
                 xticklabels=unique_chars, 
                 yticklabels=unique_chars,
-                cmap='YlOrRd',
-                annot=True,  # Add number annotations
-                fmt='.2f',   # Format annotations to 2 decimal places
-                square=True)
+                cmap='Blues',  # Changed colormap to Blues for better visibility
+                annot=True,    # Show numbers in cells
+                fmt='.3f',     # Show 3 decimal places
+                square=True,   # Make cells square
+                cbar_kws={'label': 'Transition Probability'},
+                annot_kws={'size': 8},  # Adjust annotation text size
+                linewidths=0.5,         # Add cell borders
+                linecolor='white')      # White cell borders
     
-    plt.title('Character Transition Probabilities', fontsize=16, pad=20)
-    plt.xlabel('To Character', fontsize=14)
-    plt.ylabel('From Character', fontsize=14)
-    plt.xticks(fontsize=10, rotation=45)
-    plt.yticks(fontsize=10, rotation=0)
+    plt.title('Character Transition Probabilities', fontsize=20, pad=20)
+    plt.xlabel('To Character', fontsize=16, labelpad=10)
+    plt.ylabel('From Character', fontsize=16, labelpad=10)
+    
+    # Rotate labels for better readability
+    plt.xticks(rotation=45, ha='right', fontsize=12)
+    plt.yticks(rotation=0, fontsize=12)
+    
+    # Adjust layout to prevent label cutoff
+    plt.tight_layout()
     
     # Save in high resolution
     plt.savefig(os.path.join(save_path, 'transition_probabilities.png'), 
-                dpi=300, bbox_inches='tight')
+                dpi=300, bbox_inches='tight',
+                facecolor='white')
     plt.close()
     
     return transition_probs
+    
+    
 
 def calculate_model_statistics(words: List[str]) -> Dict:
     """Calculate various statistics about the generated words"""
