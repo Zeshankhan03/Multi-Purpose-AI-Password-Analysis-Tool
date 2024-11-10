@@ -136,12 +136,12 @@ def calculate_statistics(directory, word_lengths, output_directory):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Filter words by length from text files in a directory.")
-    parser.add_argument('--directory', type=str, default='H:\\PartsOutputs', help='The path to the directory containing text files.')
+    parser.add_argument('--directory', type=str, default=r'SourceCode\Datasets_Splitted', help='The path to the directory containing text files.')
     parser.add_argument('--word_lengths', type=int, nargs='+', help='The lengths of words to filter. Default: [5, 6, 7, 8]')
     parser.add_argument('--num_chunks', type=int, default=20, help='Number of chunks to split each file into for parallel processing.')
     parser.add_argument('--subchunk_size', type=int, default=1024*1024, help='Size of subchunks to process at a time (in bytes).')
     parser.add_argument('--encoding', type=str, default='utf-8', help='File encoding (default: utf-8).')
-    parser.add_argument('--output_directory', type=str, default='.', help='The directory to save filtered words.')
+    parser.add_argument('--output_directory', type=str, default=r'SourceCode\Datasets_Filtered', help='The directory to save filtered words.')
 
     args = parser.parse_args()
 
