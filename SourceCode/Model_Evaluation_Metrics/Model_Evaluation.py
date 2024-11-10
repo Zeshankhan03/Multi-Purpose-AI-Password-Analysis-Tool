@@ -61,31 +61,49 @@ def analyze_generated_words(directory: str) -> List[str]:
 def plot_character_distribution(words: List[str], save_path: str):
     """Plot character distribution in generated words"""
     char_counts = Counter(''.join(words))
-    plt.figure(figsize=(15, 8))
+    
+    # Increased DPI and figure size
+    plt.figure(figsize=(20, 12), dpi=300)
     chars, counts = zip(*sorted(char_counts.items()))
-    plt.bar(chars, counts)
-    plt.title('Character Distribution in Generated Words')
-    plt.xlabel('Characters')
-    plt.ylabel('Frequency')
-    plt.xticks(rotation=45)
+    
+    # Enhanced plot styling
+    plt.bar(chars, counts, color='skyblue', edgecolor='black')
+    plt.title('Character Distribution in Generated Words', fontsize=16, pad=20)
+    plt.xlabel('Characters', fontsize=14)
+    plt.ylabel('Frequency', fontsize=14)
+    plt.xticks(rotation=45, fontsize=12)
+    plt.yticks(fontsize=12)
+    plt.grid(True, alpha=0.3)
     plt.tight_layout()
-    plt.savefig(os.path.join(save_path, 'character_distribution.png'))
+    
+    # Save in high resolution
+    plt.savefig(os.path.join(save_path, 'character_distribution.png'), 
+                dpi=300, bbox_inches='tight')
     plt.close()
 
 def plot_word_length_distribution(words: List[str], save_path: str):
     """Plot word length distribution"""
     lengths = [len(word) for word in words]
-    plt.figure(figsize=(12, 6))
-    plt.hist(lengths, bins=20)
-    plt.title('Word Length Distribution')
-    plt.xlabel('Word Length')
-    plt.ylabel('Frequency')
-    plt.savefig(os.path.join(save_path, 'word_length_distribution.png'))
+    
+    # Increased DPI and figure size
+    plt.figure(figsize=(16, 10), dpi=300)
+    
+    # Enhanced plot styling
+    plt.hist(lengths, bins=20, color='lightgreen', edgecolor='black')
+    plt.title('Word Length Distribution', fontsize=16, pad=20)
+    plt.xlabel('Word Length', fontsize=14)
+    plt.ylabel('Frequency', fontsize=14)
+    plt.xticks(fontsize=12)
+    plt.yticks(fontsize=12)
+    plt.grid(True, alpha=0.3)
+    
+    # Save in high resolution
+    plt.savefig(os.path.join(save_path, 'word_length_distribution.png'), 
+                dpi=300, bbox_inches='tight')
     plt.close()
 
 def analyze_transition_probabilities(words: List[str], save_path: str):
     """Analyze and visualize character transition probabilities"""
-    # Create transition matrix
     unique_chars = sorted(list(set(''.join(words))))
     n_chars = len(unique_chars)
     transitions = np.zeros((n_chars, n_chars))
@@ -100,14 +118,27 @@ def analyze_transition_probabilities(words: List[str], save_path: str):
     row_sums = transitions.sum(axis=1, keepdims=True)
     transition_probs = np.divide(transitions, row_sums, where=row_sums!=0)
     
-    # Plot heatmap
-    plt.figure(figsize=(15, 15))
-    sns.heatmap(transition_probs, xticklabels=unique_chars, yticklabels=unique_chars)
-    plt.title('Character Transition Probabilities')
-    plt.xlabel('To Character')
-    plt.ylabel('From Character')
-    plt.tight_layout()
-    plt.savefig(os.path.join(save_path, 'transition_probabilities.png'))
+    # Increased DPI and figure size
+    plt.figure(figsize=(20, 20), dpi=300)
+    
+    # Enhanced heatmap styling
+    sns.heatmap(transition_probs, 
+                xticklabels=unique_chars, 
+                yticklabels=unique_chars,
+                cmap='YlOrRd',
+                annot=True,  # Add number annotations
+                fmt='.2f',   # Format annotations to 2 decimal places
+                square=True)
+    
+    plt.title('Character Transition Probabilities', fontsize=16, pad=20)
+    plt.xlabel('To Character', fontsize=14)
+    plt.ylabel('From Character', fontsize=14)
+    plt.xticks(fontsize=10, rotation=45)
+    plt.yticks(fontsize=10, rotation=0)
+    
+    # Save in high resolution
+    plt.savefig(os.path.join(save_path, 'transition_probabilities.png'), 
+                dpi=300, bbox_inches='tight')
     plt.close()
     
     return transition_probs
@@ -124,8 +155,8 @@ def calculate_model_statistics(words: List[str]) -> Dict:
     return stats
 
 def main():
-    # Create output directory for plots
-    output_dir = "SourceCode/Model_Evaluation_Metrics/Output"
+    # Change output directory to the same folder
+    output_dir = "SourceCode/Model_Evaluation_Metrics"
     os.makedirs(output_dir, exist_ok=True)
     
     # Load model and generated words
@@ -143,20 +174,24 @@ def main():
     print("Calculating statistics...")
     stats = calculate_model_statistics(generated_words)
     
-    # Save statistics to file
+    # Save statistics to file with more detailed formatting
     with open(os.path.join(output_dir, 'model_statistics.txt'), 'w') as f:
-        f.write("Model Statistics:\n")
+        f.write("=== Model Statistics ===\n\n")
         for key, value in stats.items():
-            f.write(f"{key}: {value}\n")
+            if isinstance(value, float):
+                f.write(f"{key.replace('_', ' ').title()}: {value:.4f}\n")
+            else:
+                f.write(f"{key.replace('_', ' ').title()}: {value}\n")
     
-    # Save transition probabilities to CSV
+    # Save transition probabilities to CSV with better formatting
     unique_chars = sorted(list(set(''.join(generated_words))))
     df_transitions = pd.DataFrame(
         transition_probs,
         index=unique_chars,
         columns=unique_chars
     )
-    df_transitions.to_csv(os.path.join(output_dir, 'transition_probabilities.csv'))
+    df_transitions.to_csv(os.path.join(output_dir, 'transition_probabilities.csv'), 
+                         float_format='%.4f')
     
     print(f"Evaluation complete. Results saved to {output_dir}")
 

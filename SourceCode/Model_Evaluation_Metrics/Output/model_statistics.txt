@@ -1,6 +1,0 @@
-Model Statistics:
-total_words: 3204831
-unique_words: 2498318
-avg_word_length: 8.0
-std_word_length: 0.0
-unique_chars: 110
