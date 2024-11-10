@@ -1,0 +1,19 @@
+{
+    "original_model_stats": {
+        "total_parameters": 68272,
+        "model_size_mb": 0.26043701171875,
+        "parameter_types": {
+            "torch.float32": {
+                "count": 68272,
+                "size_mb": 0.26043701171875
+            }
+        }
+    },
+    "model_comparison": {
+        "original_size_mb": 0.26043701171875,
+        "quantized_size_mb": 0.1533203125,
+        "size_reduction": 41.12959925005859,
+        "original_params": 68272,
+        "quantized_params": 40192
+    }
+}
