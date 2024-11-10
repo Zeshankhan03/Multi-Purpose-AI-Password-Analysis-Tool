@@ -11,7 +11,6 @@ import re
 import json
 from datetime import datetime
 import logging
-from logging.handlers import RotatingFileHandler
 
 class PasswordAnalysisApp(QMainWindow):
     def __init__(self, parent=None):
@@ -526,85 +525,38 @@ class PasswordAnalysisApp(QMainWindow):
     # Add these new methods for logging and output handling
     def setup_logging(self):
         """Setup logging configuration"""
-        try:
-            # Create base logs directory
-            base_log_dir = "SourceCode/Logs"
-            os.makedirs(base_log_dir, exist_ok=True)
-            
-            # Create specific logs directory for Password Analysis
-            analysis_log_dir = os.path.join(base_log_dir, "Passwords_Analysis_logs")
-            os.makedirs(analysis_log_dir, exist_ok=True)
-            
-            # Create run-specific directory with timestamp
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            run_log_dir = os.path.join(analysis_log_dir, f"run_{timestamp}")
-            os.makedirs(run_log_dir, exist_ok=True)
-            
-            # Create log file
-            log_file = os.path.join(run_log_dir, 'password_analysis.log')
-            
-            # Configure logging with RotatingFileHandler
-            file_handler = RotatingFileHandler(
-                log_file,
-                maxBytes=10*1024*1024,  # 10MB
-                backupCount=5,
-                encoding='utf-8'
-            )
-            
-            # Set format
-            formatter = logging.Formatter(
-                '%(asctime)s - %(levelname)s - %(message)s',
-                datefmt='%Y-%m-%d %H:%M%S'
-            )
-            file_handler.setFormatter(formatter)
-            
-            # Configure logger
-            logger = logging.getLogger('PasswordAnalysis')
-            logger.setLevel(logging.INFO)
-            logger.addHandler(file_handler)
-            
-            # Create outputs directory
-            outputs_dir = os.path.join("SourceCode", "Analyzed_Passwords_Outputs")
-            os.makedirs(outputs_dir, exist_ok=True)
-            
-            # Store configuration for later use
-            self.log_config = type('LogConfig', (), {
-                'logs_dir': analysis_log_dir,
-                'outputs_dir': outputs_dir
-            })()
-            
-            # Log initial setup information
-            logging.info("Logging initialized")
-            logging.info(f"Log directory: {run_log_dir}")
-            logging.info(f"Outputs directory: {outputs_dir}")
-            
-            return log_file
-            
-        except Exception as e:
-            self.show_message("Error", f"Could not set up logging: {str(e)}", QMessageBox.Critical)
-            return None
+        log_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "Logs")
+        output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "Analyzed passwords outputs")
+        
+        # Create directories if they don't exist
+        os.makedirs(log_dir, exist_ok=True)
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Setup logging
+        log_file = os.path.join(log_dir, f"password_analysis_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
+        logging.basicConfig(
+            filename=log_file,
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s'
+        )
+        
+        self.log_config = type('LogConfig', (), {
+            'logs_dir': log_dir,
+            'outputs_dir': output_dir
+        })()
 
     def save_analysis_output(self, analysis_results):
         """Save analysis results to output file"""
-        try:
-            # Ensure output directory exists
-            os.makedirs(self.log_config.outputs_dir, exist_ok=True)
-            
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            output_file = os.path.join(
-                self.log_config.outputs_dir,
-                f"analysis_result_{timestamp}.json"
-            )
-            
-            with open(output_file, 'w') as f:
-                json.dump(analysis_results, f, indent=4)
-            
-            logging.info(f"Analysis results saved to {output_file}")
-            
-        except Exception as e:
-            error_msg = f"Error saving analysis results: {str(e)}"
-            logging.error(error_msg)
-            self.show_message("Error", error_msg, QMessageBox.Critical)
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        output_file = os.path.join(
+            self.log_config.outputs_dir,
+            f"analysis_result_{timestamp}.json"
+        )
+        
+        with open(output_file, 'w') as f:
+            json.dump(analysis_results, f, indent=4)
+        
+        logging.info(f"Analysis results saved to {output_file}")
 
     def show_logs(self):
         """Show logs in a new window"""
