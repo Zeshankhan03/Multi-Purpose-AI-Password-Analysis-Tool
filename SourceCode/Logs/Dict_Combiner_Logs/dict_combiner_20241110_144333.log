@@ -1,0 +1,73 @@
+2024-11-10 14:43:33 - INFO - Dictionary Combiner Started
+2024-11-10 14:43:33 - INFO - Log file: SourceCode/Logs/Dict_Combiner_Logs\dict_combiner_20241110_144333.log
+2024-11-10 14:43:33 - INFO - Platform: Windows 10 (Intel64 Family 6 Model 79 Stepping 1, GenuineIntel)
+2024-11-10 14:43:33 - INFO - Total Memory: 63.92 GB
+2024-11-10 14:43:33 - INFO - Configuration:
+2024-11-10 14:43:33 - INFO - Input folder: SourceCode\Generated_Dict
+2024-11-10 14:43:33 - INFO - Output file: SourceCode/Main_Dict/Model_Validation.txt
+2024-11-10 14:43:33 - INFO - Found 53 text files in input folder
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_A_20241110_032352.txt
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_a_20241110_045631.txt
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_B_20241110_032722.txt
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_b_20241110_050007.txt
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_C_20241110_033055.txt
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_c_20241110_050342.txt
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_D_20241110_033426.txt
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_d_20241110_050717.txt
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_E_20241110_033757.txt
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_e_20241110_051052.txt
+2024-11-10 14:43:33 - INFO - Processed 10/53 files. Total lines: 500000
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_F_20241110_034128.txt
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_f_20241110_051427.txt
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_G_20241110_034458.txt
+2024-11-10 14:43:33 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_g_20241110_051802.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_H_20241110_034829.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_h_20241110_052136.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_I_20241110_035202.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_i_20241110_052510.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_J_20241110_035537.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_j_20241110_052844.txt
+2024-11-10 14:43:34 - INFO - Processed 20/53 files. Total lines: 1000000
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_K_20241110_035912.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_k_20241110_053218.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_L_20241110_040247.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_l_20241110_053553.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_M_20241110_040622.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_m_20241110_053928.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_N_20241110_040957.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_n_20241110_054303.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_O_20241110_041333.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_o_20241110_054637.txt
+2024-11-10 14:43:34 - INFO - Processed 30/53 files. Total lines: 1500000
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_P_20241110_041708.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_p_20241110_055012.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_Q_20241110_042043.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_q_20241110_055346.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_R_20241110_042418.txt
+2024-11-10 14:43:34 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_r_20241110_055719.txt
+2024-11-10 14:43:35 - ERROR - Error reading SourceCode\Generated_Dict\generated_words_special_chars_20241110_062929.txt: 'utf-8' codec can't decode byte 0xa3 in position 25437: invalid start byte
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_S_20241110_042753.txt
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_s_20241110_060054.txt
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_T_20241110_043128.txt
+2024-11-10 14:43:35 - INFO - Processed 40/53 files. Total lines: 1950000
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_t_20241110_060428.txt
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_U_20241110_043503.txt
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_u_20241110_060803.txt
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_V_20241110_043838.txt
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_v_20241110_061138.txt
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_W_20241110_044213.txt
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_w_20241110_061512.txt
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_X_20241110_044547.txt
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_x_20241110_061846.txt
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_Y_20241110_044921.txt
+2024-11-10 14:43:35 - INFO - Processed 50/53 files. Total lines: 2450000
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_y_20241110_062220.txt
+2024-11-10 14:43:35 - INFO - Successfully read 50000 lines from: SourceCode\Generated_Dict\generated_words_Z_20241110_045256.txt
+2024-11-10 14:43:35 - INFO - Successfully read 4846 lines from: SourceCode\Generated_Dict\generated_words_z_20241110_062554.txt
+2024-11-10 14:43:35 - INFO - ==================================================
+2024-11-10 14:43:35 - INFO - Combination Complete
+2024-11-10 14:43:35 - INFO - Total files processed: 53
+2024-11-10 14:43:35 - INFO - Total lines written: 2554846
+2024-11-10 14:43:35 - INFO - Output file: SourceCode/Main_Dict/Model_Validation.txt
+2024-11-10 14:43:35 - INFO - ==================================================
+2024-11-10 14:43:35 - INFO - Dictionary Combiner completed successfully

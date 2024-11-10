@@ -219,7 +219,7 @@ class CustomGUI:
         resized_image = self.background_image.resize((width, height), Image.LANCZOS)
         
         # Apply blur to the resized image
-        blurred_image = resized_image.filter(ImageFilter.GaussianBlur(radius=10))  # Adjust radius as needed
+        blurred_image = resized_image.filter(ImageFilter.GaussianBlur(radius=50))  # Adjust radius as needed
         self.background_photo = ImageTk.PhotoImage(blurred_image)
         self.background_label.config(image=self.background_photo)
 
