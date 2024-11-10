@@ -17,7 +17,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # Generate words for each starting character and save them in separate files
 word_length = 8
 temperature = 0.5
-words_per_char = 10  # Number of words per starting character 65*count
+words_per_char = 50000  # Number of words per starting character 65*count
 #max_concurrent_threads = 128  # Max number of threads to run at a time
 
 
