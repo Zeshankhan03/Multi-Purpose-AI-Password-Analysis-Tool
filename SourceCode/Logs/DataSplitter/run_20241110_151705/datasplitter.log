@@ -1,0 +1,13 @@
+2024-11-10 15:17:05 - INFO - Logging initialized
+2024-11-10 15:17:05 - INFO - Log directory: SourceCode/Logs\DataSplitter\run_20241110_151705
+2024-11-10 15:17:05 - INFO - Data Splitter Started
+2024-11-10 15:17:05 - INFO - Log file: SourceCode/Logs\DataSplitter\run_20241110_151705\datasplitter.log
+2024-11-10 15:17:05 - INFO - Platform: Windows 10 (Intel64 Family 6 Model 79 Stepping 1, GenuineIntel)
+2024-11-10 15:17:05 - INFO - Total Memory: 63.92 GB
+2024-11-10 15:17:05 - INFO - Configuration:
+2024-11-10 15:17:05 - INFO - Input file: D:/Osama Khalid/Osama Khalid BSCY 7/FYP Part 1/AI Codes/PasswrodsBIG/rockyou.txt
+2024-11-10 15:17:05 - INFO - Output directory: H:\PartsOutputs
+2024-11-10 15:17:05 - INFO - Process log file: DataSpliter_log_file.log
+2024-11-10 15:17:05 - ERROR - Error: Input file does not exist: D:/Osama Khalid/Osama Khalid BSCY 7/FYP Part 1/AI Codes/PasswrodsBIG/rockyou.txt
+2024-11-10 15:17:05 - ERROR - Critical error in process_files: Invalid input file: D:/Osama Khalid/Osama Khalid BSCY 7/FYP Part 1/AI Codes/PasswrodsBIG/rockyou.txt
+2024-11-10 15:17:05 - ERROR - Critical error in main execution: Invalid input file: D:/Osama Khalid/Osama Khalid BSCY 7/FYP Part 1/AI Codes/PasswrodsBIG/rockyou.txt
