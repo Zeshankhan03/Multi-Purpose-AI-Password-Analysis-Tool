@@ -1,0 +1,242 @@
+[
+    {
+        "hash_file": "md5s_lowercase_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 00:54:22",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.37,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_lowercase_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 00:54:22",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.2,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_lowercase_numbers_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 00:54:22",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.2,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_lowercase_numbers_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 00:54:22",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.2,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_lowercase_symbols_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 00:54:23",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.17,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_lowercase_symbols_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 00:54:23",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.19,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_numbers_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 00:54:23",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.21,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_numbers_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 00:54:23",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.2,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_symbols_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 00:54:23",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.2,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_symbols_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 00:54:24",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.19,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 00:54:24",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.17,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 00:54:24",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.19,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_lowercase_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 00:54:24",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.2,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_lowercase_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 00:54:24",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.19,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_lowercase_numbers_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 00:54:25",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.2,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_lowercase_numbers_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 00:54:25",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.17,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_lowercase_symbols_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 00:54:25",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.19,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_lowercase_symbols_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 00:54:25",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.19,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_numbers_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 00:54:25",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.19,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_numbers_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 00:54:25",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.2,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_number_symbols_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 00:54:26",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.17,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_number_symbols_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 00:54:26",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.19,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_symbols_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 00:54:26",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.2,
+        "success_rate": 0.0,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_symbols_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 00:54:26",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.19,
+        "success_rate": 0.0,
+        "status": "completed"
+    }
+]

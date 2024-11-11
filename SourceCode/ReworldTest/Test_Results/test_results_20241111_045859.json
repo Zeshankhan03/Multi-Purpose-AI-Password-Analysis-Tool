@@ -1,0 +1,42 @@
+[
+    {
+        "hash_file": "md5s_lowercase_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 04:58:59",
+        "cracked_passwords": 14,
+        "total_passwords": 10000,
+        "time_taken": 141.58,
+        "success_rate": 0.14,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_lowercase_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 05:01:21",
+        "cracked_passwords": 14,
+        "total_passwords": 10000,
+        "time_taken": 182.86,
+        "success_rate": 0.14,
+        "status": "timeout"
+    },
+    {
+        "hash_file": "md5s_uppercase_lowercase_numbers_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 05:04:23",
+        "cracked_passwords": 14,
+        "total_passwords": 10000,
+        "time_taken": 143.04,
+        "success_rate": 0.14,
+        "status": "completed"
+    },
+    {
+        "hash_file": "md5s_uppercase_lowercase_numbers_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 05:06:46",
+        "cracked_passwords": 14,
+        "total_passwords": 10000,
+        "time_taken": 182.91,
+        "success_rate": 0.14,
+        "status": "timeout"
+    }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "hash_file": "md5s_uppercase_lowercase_numbers_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 05:18:05",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.74,
+        "success_rate": 0.0,
+        "status": "completed",
+        "last_progress": ""
+    },
+    {
+        "hash_file": "md5s_uppercase_lowercase_numbers_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 05:18:05",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 0.74,
+        "success_rate": 0.0,
+        "status": "completed",
+        "last_progress": ""
+    }
+]

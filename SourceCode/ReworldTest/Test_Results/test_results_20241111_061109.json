@@ -1,0 +1,24 @@
+[
+    {
+        "hash_file": "md5s_uppercase_lowercase_numbers_8.txt",
+        "attack_type": "dictionary",
+        "start_time": "2024-11-11 06:11:09",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 181.81,
+        "success_rate": 0.0,
+        "status": "timeout",
+        "output_file": "I:\\Project AI Password\\Multi-Purpose-AI-Password-Analysis-Tool\\SourceCode\\ReworldTest\\Cracked_Passwords\\dictionary_cracked_md5s_uppercase_lowercase_numbers_8_1731287469.txt"
+    },
+    {
+        "hash_file": "md5s_uppercase_lowercase_numbers_8.txt",
+        "attack_type": "brute-force",
+        "start_time": "2024-11-11 06:14:11",
+        "cracked_passwords": 0,
+        "total_passwords": 10000,
+        "time_taken": 181.54,
+        "success_rate": 0.0,
+        "status": "timeout",
+        "output_file": "I:\\Project AI Password\\Multi-Purpose-AI-Password-Analysis-Tool\\SourceCode\\ReworldTest\\Cracked_Passwords\\bruteforce_cracked_md5s_uppercase_lowercase_numbers_8_1731287651.txt"
+    }
+]
