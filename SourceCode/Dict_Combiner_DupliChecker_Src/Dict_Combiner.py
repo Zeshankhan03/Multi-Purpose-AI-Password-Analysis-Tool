@@ -143,8 +143,8 @@ def main():
         log_event(f"Total Memory: {psutil.virtual_memory().total / (1024 ** 3):.2f} GB")
 
         # Configuration
-        input_folder = "SourceCode\Generated_Dict"
-        output_file = "SourceCode/Main_Dict/Model_Validation.txt"
+        input_folder = r"SourceCode\Datasets_Filtered\length_7"
+        output_file = r"SourceCode/Main_Dict/Main_Dict_7.txt"
         
         # Log configuration
         log_event("Configuration:")

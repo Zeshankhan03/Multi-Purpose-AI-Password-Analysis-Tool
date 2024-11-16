@@ -1,0 +1,7 @@
+=== Model Statistics ===
+
+Total Words: 3204831
+Unique Words: 2498318
+Avg Word Length: 8.0000
+Std Word Length: 0.0000
+Unique Chars: 110

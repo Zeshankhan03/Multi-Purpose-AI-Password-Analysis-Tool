@@ -1,0 +1,65 @@
+2024-11-10 22:59:03 - INFO - Dictionary Combiner Started
+2024-11-10 22:59:03 - INFO - Log file: SourceCode/Logs/Dict_Combiner_Logs\dict_combiner_20241110_225903.log
+2024-11-10 22:59:03 - INFO - Platform: Windows 10 (Intel64 Family 6 Model 79 Stepping 1, GenuineIntel)
+2024-11-10 22:59:03 - INFO - Total Memory: 63.92 GB
+2024-11-10 22:59:03 - INFO - Configuration:
+2024-11-10 22:59:03 - INFO - Input folder: SourceCode\Datasets_Filtered\length_6
+2024-11-10 22:59:03 - INFO - Output file: SourceCode/Main_Dict/Main_Dict_6.txt
+2024-11-10 22:59:03 - INFO - Found 46 text files in input folder
+2024-11-10 22:59:04 - INFO - Successfully read 5739552 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000001.txt
+2024-11-10 22:59:08 - INFO - Successfully read 343899 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000002.txt
+2024-11-10 22:59:09 - INFO - Successfully read 5096614 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000003.txt
+2024-11-10 22:59:12 - INFO - Successfully read 5067669 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000004.txt
+2024-11-10 22:59:16 - INFO - Successfully read 7119958 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000005.txt
+2024-11-10 22:59:21 - INFO - Successfully read 6220565 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000006.txt
+2024-11-10 22:59:25 - INFO - Successfully read 6201596 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000007.txt
+2024-11-10 22:59:29 - INFO - Successfully read 5084619 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000008.txt
+2024-11-10 22:59:33 - INFO - Successfully read 6501824 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000009.txt
+2024-11-10 22:59:38 - INFO - Successfully read 8091205 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000010.txt
+2024-11-10 22:59:42 - INFO - Processed 10/46 files. Total lines: 55467501
+2024-11-10 22:59:43 - INFO - Successfully read 3690110 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000011.txt
+2024-11-10 22:59:45 - INFO - Successfully read 5120393 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000012.txt
+2024-11-10 22:59:49 - INFO - Successfully read 5175224 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000013.txt
+2024-11-10 22:59:53 - INFO - Successfully read 4478706 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000014.txt
+2024-11-10 22:59:56 - INFO - Successfully read 6023332 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000015.txt
+2024-11-10 23:00:00 - INFO - Successfully read 5031024 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000016.txt
+2024-11-10 23:00:04 - INFO - Successfully read 4602364 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000017.txt
+2024-11-10 23:00:07 - INFO - Successfully read 4749898 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000018.txt
+2024-11-10 23:00:10 - INFO - Successfully read 3705046 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000019.txt
+2024-11-10 23:00:13 - INFO - Successfully read 5004101 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000020.txt
+2024-11-10 23:00:16 - INFO - Processed 20/46 files. Total lines: 103047699
+2024-11-10 23:00:17 - INFO - Successfully read 9042680 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000021.txt
+2024-11-10 23:00:24 - INFO - Successfully read 15961257 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000022.txt
+2024-11-10 23:00:35 - INFO - Successfully read 12339325 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000023.txt
+2024-11-10 23:00:44 - INFO - Successfully read 13955968 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000024.txt
+2024-11-10 23:00:54 - INFO - Successfully read 12545222 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000025.txt
+2024-11-10 23:01:03 - INFO - Successfully read 13984920 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000026.txt
+2024-11-10 23:01:13 - INFO - Successfully read 17883255 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000027.txt
+2024-11-10 23:01:26 - INFO - Successfully read 20403314 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000028.txt
+2024-11-10 23:01:40 - INFO - Successfully read 19694038 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000029.txt
+2024-11-10 23:01:54 - INFO - Successfully read 17950305 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000030.txt
+2024-11-10 23:02:04 - INFO - Processed 30/46 files. Total lines: 256807983
+2024-11-10 23:02:08 - INFO - Successfully read 25994248 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000031.txt
+2024-11-10 23:02:25 - INFO - Successfully read 18204644 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000032.txt
+2024-11-10 23:02:37 - INFO - Successfully read 17328888 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000033.txt
+2024-11-10 23:02:49 - INFO - Successfully read 16452829 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000034.txt
+2024-11-10 23:02:59 - INFO - Successfully read 6588745 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000035.txt
+2024-11-10 23:03:05 - INFO - Successfully read 15231517 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000036.txt
+2024-11-10 23:03:18 - INFO - Successfully read 29779360 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000037.txt
+2024-11-10 23:03:36 - INFO - Successfully read 14638743 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000038.txt
+2024-11-10 23:03:48 - INFO - Successfully read 25284308 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000039.txt
+2024-11-10 23:04:04 - INFO - Successfully read 11697954 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000040.txt
+2024-11-10 23:04:10 - INFO - Processed 40/46 files. Total lines: 438009219
+2024-11-10 23:04:12 - INFO - Successfully read 10280638 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000041.txt
+2024-11-10 23:04:19 - INFO - Successfully read 11908712 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000042.txt
+2024-11-10 23:04:30 - INFO - Successfully read 25959466 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000043.txt
+2024-11-10 23:04:47 - INFO - Successfully read 21661189 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000044.txt
+2024-11-10 23:05:06 - INFO - Successfully read 42961128 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000045.txt
+2024-11-10 23:05:31 - INFO - Successfully read 12828002 lines from: SourceCode\Datasets_Filtered\length_6\filtered_words_00000046.txt
+2024-11-10 23:05:39 - INFO - ==================================================
+2024-11-10 23:05:39 - INFO - Combination Complete
+2024-11-10 23:05:39 - INFO - Total files processed: 46
+2024-11-10 23:05:39 - INFO - Total lines written: 563608354
+2024-11-10 23:05:39 - INFO - Output file: SourceCode/Main_Dict/Main_Dict_6.txt
+2024-11-10 23:05:39 - INFO - ==================================================
+2024-11-10 23:05:39 - INFO - Dictionary Combiner completed successfully
